@@ -1,0 +1,131 @@
+
+/* header start*/
+#header{
+
+display:flex;
+align-items:center;
+justify-content:space-beween ;
+padding:20px 80px;
+background: #7E685A ;
+box-shadow: 100px 30px 30px rgba(0, 0, 0, 0.06);
+position:sticky;
+top: 0;
+left: 0;
+
+}
+
+#navbar{
+    display:flex;
+    align-items: center;
+    justify-content: center;}
+
+    #navbar li{
+        list-style:none;
+        padding: 0 20px;
+        position: relative;
+
+    }
+    #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color:white;
+        transition: 0.3s ease;
+    }
+    #navbar li a:hover,
+    #navbar li a.active{
+        color: #C2B9B0;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+        content:"";
+        width: 30%;
+        height: 2px;
+        background:#C2B9B0;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+    }
+/*homepage*/
+#main{
+    background-image:url("img/start.jpg");
+    height: 90vh ;
+    width: 89%;
+    background-size: cover;
+    background-position: top 20% right 0;
+    padding: 0 80px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+#main h4{
+    padding-bottom: 15px;
+    color:#AFD275;
+}
+
+#main h2{
+    color:white;
+}
+#main p{
+    color:#C2B9B0;
+}
+#main button{
+    background-color:#AFD275;
+    color:white;
+    padding: 14px 80px 14px 65px;
+    font-size: 15px;
+}
+
+#mentor{
+    width:190px;
+}
+#bba{
+    height: 110px;
+    width: 190px;
+}
+#bulb{
+    height:110 px;
+    width: 190px;
+}
+#ide{
+    height:100 px;
+    width: 110px;
+}
+#friends{
+    height:100 px;
+    width: 110px;
+
+}
+.section-p1{
+    padding: 40px 80px;
+}
+#feature .fe-box{
+    width:180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.06);
+    border:1px solid #C2B9B0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow:10px 10px 54px #C2CAD0;
+}
+#feature .fe-box h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:black;
+    background-color:#AFD275;
+
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

@@ -18,13 +18,13 @@ body{
 }
 
 .gameBoard{
-    background: linear-gradient(rgb(34, 123, 34), rgb(160, 160, 53));
+    /* background: linear-gradient(rgb(34, 123, 34), rgb(160, 160, 53)); */
     width : 90vmin;
     height: 92vmin;
     border: 2px solid black;
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 }
 
 .score{
@@ -41,4 +41,12 @@ body{
 
 .food {
     background-color: yellow;
+}
+
+.activeBoardCell{
+    background-color: green;
+}
+
+.inactiveBoardCell{
+    background-color: grey;
 }

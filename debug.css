@@ -13,6 +13,9 @@ top: 0;
 left: 0;
 
 }
+#header .img{
+    width:20%;
+}
 
 #navbar{
     display:flex;
@@ -129,3 +132,201 @@ left: 0;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+#idea1{
+    text-align: center;
+    background-color:#a0d5fe;
+}
+#idea1 .pro-container{
+    display: flex;
+    justify-content:space-between;
+    padding:10px 10px;
+    flex-wrap:wrap;
+}
+#idea1 .pro{
+    width:23%;
+    min-width:250 px ;
+    padding:10px 12px;
+    border:1px solid #7E685A;
+    border-radius:25px;
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(13, 13, 13, 0.06);
+    margin:15px 0;
+    background-color: white;
+
+}
+#idea1 .petcare{
+    background-color:whitesmoke;
+    border-radius: 25px;
+    text-align:start;
+    padding: 10px 20px;
+}
+#idea1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+    transition: 0.2s ease;
+}
+#idea1 .pro img{
+    width:100%;
+    border-radius: 20px;
+}
+#idea1 .pro span
+{  color:#ff6600;
+
+}
+#idea1 .pro i{
+    color:#F6BE00;
+}
+.section-m1{
+    margin: 40px 0;
+}
+#banner{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    background-image: url("img/com.jpg");
+    width:100%;
+    height:40vh;
+    background-size:cover;
+    background-position: center;
+}
+
+#banner h1{
+    color: #f9e215;
+
+}
+#banner h3{ color:#f9e215}
+#banner p{ color: #f9e215;}
+#banner h2{ color:red}
+#banner button{
+    font-size:14px;
+    font-weight:600;
+    padding:15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    padding: 8px;
+}
+#banner button:hover{
+    background:#AFD275;
+}
+.buulb{
+    position: relative;
+    top:-2px;
+    transform: translate(-20px,-270px);
+}
+#newsletter{
+    display:flex;
+    justify-content: space-between;
+  
+    align-items: center;
+    background-color: #AFD275;
+   }
+   #newsletter h4{
+       font-size: 22px;
+       font-weight: 700;
+       color:#126619;
+
+   }
+   #newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color:#269435;
+    }
+    #newsletter p span{
+        color:#5953ff;
+    }
+    #newsletter input{
+        height: 2.125rem;
+        padding: 0 1.25rem;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transperant;
+        border-radius: 4px ;
+        outline: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
+
+    #newsletter button{
+        background-color:#126619;
+        color: white;
+        white-space: nowrap;
+        padding: 10px 10px;
+
+    }
+    #newsletter .form{
+        display: flex;
+        width: 40%;
+    }
+   
+      
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      
+    
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+      
+      
+      }
+      .fa-facebook {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+      
+      }
+     
+            
+      .fa-facebook:hover {
+        opacity: 0.7;
+      }
+      .fa-twitter:hover {
+        opacity: 0.7;
+      }
+     #footer {
+         align-items: flex-start;
+           display:flex;
+           flex-wrap: wrap;
+           justify-content: space-between ;
+       }
+  
+
+       /*media query*/
+       @media(max-width:799px){
+           #navbar{
+               display: flex;
+               flex-direction: column;
+               align-items:flex-start;
+               justify-content: flex-start;
+               position:fixed;
+           
+           top:0;
+           right: 0px;
+           height:100vh;
+           width: 300px;
+           background-color: white
+           }
+       }
+       /*shop page*/
+       #page{
+           background-image: url("img/startup.jpg");
+       width:100%;
+       height:500px;
+         }

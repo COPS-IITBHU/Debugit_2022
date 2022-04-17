@@ -30,3 +30,15 @@ body{
 .score{
     width:50vmin;
 }
+
+.snakeHead{
+    background-color: blue;
+}
+
+.snakeBody {
+    background-color: aquamarine;
+}
+
+.food {
+    background-color: yellow;
+}

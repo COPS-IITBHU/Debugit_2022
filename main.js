@@ -1,12 +1,11 @@
 // Game Variables
 let moveDirection = {x:0, y:0};
 let renderSpeed = 5;
-let snake = [
-    {x:13, y:15} , {x:14, y:15}
-]
+let snake = [{x:13, y:15}]
 let food = {x:2, y:18};
 var playGameMusic = false;
 var score = 0;
+var allowLoop = true;
 
 // Sound Objects
 let foodSound = new Audio('./assets/music/food.mp3');
@@ -112,9 +111,37 @@ function moveSnake(){
     snake[0].x += moveDirection.x;
     snake[0].y += moveDirection.y;
 
+    if (allowLoop){
+        if (boardLayout[snake[0].y-1][snake[0].x-1]==0){
+            var count = 0;
+            while (boardLayout[snake[0].y-1][snake[0].x-1]==0){
+                snake[0].x += moveDirection.x;
+                snake[0].y += moveDirection.y;
+                if (snake[0].x>20) snake[0].x-=20;
+                if (snake[0].x<=0) snake[0].x+=20;
+                if (snake[0].y>20) snake[0].y-=20;
+                if (snake[0].y<=0) snake[0].y+=20;
+                if (count>20){
+                    gameOver();
+                }
+                count+=1;
+            }
+        }
+    }
+
 }
 
 function isCollide(){
+
+    for (let i=1; i<snake.length; i++){
+        if (snake[i].x==snake[0].x && snake[i].y ==snake[0].y) return true;
+    }
+
+    if (!allowLoop){
+        if (boardLayout[snake[0].y-1][snake[0].x-1]==0){
+            return true;
+        }
+    }
     return false;
 }
 

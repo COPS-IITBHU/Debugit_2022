@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shuddha_samachar/pages/area_categorised_page.dart';
+import 'package:shuddha_samachar/pages/categorised_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -8,6 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 import '../models/catagory.dart';
 import '../models/country_catagory.dart';
 import '../models/default_news_model.dart';
+import 'artical_web_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     children: 
                     [
                       Container(
-                        height: 100,
+                        height: 110,
                         child: 
                         ListView.builder(
           
@@ -95,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                       ).px8(),
                       Container(
           
-                      height: 43,
+                      height: 50,
                       child: ListView.builder(
           
                         shrinkWrap: true,
@@ -258,9 +259,13 @@ class NewsTile extends StatelessWidget {
       elevation: 10,
       child: InkWell(
         splashColor: Colors.amber,
-        onTap: (){
-
-        },
+        onTap: (() {
+        Navigator.push(context, MaterialPageRoute(
+          builder: ((context) => 
+          ArticalPage(articalUrl: newsdetail.url,image: newsdetail.imageurl,title: newsdetail.title,)
+          ) )
+        );
+      }),
         child: Column(
           children: [
             

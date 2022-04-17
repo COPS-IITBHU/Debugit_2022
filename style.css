@@ -24,7 +24,11 @@ body{
 
 /* page title */
 .page-title{
-  margin: 0 350px 0 0;
+  max-width: none;
+  min-width: none;
+  justify-self: center;
+  margin-right: -150px;
+  flex: 4;
 }
 
 .glow {
@@ -51,7 +55,7 @@ body{
 
 .btn{
     height: 30px;
-    width: 50px;
+    max-width: 50px;
     color: rgb(120, 116, 116);
     text-align: center;
     margin: 0px 10px 0 10px;
@@ -59,6 +63,7 @@ body{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    justify-self: flex-end;
 }
 .btn:hover a:hover{
   border-bottom: 2px solid var(--seconday-colour) ;
@@ -110,7 +115,7 @@ body{
     display: none;
     position: absolute;
     background-color: rgba(234, 224, 224, 0.3);
-    min-width: 160px;
+    min-width: 100px;
     font-family: 'Oswald', sans-serif;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -136,9 +141,9 @@ body{
 
 /* darkmode settings icons */
 #darkmode-icon{
-  margin-right: 650px;
   height: 30px;
-  width: 30px;
+  min-width: 30px;
   cursor: pointer;
-  transition: transform 1s ease ;
+  justify-self: flex-start;
+  position:sticky;
 }

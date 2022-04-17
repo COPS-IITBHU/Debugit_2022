@@ -3,7 +3,7 @@ package com.example.chatlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class SignUp : AppCompatActivity() {
+class SignUp_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)

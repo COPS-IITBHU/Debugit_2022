@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatlin">
         <activity
-            android:name=".login"
+            android:name=".login_Activity"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".SignUp_Activity"
             android:exported="false" />
         <activity
             android:name=".Welcome"

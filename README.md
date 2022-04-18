@@ -1,15 +1,15 @@
-## Debugit 2022
-[![Debugit](./lib/copsWeek_debugit.png)](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022)
+## Debugit 2022 - Revenge of the Snake
 
 ## Introduction
-Debugit is a week long hackathon open to ideas in a very literal sense. You can make anything from the projects' list we'll share or ignite the inquisitive Bob the Builder inside you to make something exciting and completely new!
+How hasn't played the infamous Snake Game?! This is an attempt to replicate the same classic "Nokia" phone Snake game, but with better customisations (as each player has his own asthetic choices) and a variety of never-seen-before boards that will challenge even the best of players.
 
-## How to make a submission?
-Submissions are to be made through GitHub Pull Requests. To know more about how to make a GitHub Pull Request you can refer the [Fundamentals of Git](https://www.youtube.com/playlist?list=PLLt4yMoVgczVgFcTzT60U5IXtNX1qjHL9) playlist which contains everything that you would need.
+## How to run the game?
+You can either run the game online at [Revenege of the Snake](deployment-link) or you can also clone this repository and then run index.html in your web browser. No need for any fancy installations!
 
-## Make sure to include
-  - A README.md file with your name, contact information, project description and how to run the code (and other necessary information).
-  - A folder containing a demo video of your project.
+## Tech Stack Used
+  - HTML to provide the skeleton for the web-page.
+  - CSS to provide the skin and visual appeal.
+  - Javascript to provide the brain.
 
 ## Here is a detailed step by step walkthrough if you don't know how to make a Debugit submission.
 

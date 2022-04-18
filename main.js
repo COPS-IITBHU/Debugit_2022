@@ -1,6 +1,7 @@
 // Game Variables
 let moveDirection = {x:0, y:0};
-let renderSpeed = 5;
+let renderSpeedIntial = 5;
+let renderSpeedIncrement = 0.1;
 let snake = [{x:13, y:15}]
 let food = {x:2, y:18};
 var playGameMusic = false;
@@ -17,8 +18,10 @@ let musicSound = new Audio('./assets/music/music.mp3');
 let lastPaintTime = 0
 var gameBoard = document.getElementById('gameBoard');
 var gameBoardIndex = 0;
+while (gameBoardsList[gameBoardIndex].status!=1) gameBoardIndex++;
 var gameBoardName = gameBoardsList[gameBoardIndex].name;
 var boardLayout = gameBoardsList[gameBoardIndex].board;
+var renderSpeed = renderSpeedIntial;
 
 // Game Functions
 function main(ctime){
@@ -71,7 +74,7 @@ function updateGameVariables(){
 
     // Check for Snake eating the food
     if (snake[0].x===food.x && snake[0].y === food.y) growSnake();
-
+    
     moveSnake();
 }
 
@@ -85,11 +88,13 @@ function gameOver(){
     // TODO : Implement a better game over scenario 
     alert("Game Over.")
     
+    renderSpeed = renderSpeedIntial;
+    score = 0;
     snake = [{...getRandomCellInGrid()}];
     if (playGameMusic){
         musicSound.play();
     }
-    score = 0;
+    
 }
 
 function growSnake(){
@@ -97,9 +102,32 @@ function growSnake(){
         x:snake[0].x + moveDirection.x,
         y:snake[0].y + moveDirection.y
     });
+
+    checkSnakeHead();
     
     score+=1;
     food = {...getRandomCellInGrid()};
+    renderSpeed = renderSpeed + renderSpeedIncrement;
+
+}
+
+function checkSnakeHead(){
+    if (allowLoop){
+        var count = 0;
+        while (boardLayout[snake[0].y-1][snake[0].x-1]==0){
+            snake[0].x += moveDirection.x;
+            snake[0].y += moveDirection.y;
+                
+            if (snake[0].x>20) snake[0].x-=20;
+            if (snake[0].x<1) snake[0].x+=20;
+            if (snake[0].y>20) snake[0].y-=20;
+            if (snake[0].y<1) snake[0].y+=20;
+                
+            if (count>20) gameOver();
+            count+=1;
+        }
+    
+    }
 }
 
 function moveSnake(){
@@ -110,24 +138,8 @@ function moveSnake(){
 
     snake[0].x += moveDirection.x;
     snake[0].y += moveDirection.y;
-
-    if (allowLoop){
-        if (boardLayout[snake[0].y-1][snake[0].x-1]==0){
-            var count = 0;
-            while (boardLayout[snake[0].y-1][snake[0].x-1]==0){
-                snake[0].x += moveDirection.x;
-                snake[0].y += moveDirection.y;
-                if (snake[0].x>20) snake[0].x-=20;
-                if (snake[0].x<=0) snake[0].x+=20;
-                if (snake[0].y>20) snake[0].y-=20;
-                if (snake[0].y<=0) snake[0].y+=20;
-                if (count>20){
-                    gameOver();
-                }
-                count+=1;
-            }
-        }
-    }
+    
+    checkSnakeHead();
 
 }
 
@@ -171,11 +183,6 @@ function displayFood(){
     foodElement.classList.add('food');
 
 }
-
-
-
-
-
 
 // Main Logic for the Program
 window.requestAnimationFrame(main);

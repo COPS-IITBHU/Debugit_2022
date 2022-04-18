@@ -2,8 +2,6 @@
 let moveDirection = {x:0, y:0};
 let renderSpeedIntial = 5;
 let renderSpeedIncrement = 0.1;
-let snake = [{x:13, y:15}]
-let food = {x:2, y:18};
 var playGameMusic = false;
 var score = 0;
 var allowLoop = true;
@@ -98,6 +96,7 @@ function gameOver(){
 }
 
 function growSnake(){
+    if (playGameMusic) foodSound.play();
     snake.unshift({
         x:snake[0].x + moveDirection.x,
         y:snake[0].y + moveDirection.y
@@ -237,3 +236,6 @@ function getRandomCellInGrid(){
         }
     }
 }
+
+let snake = [{...getRandomCellInGrid()}]
+let food = {...getRandomCellInGrid()};

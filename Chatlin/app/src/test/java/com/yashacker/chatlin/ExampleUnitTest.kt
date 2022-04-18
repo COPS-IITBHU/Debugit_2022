@@ -1,4 +1,4 @@
-package com.example.chatlin
+package com.yashacker.chatlin
 
 import org.junit.Test
 

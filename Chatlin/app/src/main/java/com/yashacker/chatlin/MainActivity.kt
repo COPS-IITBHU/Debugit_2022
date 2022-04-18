@@ -1,11 +1,15 @@
-package com.example.chatlin
+package com.yashacker.chatlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class login_Activity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_main)
+
+
+
     }
 }

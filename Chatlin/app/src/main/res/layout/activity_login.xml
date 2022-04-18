@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".login_Activity">
+    tools:context=".Login_Activity">
 
     <ImageView
+        android:id="@+id/loginbacktowelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -63,7 +64,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your Email"
@@ -83,7 +84,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -135,12 +136,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:text="Don,t have an account?"
+                android:text="Don't have an account?"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

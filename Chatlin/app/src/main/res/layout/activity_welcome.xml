@@ -64,9 +64,13 @@
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnwelcomesignup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             android:background="@drawable/background_btn2"
             android:text="signup"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -92,9 +96,13 @@
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-
+            android:id="@+id/btnwelcomelogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             android:background="@null"
             android:text="login"
             app:layout_constraintBottom_toBottomOf="parent"

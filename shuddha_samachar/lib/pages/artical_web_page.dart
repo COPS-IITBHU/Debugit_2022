@@ -19,29 +19,31 @@ class _ArticalPageState extends State<ArticalPage> {
   @override
   void initState() {
      super.initState();
+     _loading = false;
      // Enable virtual display.
      WebView.platform = AndroidWebView();
+     
    }
 
-  
+  bool _loading = true;
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 10,
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-          const Icon(CupertinoIcons.news,color: Colors.blue,size: 40,).px12(),
-          "Shuddh".text.amber500.xl2.bold.make(),
-          " Samachar".text.blue900.xl4.extraBold.make()
-          ],),
-      
-      ),
-      body: Container(
+      appBar:AppBar(
+          elevation: 0,
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+            const Icon(CupertinoIcons.news,color: Colors.blue,size: 40,).px12(),
+            "शुद्ध ".text.amber500.xl2.bold.make(),
+            "Samachar".text.blue900.xl4.extraBold.make()
+            ],),
+
+        ),
+      body: _loading?LinearProgressIndicator():Container(
         child: WebView(
           initialUrl: widget.articalUrl,
           // onWebViewCreated: completer.complete(),

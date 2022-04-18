@@ -2,13 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shuddha_samachar/pages/categorised_page.dart';
 import 'package:velocity_x/velocity_x.dart';
-
+import 'package:english_words/english_words.dart' as english_words;
 
 
 import '../models/catagory.dart';
 import '../models/country_catagory.dart';
 import '../models/default_news_model.dart';
+import '../widgets/home_widgets/home_widget_tile.dart';
 import 'artical_web_page.dart';
+import 'search_result_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -22,6 +24,16 @@ class _HomePageState extends State<HomePage> {
   List<Area> areas = <Area>[];
   List<Catagory> catagories = <Catagory>[];
   List<Newsdetails> newslist = <Newsdetails>[];
+  final List<String> kEnglishWords;
+  late _MySearchDelegate _delegate;
+
+
+  _HomePageState()
+      : kEnglishWords = List.from(Set.from(english_words.all))
+          ..sort(
+            (w1, w2) => w1.toLowerCase().compareTo(w2.toLowerCase()),
+          ),
+        super();
 
   bool _loading = true;
 
@@ -32,6 +44,7 @@ class _HomePageState extends State<HomePage> {
     catagories = getCatagory();
     
     getNewsDetails();
+    _delegate = _MySearchDelegate(kEnglishWords);
   }
 
 
@@ -57,8 +70,22 @@ class _HomePageState extends State<HomePage> {
             children: [
             const Icon(CupertinoIcons.news,color: Colors.blue,size: 40,).px12(),
             "शुद्ध ".text.amber500.xl2.bold.make(),
-            "Samachar".text.blue900.xl4.extraBold.make()
+            "Samachar".text.blue900.xl4.extraBold.make(),
+            
             ],),
+            actions: <Widget>[
+          IconButton(
+            tooltip: 'Search a single keyword',
+            icon: const Icon(Icons.search),
+            onPressed: () async {
+              final String? selected = await showSearch<String>(
+                context: context,
+                delegate: _delegate,
+              );
+            
+            },
+          ),
+        ],
 
         ),
 
@@ -67,9 +94,7 @@ class _HomePageState extends State<HomePage> {
         SafeArea(
           child: 
           _loading
-          ?Container(
-            child: const Center(
-              child: CircularProgressIndicator()),)
+          ?const LinearProgressIndicator()
           :SingleChildScrollView(
             child: Container(
                   color: const Color.fromARGB(255, 245, 239, 226),
@@ -157,135 +182,149 @@ class _HomePageState extends State<HomePage> {
 
 
 
-class AreaCatagoryTile extends StatelessWidget {
-  const AreaCatagoryTile({ Key? key, required this.areaimage, required this.areaname, required this.areaurl }) : super(key: key);
-  final String areaimage;
-  final String areaname,areaurl;
 
+
+
+
+
+
+
+
+class _MySearchDelegate extends SearchDelegate<String> {
+  final List<String> _words;
+  final List<String> _history;
+
+  _MySearchDelegate(List<String> words)
+      : _words = words,
+        _history = <String>['apple', 'hello', 'world', 'flutter'],
+        super();
+
+  // Leading icon in search bar.
   @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: const Color.fromARGB(255, 229, 196, 168),
-      child: InkWell(
-        splashColor: Colors.amber,
-        onTap: (() {
-        Navigator.push(context, MaterialPageRoute(
-          builder: (
-            (context) => 
-              CategorisedPage(caturl: areaurl)
-
-          ) )
-        );
-      }),
-        child: Column(
-          children: [
-            Container(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(areaimage,width: 120,height: 70,
-                // isAntiAlias: true,
-                
-                fit: BoxFit.fill
-                
-                ).p2(),
-              ),
-              
-              ),
-            Center(child: Text(areaname,style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),))
-          ],
-        ),
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      tooltip: 'Back',
+      icon: AnimatedIcon(
+        icon: AnimatedIcons.menu_arrow,
+        progress: transitionAnimation,
       ),
-    )
-    .box
-    .roundedLg.make();
+      onPressed: () {
+        // SearchDelegate.close() can return vlaues, similar to Navigator.pop().
+        this.close(context, '');
+      },
+    );
   }
-}
 
-
-
-
-
-
-
-
-class CatagoryTile extends StatelessWidget {
-  const CatagoryTile({ Key? key, required this.caturl,required this.catagoryName }) : super(key: key);
-  final String caturl;
-  final catagoryName;
-
+  // Widget of result page.
   @override
-  Widget build(BuildContext context) {
-    return Card(
-     
-      color: const Color.fromARGB(255, 229, 196, 168),
-      child: InkWell(
-        splashColor: Colors.amber,
-         onTap: (() {
-        Navigator.push(context, MaterialPageRoute(
-          builder: (
-            (context) => 
-              CategorisedPage(caturl: caturl)
-
+  Widget buildResults(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const Text('You have selected the word:'),
+            GestureDetector(
+              onTap: () {
+                // Returns this.query as result to previous screen, c.f.
+                // `showSearch()` above.
+                Navigator.push(context, MaterialPageRoute(
+          builder: ((context) => 
+          SearchedPage(keyword: this.query,)
           ) )
         );
-      }),
-        child: Column(
-          children: [
-            Text(catagoryName,style: const 
-              TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
-              .centered()
-              .p8()
+                // this.close(context, this.query);
+              },
+              child: Text(
+                this.query,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4!
+                    .copyWith(fontWeight: FontWeight.bold),
+              ),
+             
+            ),
+            "Click On Above Text To Get Search Result".text.caption(context).make().py8()
           ],
         ),
       ),
     );
   }
+
+  // Suggestions list while typing (this.query).
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final Iterable<String> suggestions = this.query.isEmpty
+        ? _history
+        : _words.where((word) => word.startsWith(query));
+
+    return _SuggestionList(
+      query: this.query,
+      suggestions: suggestions.toList(),
+      onSelected: (String suggestion) {
+        this.query = suggestion;
+        this._history.insert(0, suggestion);
+        showResults(context);
+      },
+    );
+  }
+
+  // Action buttons at the right of search bar.
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return <Widget>[
+      if (query.isNotEmpty)
+        IconButton(
+          tooltip: 'Clear',
+          icon: const Icon(Icons.clear),
+          onPressed: () {
+            query = '';
+            showSuggestions(context);
+          },
+        )
+    ];
+  }
 }
 
+// Suggestions list widget displayed in the search page.
+class _SuggestionList extends StatelessWidget {
+  const _SuggestionList(
+      {required this.suggestions,
+      required this.query,
+      required this.onSelected});
 
+  final List<String> suggestions;
+  final String query;
+  final ValueChanged<String> onSelected;
 
-
-
-
-
-
-class NewsTile extends StatelessWidget {
-  const NewsTile({ Key? key, required this.newsdetail,  }) : super(key: key);
-  final Newsdetails newsdetail;
-  
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10,
-      child: InkWell(
-        splashColor: Colors.amber,
-        onTap: (() {
-        Navigator.push(context, MaterialPageRoute(
-          builder: ((context) => 
-          ArticalPage(articalUrl: newsdetail.url,image: newsdetail.imageurl,title: newsdetail.title,)
-          ) )
+    final textTheme = Theme.of(context).textTheme.subtitle1!;
+    return ListView.builder(
+      itemCount: suggestions.length,
+      itemBuilder: (BuildContext context, int i) {
+        final String suggestion = suggestions[i];
+        return ListTile(
+          leading: query.isEmpty ? const Icon(Icons.history) : const Icon(null),
+          // Highlight the substring that matched the query.
+          title: RichText(
+            text: TextSpan(
+              text: suggestion.substring(0, query.length),
+              style: textTheme.copyWith(fontWeight: FontWeight.bold),
+              children: <TextSpan>[
+                TextSpan(
+                  text: suggestion.substring(query.length),
+                  style: textTheme,
+                ),
+              ],
+            ),
+          ),
+          onTap: () {
+            onSelected(suggestion);
+          },
         );
-      }),
-        child: Column(
-          children: [
-            
-            Container(
-              
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.network(newsdetail.imageurl,
-                // isAntiAlias: true,
-                // height: 200,
-                fit: BoxFit.fitWidth
-                
-                ).p2(),
-              ).p2(),
-              
-              ),
-            Center(child: Text(newsdetail.title,style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),))
-          ],
-        ),
-      ),
-    ).box.roundedLg.make().p2().py8();
+      },
+    );
   }
 }

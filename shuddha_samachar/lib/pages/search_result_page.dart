@@ -2,35 +2,36 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../models/catagorised_news_model.dart';
+import '../models/search_model.dart';
 import '../models/default_news_model.dart';
 import '../widgets/home_widgets/home_widget_tile.dart';
 import 'home_page.dart';
 
-class CategorisedPage extends StatefulWidget {
-  const CategorisedPage({ Key? key, required this.caturl,  }) : super(key: key);
-  final String caturl;
+class SearchedPage extends StatefulWidget {
+  const SearchedPage({ Key? key, required this.keyword,  }) : super(key: key);
+  final String keyword;
   
 
   @override
-  State<CategorisedPage> createState() => _CategorisedPageState();
+  State<SearchedPage> createState() => _SearchedPageState();
 }
 
-class _CategorisedPageState extends State<CategorisedPage> {
+class _SearchedPageState extends State<SearchedPage> {
   List<Newsdetails> newslist = <Newsdetails>[];
   bool _loading = true;
+  String word  = "";
    @override
   void initState() {
     super.initState();
     
-    
+    word = widget.keyword;
     
     getNewsDetails();
   }
 
   getNewsDetails() async {
-    CatagorisedNews newsClass = CatagorisedNews();
-    await newsClass.getCatagorisedNews(widget.caturl);
+    SearchedNews newsClass = SearchedNews();
+    await newsClass.getSearchedNews(widget.keyword);
     newslist = newsClass.news;
     setState(() {
       _loading = false;
@@ -72,7 +73,7 @@ class _CategorisedPageState extends State<CategorisedPage> {
                       
                       Row(
                         children: [
-                                    "Top HeadLines".text.caption(context).xl3.make().px12().pOnly(top: 10)
+                                    "Search Result For: $word".text.caption(context).xl3.make().px12().pOnly(top: 10)
                         ],
                       ),
 

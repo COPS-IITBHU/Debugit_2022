@@ -2,7 +2,7 @@
 let moveDirection = {x:0, y:0};
 let renderSpeedIntial = 5;
 let renderSpeedIncrement = 0.1;
-var playGameMusic = false;
+var playGameMusic = true;
 var score = 0;
 var allowLoop = true;
 
@@ -79,8 +79,9 @@ function updateGameVariables(){
 function gameOver(){
     if (playGameMusic){
         gameOverSound.play();
+        musicSound.pause();
     }
-    musicSound.pause();
+    
     moveDirection = {x:0, y:0};
     
     // TODO : Implement a better game over scenario 
@@ -188,7 +189,7 @@ window.requestAnimationFrame(main);
 window.addEventListener('keydown', key=>{
 
     if (playGameMusic){
-        musicSound,play();
+        musicSound.play();
         moveSound.play();
     }
     

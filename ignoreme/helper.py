@@ -26,42 +26,42 @@
 
 # print(arr)
 
-def getVal(val):
-    if val<=4*20-4:
-        return 0
-    else:
-        return 1
+# def getVal(val):
+#     if val<=4*20-4:
+#         return 0
+#     else:
+#         return 1
 
-def spiralFill(m, n, a):
+# def spiralFill(m, n, a):
 
-	val = 1
+# 	val = 1
 
-	k, l = 0, 0
-	while (k < m and l < n):
+# 	k, l = 0, 0
+# 	while (k < m and l < n):
 
-		for i in range(l, n):
-			a[k][i] = getVal(val)
-			val += 1
-		k += 1
+# 		for i in range(l, n):
+# 			a[k][i] = getVal(val)
+# 			val += 1
+# 		k += 1
 
-		for i in range(k, m):
-			a[i][n - 1] = getVal(val)
-			val += 1
-		n -= 1
+# 		for i in range(k, m):
+# 			a[i][n - 1] = getVal(val)
+# 			val += 1
+# 		n -= 1
 
-		if (k < m):
-			for i in range(n - 1, l - 1, -1):
-				a[m - 1][i] = getVal(val)
-				val += 1
-			m -= 1
+# 		if (k < m):
+# 			for i in range(n - 1, l - 1, -1):
+# 				a[m - 1][i] = getVal(val)
+# 				val += 1
+# 			m -= 1
 
-		if (l < n):
-			for i in range(m - 1, k - 1, -1):
-				a[i][l] = getVal(val)
-				val += 1
-			l += 1
+# 		if (l < n):
+# 			for i in range(m - 1, k - 1, -1):
+# 				a[i][l] = getVal(val)
+# 				val += 1
+# 			l += 1
 
 
-a = [[0 for j in range(20)] for i in range(20)]
-spiralFill(20, 20, a)
-print(a)
+# a = [[0 for j in range(20)] for i in range(20)]
+# spiralFill(20, 20, a)
+# print(a)

@@ -10,6 +10,7 @@ You can either run the game online at [Revenege of the Snake](deployment-link) o
   - HTML to provide the skeleton for the web-page.
   - CSS to provide the skin and visual appeal.
   - Javascript to provide the brain.
+  - Bootstrap to make the iterface prettier.
 
 ## Here is a detailed step by step walkthrough if you don't know how to make a Debugit submission.
 

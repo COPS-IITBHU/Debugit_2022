@@ -1,1 +1,0 @@
-spiralFill(20, 20, a)

@@ -325,8 +325,75 @@ left: 0;
            }
        }
        /*shop page*/
+    
        #page{
-           background-image: url("img/startup.jpg");
-       width:100%;
-       height:500px;
-         }
+       background-image: url("img/aes.jpg");
+       width:96%;
+       height:200px;
+       text-align: center;
+       padding: 30px ;       
+     }
+
+        #page h2{
+         color:white;
+        }
+        #page p{
+            color:rgb(208, 202, 202);
+        }
+
+        /*single idea*/
+        #prodetails .single-pro-image{
+            width:20%;
+            margin-right:50px;
+        }
+        .small-img-group{
+            display:flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis:30%;
+            cursor:pointer;
+
+        }
+        x-star-rating {
+            font-family: 'Ionicons';
+            font-size: 30px;
+            display: inline-flex;
+            cursor: pointer;
+        }
+        
+        x-star-rating > .star::after {
+            content: '\f3ae';
+            color: #777;
+        }
+        
+        x-star-rating > .star.full::after {
+            content: '\f2fc';
+            color: #fd0;
+        }
+        #prodetails{
+            display:flex;
+         
+            margin-top:20px;
+        }
+
+        #prodetails .single-pro-details{
+            width:50%;
+            padding-top:30px;
+        }
+
+        #prodetails .single-pro-details h4{
+            padding: 20px 0 20px 0;
+        }
+        #prodetails .single-pro-details h2{
+          font-size:26px;
+        }
+        #blogs{
+            background-image: url("img/book.jpg");
+            height: 30vh;
+            width:89%;
+            text-align: center;
+
+        }
+        /*about page*/
+     

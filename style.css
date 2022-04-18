@@ -2,20 +2,27 @@
 :root{
   --primary-colour: rgb(4, 32, 48);
   --seconday-colour: rgb(194, 205, 216);
+  --tertiary-colour: rgba(234, 224, 224, 0.2);
 }
 
 .light-mode{
   --primary-colour: rgb(194, 205, 216);
   --seconday-colour: rgb(4, 32, 48);
+  --tertiary-colour: rgba(13, 219, 130, 0.2);
 }
 
 body{
   background:var(--primary-colour);
   transition: background 0.8s linear;
 }
+
+
+
+
+
 /* Top container */
-.top-container{
-    
+
+.top-container{    
     display: flex;
     height: 70px;
     justify-content: right;
@@ -55,7 +62,7 @@ body{
 
 .btn{
     height: 30px;
-    max-width: 50px;
+    min-width: 50px;
     color: rgb(120, 116, 116);
     text-align: center;
     margin: 0px 10px 0 10px;
@@ -91,6 +98,7 @@ body{
     border-width: 0 3px 3px 0;
     display: inline-flex;
     padding: 3px;
+    margin-left: 2px;
     transform: rotate(90deg);
   -webkit-transform: rotate(135deg);
   transition: 0.2s ease;
@@ -130,9 +138,7 @@ body{
     display: block;
   }
   
-
   .dropdown-content a:hover {background-color: rgba(234, 224, 224, 0.2)}
-  
 
   .dropdown:hover .dropdown-content {
     display: block;
@@ -144,6 +150,36 @@ body{
   height: 30px;
   min-width: 30px;
   cursor: pointer;
+  margin-left: 1%;
   justify-self: flex-start;
   position:sticky;
+}
+
+
+/* content container */
+.content-container{
+  margin: 70px;
+  display: flex;
+  border-radius: 25px;
+  min-width: 50px;
+  min-height: 80px;
+  background-color: var(--tertiary-colour);
+  padding: 30px;
+  color: var(--seconday-colour);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 24px;
+}
+
+
+
+
+/* typewriter effect */
+span{
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker{
+  50%{
+    opacity: 0;
+  }
 }

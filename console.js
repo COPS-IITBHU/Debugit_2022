@@ -16,7 +16,7 @@ darkmode.onclick = function(){
 var content=document.getElementById("message").innerText;
 var messageArray=[content];
 var textPosition=0;
-var speed=5;
+var speed=10;
 
 typewriter= function(){
     document.querySelector("#message").innerHTML=messageArray[0].substring(0,textPosition)+ "<span>\u25ae</span>";

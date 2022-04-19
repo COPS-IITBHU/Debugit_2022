@@ -15,7 +15,7 @@ function displayGameBoard(){
         for (var j=0; j<20; j++){
             var boardElement = document.createElement('div');
             boardElement.style.gridRowStart = j+1;
-            boardElement.style.gridColumnStar = i+1;
+            boardElement.style.gridColumnStart = i+1;
             var elementId = "R" + (j+1) + "C" + (i+1);
             boardElement.setAttribute('id', elementId);
             if (boardLayout[j][i]==1){

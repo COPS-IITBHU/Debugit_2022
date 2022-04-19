@@ -1,4 +1,5 @@
 /* header start*/
+body{ margin:0;}
 #header{
 
 display:flex;
@@ -52,7 +53,7 @@ left: 0;
 /*homepage*/
 #main{
     background-image:url("img/start.jpg");
-    height: 90vh ;
+    height: 80vh ;
     width: 89%;
     background-size: cover;
     background-position: top 20% right 0;
@@ -63,22 +64,31 @@ left: 0;
     justify-content: center;
     
 }
+#main .info{
+    background-color: rgba(0, 0, 0, 0.396);
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right:30px;
+}
 #main h4{
-    padding-bottom: 15px;
+   font-size:30px;
     color:#AFD275;
+   
 }
 
 #main h2{
+    font-size:40px;
     color:white;
 }
 #main p{
-    color:#C2B9B0;
+    color:#ede7e1;
+    font-size:18px;
 }
 #main button{
     background-color:#AFD275;
     color:white;
     padding: 14px 80px 14px 65px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #mentor{
@@ -131,15 +141,81 @@ left: 0;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+#about-head .wewho{
+    background-color: rgba(11, 11, 11, 0.025);
+    display:flex;
+    padding: 20px 20px 20px 20px;
+
+
+}
+
+#blogs h2{
+   font-size: 30px; 
+}
+#blogs h1{
+    font-size:50px;
+}
+#page h2{
+    font-size:50px; 
+}
+#page p{
+    font-size: 18px; 
+}
+#blog-detail .blog-box{
+    display:flex;
+    padding-right:20px;
+
+
+}
+#blog-detail .blog2andar{
+    padding-left: 20px;
+}
+
+
+
+#blog-detail .innovative{
+    display:flex;
+    padding-top: 40px;
+    padding-right: 20px;
+
+}
+
+#blog-detail .pitchright{
+    display:flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+    padding-right: 20px;
+
+}
+#blog-detail .blog3andar{
+    display: flex;
+    flex-direction:column;
+    padding-right: 20px;
+}
+#blog-detail .pitchright img{
+    width: 24.5%;
+}
+#blog-detail .innovative img{
+    width:24.5%;
+}
+
+#blog-detail .blog1andar{
+    padding-right: 20px;
+}
+#blog-detail .joote{
+    padding-left: 20px;
+}
 #idea1{
     text-align: center;
-    background-color:#a0d5fe;
+    background-color:#b3e06c82;
 }
+
 #idea1 .pro-container{
-    display: flex;
+    display: flex;   
     justify-content:space-between;
     padding:10px 10px;
     flex-wrap:wrap;
+    margin:20px;
 }
 #idea1 .pro{
     width:23%;
@@ -171,12 +247,19 @@ left: 0;
 {  color:#ff6600;
 
 }
+  
+
+#whyus{
+    background-color:white;
+    padding-left: 20px;
+}
 #idea1 .pro i{
     color:#F6BE00;
 }
 .section-m1{
     margin: 40px 0;
 }
+
 #banner{
     display:flex;
     flex-direction:column;
@@ -188,6 +271,10 @@ left: 0;
     height:40vh;
     background-size:cover;
     background-position: center;
+}
+#banner .ban{
+    background-color: rgba(23, 20, 20, 0.374);
+    padding: 20px 20px 20px 20px;
 }
 
 #banner h1{
@@ -228,13 +315,15 @@ left: 0;
    #newsletter h4{
        font-size: 22px;
        font-weight: 700;
-       color:#126619;
+       color:#105716;
+       padding-left:20px;
 
    }
    #newsletter p{
     font-size: 14px;
     font-weight: 600;
-    color:#269435;
+    color:#248d32;
+    padding-left:20px;
     }
     #newsletter p span{
         color:#5953ff;
@@ -256,7 +345,7 @@ left: 0;
         background-color:#126619;
         color: white;
         white-space: nowrap;
-        padding: 10px 10px;
+        padding: 10px 10px ;
 
     }
     #newsletter .form{
@@ -299,13 +388,58 @@ left: 0;
       .fa-twitter:hover {
         opacity: 0.7;
       }
-     #footer {
-         align-items: flex-start;
-           display:flex;
-           flex-wrap: wrap;
-           justify-content: space-between ;
+     #footer .col {
+        display: flex;
+       background-color:#a0d5fe;
+        justify-content:space-between;
+        flex-direction: row;
+        padding-right: 20px;
+        
        }
-  
+       #footer .my{
+        display: flex;
+        padding: 20px 20px 20px 20px;
+    
+        flex-direction: column;
+       }
+      #gpay{
+          width:200px;
+         
+      }
+
+      #footer .copyright{
+        padding: 20px 20px 20px 20px;
+      }
+      #footer h4{
+          color:rgb(0, 7, 134);
+          font-size: 18px;
+      }
+      #footer .acha{
+        display:flex;
+        flex-direction: row;
+      }
+      #footer .my{
+          color:#3B5998;
+      }
+      #footer .install{
+        padding: 20px 20px 20px 20px;
+        justify-content: space-between;
+      }
+      #footer .contacthome{
+          padding: 20px 20px 20px 20px;
+         flex-direction: column;
+         
+      
+         
+      }
+      #footer .contacticon{
+          display: flex;
+          flex-direction: row;
+      }
+      #mar{
+          color:white;
+          position:relative;
+      }
 
        /*media query*/
        @media(max-width:799px){
@@ -378,7 +512,7 @@ left: 0;
 
         #prodetails .single-pro-details{
             width:50%;
-            padding-top:30px;
+            padding-top:0px;
         }
 
         #prodetails .single-pro-details h4{
@@ -422,7 +556,7 @@ left: 0;
         #contact-details .details h2{
          font-size: 26px;
          line-height: 35px;
-         padding: 20px;
+         
         }
         
         #contact-details .details h3{

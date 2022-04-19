@@ -17,10 +17,12 @@ class Welcome : AppCompatActivity() {
         btnwelcomesignup.setOnClickListener {
             val intent = Intent(this, SignUp_Activity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out )
         }
         btnwelcomelogin.setOnClickListener {
             val intent = Intent(this, Login_Activity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out )
         }
     }
 }

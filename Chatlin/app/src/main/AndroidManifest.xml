@@ -10,25 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chatlin">
         <activity
-            android:name="com.yashacker.chatlin.Login_Activity"
+            android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name="com.yashacker.chatlin.SignUp_Activity"
+            android:name=".Login_Activity"
             android:exported="false" />
         <activity
-            android:name="com.yashacker.chatlin.Welcome"
-            android:exported="true" >
+            android:name=".SignUp_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Welcome"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
         <activity
-            android:name="com.yashacker.chatlin.MainActivity"
-            android:exported="false"/>
-
-
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

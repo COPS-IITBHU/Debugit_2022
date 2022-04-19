@@ -35,12 +35,11 @@ class SignUp_Activity : AppCompatActivity() {
         }
         btnsignup.setOnClickListener {
             credential_check()
-
-
         }
         textlogin.setOnClickListener{
             val intent = Intent(this@SignUp_Activity, Login_Activity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out )
         }
     }
     private fun signUp(email: String, password: String){
@@ -53,6 +52,8 @@ class SignUp_Activity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     val intent = Intent(this@SignUp_Activity, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right )
+
 
                 } else {
                     // If sign in fails, display a message to the user.

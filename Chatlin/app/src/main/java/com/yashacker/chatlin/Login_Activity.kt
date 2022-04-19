@@ -39,6 +39,7 @@ class Login_Activity : AppCompatActivity() {
         textsignup.setOnClickListener{
             val intent = Intent(this@Login_Activity, SignUp_Activity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out )
         }
 
     }
@@ -51,6 +52,7 @@ class Login_Activity : AppCompatActivity() {
                     Log.d(TAG, "signInWithEmail:success")
                     val intent = Intent(this@Login_Activity, MainActivity::class.java)
                     startActivity(intent)
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right )
 
 
 

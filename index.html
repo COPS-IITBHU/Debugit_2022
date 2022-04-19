@@ -25,12 +25,12 @@
             <div class="accordion-item">
             
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Game Difficulty
                 </button>
               </h2>
 
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -101,13 +101,29 @@
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body overflow-scroll row flex-row flex-nowrap" id="gameLayoutOptions">
+          
                   <!-- Change Layout Content Starts-->
+                  <div class="card" style="width: 18rem; padding:2%; margin:2%;">
+                    <img src="./assets/images/board_classic.bmp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
 
-
-
+                  <div class="card" style="width: 18rem; padding:2%; margin:2%;">
+                    <img src="./assets/images/board_classic.bmp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
 
                   <!-- Change Layout Content Ends-->
+            
                 </div>
               </div>
             </div>
@@ -127,6 +143,7 @@
 <!-- Including Custom JS Functionalities-->
 <script src="./assets/boards.js"></script>
 <script src="./js_files/helper.js"></script>
+<script src="./js_files/layoutOptions.js"></script>
 <script src="./js_files/movement.js"></script>
 <script src="./js_files/game.js"></script>
 <script src="./js_files/main.js"></script>

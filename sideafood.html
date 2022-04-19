@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="debug.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/ladder.png" class="logo" alt ="" ></a>
+          <div>
+         <ul id="navbar">
+            <li><a  href="debug.html">Home</a></li>
+            <li><a class="active" href="idea.html">Ideas and Blog</a></li>
+           
+             <li><a href="contact.html">Contact Us</a></li>
+           </ul>
+ 
+     </div>
+     </section>
+    <Section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="img/pet.jpg" onclick="myfunction()" width="100%"  id="MainImg" alt="">
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="img/ladder.png"  onclick="myfunction()" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="img/ladder.png" onclick="myfunction()"width="100%" class="small-img" alt="">
+            </div>
+            
+        </div>
+      </div>
+      <div class="single-pro-details">
+          <h6> Home/ idea</h6>
+          <h4>petcare</h4>
+          <p>hgcdwgefdjw</p>
+          <h3>Rate </h3>
+          <h6>click on the desired star to rate</h6>
+          <x-star-rating value="4" number="5"></x-star-rating>
+        <script src="Starrating.js"></script>
+      </div>
+
+    </Section>
+
+
+    <section id="idea1" class="section-p1">
+        <h2>Top Ideas</h2>
+        <p>Highest rated this week</p>
+        <div class="pro-container">
+         <div class="pro">
+          <img src="img/pet.jpg" onclick="" alt="">
+          <div class="petcare">
+            <span>Personalised pet care</span>
+            <h5> Petcare</h5>
+            <div class="star">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              </div>
+              <h4> 5 star</h4>
+  
+            </div>
+            
+          </div>
+            
+         
+         <div class="pro">
+          <img src="img/pet.jpg" alt="">
+          <div class="petcare">
+            <span>Personalised pet care</span>
+            <h5> Petcare</h5>
+            <div class="star">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              </div>
+              <h4> 5 star</h4>
+  
+            </div>
+            
+          </div>
+            
+        
+         <div class="pro">
+          <img src="img/pet.jpg" alt="">
+          <div class="petcare">
+            <span>Personalised pet care</span>
+            <h5> Petcare</h5>
+            <div class="star">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              </div>
+              <h4> 5 star</h4>
+  
+            </div>
+            
+          </div>
+           
+         
+        
+        </div>
+      </section>
+      <section id="newsletter" class="section-m1">
+        <div class="newstext">
+          <h4> Sign Up For Newsletter</h4>
+          <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your email address">
+          <a href="https://accounts.google.com/accountchooser/signinchooser?flowName=GlifWebSignIn&flowEntry=AccountChooser" target="_blank">
+          <button> Sign Up</button>
+          </a>
+        </div>
+      </section>
+  
+      <section id="footer" >
+        <div class="col">
+          <div class="contacthome">
+          <h4>Contact </h4>
+          
+            <i class="fa fa-map"></i>
+            <P> LC corner IIT BHU, Varanasi</P>
+            
+          <i class="fa fa-envelope"></i>
+          <P>copsiitbhu@gmail.com</P>
+          
+          <i class="fa fa-phone"></i>
+          <P> 910005453</P>
+         
+          <i class="fa fa-clock-o"></i>
+          <P>10:00am-6:00pm</P>
+          
+          
+          <div class="contacticon">
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" class="fa fa-twitter"></a>
+          </div>
+          </div>
+          <div class="my">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">My wishlist ideas</a>
+            <a href="#">My donations</a>
+            
+          </div>
+          <div class="install">
+            <h4>Install App</h4>
+            <p> From App Store or Google Play</p>
+            <div class="row">
+               <img id="gpay" src="img/Google.jpg" alt="">
+            </div>
+  
+          </div>
+          <div class="copyright">
+            <p> @ 2022, Ladder corporates </p>
+          </div>
+        </div>
+      </section>
+    <script src="smallimg.js"></script>
+       
+   
+</body>
+<script >
+  
+  function myfunction()
+  { 
+  var MainImg = document.getElementById("MainImg");
+  var smallimg= document.getElementsByClassName("small-img");
+  smallimg[0].onclick = function(){
+  MainImg.src = smallimg[0].src;
+  }
+  smallimg[1].onclick = function(){
+   MainImg.src = smallimg[1].src;
+   
+  }}
+</script>
+</html>

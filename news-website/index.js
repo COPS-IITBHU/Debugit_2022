@@ -1,14 +1,17 @@
 // grabbing elements start
-const general_news = document.querySelector("#genral");
-const business_news = document.querySelector("#business");
-const sport_news = document.querySelector("#sport");
-const movie_news = document.querySelector("#entertainment");
-const tech_news = document.querySelector("#technology");
-const find_button = document.querySelector("#searchBtn");
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
+const loader_title = document.querySelector('#loader-title');
+const general_news = document.querySelector("#general-btn");
+const business_news = document.querySelector("#business-btn");
+const sport_news = document.querySelector("#sport-btn");
+const movie_news = document.querySelector("#movie-btn");
+const tech_news = document.querySelector("#tech-btn");
+const find_button = document.querySelector("#search-btn");
 
-const newsQuery = document.querySelector("#newsQuery");
-const newsType = document.querySelector("#newsType");
-const newsdetails = document.querySelector("#newsdetails");
+const to_be_founded = document.querySelector("#newsQuery");
+const founded_news_subtitle = document.querySelector("#news-sub-headline");
+const founded_news = document.querySelector("#founded_news");
 // grabbing elements end
 
 // Declaring array for news data
@@ -21,46 +24,60 @@ const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=g
 const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=";
 const SPORTS_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=";
 const ENTERTAINMENT_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=";
-const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=8&apiKey=";
+const TECHNOLOGY_NEWS = "https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=10&apiKey=";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q=";
 // API DATA End
 
 
 // on start of page data
 window.onload = function () {
-    newsType.innerHTML = "<h2>Headlines</h2>";
+    init();
+    loader_title.innerHTML = "Getting Headlines";
+    founded_news_subtitle.innerHTML = "<h2>Headlines</h2>";
     fetchHeadlines();
 };
 
 
 // Eventlistener start
 general_news.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>General news</h2>";
+    init();
+    loader_title.innerHTML = "Getting General news";
+    founded_news_subtitle.innerHTML = "<h2>General news</h2>";
     fetchGeneralNews();
 });
 
 business_news.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>Business</h2>";
+    init();
+    loader_title.innerHTML = "Getting business news";
+    founded_news_subtitle.innerHTML = "<h2>Business news</h2>";
     fetchBusinessNews();
 });
 
 sport_news.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>Sports</h2>";
+    init();
+    loader_title.innerHTML = "Getting sport news";
+    founded_news_subtitle.innerHTML = "<h2>Sports news</h2>";
     fetchSportsNews();
 });
 
 movie_news.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>Movies</h2>";
+    init();
+    loader_title.innerHTML = "Getting movies news";
+    founded_news_subtitle.innerHTML = "<h2>Movies news</h2>";
     fetchEntertainmentNews();
 });
 
 tech_news.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>Tech</h2>";
+    init();
+    loader_title.innerHTML = "Getting Tech news";
+    founded_news_subtitle.innerHTML = "<h2>Tech news</h2>";
     fetchTechnologyNews();
 });
 
 find_button.addEventListener("click", function () {
-    newsType.innerHTML = "<h2>Found = " + newsQuery.value + "</h2>";
+    init();
+    loader_title.innerHTML = "Finding query news";
+    founded_news_subtitle.innerHTML = "<h2>Found = " + to_be_founded.value + "</h2>";
     fetchQueryNews();
 });
 // Eventlistener End
@@ -68,6 +85,16 @@ find_button.addEventListener("click", function () {
 
 
 // function start
+
+function init() {
+    main.style.display = 'none';
+    loader.style.display = 'block';
+    setTimeout(() => {
+        loader.style.display = 'none';
+        main.style.display = 'block';
+        setTimeout(() => (main.style.opacity = 1), 50);
+    }, 4000);
+}
 const fetchHeadlines = async () => {
     const response = await fetch(HEADLINES_NEWS + API_KEY);
     newsDataArr = [];
@@ -77,14 +104,12 @@ const fetchHeadlines = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
     displayNews();
 }
-
-
 const fetchGeneralNews = async () => {
     const response = await fetch(GENERAL_NEWS + API_KEY);
     newsDataArr = [];
@@ -94,7 +119,7 @@ const fetchGeneralNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -110,7 +135,7 @@ const fetchBusinessNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -127,7 +152,7 @@ const fetchEntertainmentNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -143,7 +168,7 @@ const fetchSportsNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -159,7 +184,7 @@ const fetchTechnologyNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -168,10 +193,10 @@ const fetchTechnologyNews = async () => {
 
 const fetchQueryNews = async () => {
 
-    if (newsQuery.value == null)
+    if (to_be_founded.value == null)
         return;
 
-    const response = await fetch(SEARCH_NEWS + encodeURIComponent(newsQuery.value) + "&apiKey=" + API_KEY);
+    const response = await fetch(SEARCH_NEWS + encodeURIComponent(to_be_founded.value) + "&apiKey=" + API_KEY);
     newsDataArr = [];
     if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
@@ -179,7 +204,7 @@ const fetchQueryNews = async () => {
     } else {
         //error handle
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        founded_news.innerHTML = "<h5>No data found.</h5>"
         return;
     }
 
@@ -192,7 +217,7 @@ const fetchQueryNews = async () => {
 // displaying news data start
 function displayNews() {
 
-    newsdetails.innerHTML = "";
+    founded_news.innerHTML = "";
 
     newsDataArr.forEach(news => {
 
@@ -205,13 +230,13 @@ function displayNews() {
         card.className = "p-1 m-1 row";
 
         var image = document.createElement('img');
-        image.className = "col-4";
+        image.className = "col-4 display";
         image.setAttribute("height", "parentelement");
         image.setAttribute("width", "100px");
         image.src = news.urlToImage;
 
         var cardBody = document.createElement('span');
-        cardBody.className = "col-8";
+        cardBody.className = "col-lg-8 col-md-12";
 
         var newsHeading = document.createElement('h5');
         newsHeading.className = "card-title headline-style";
@@ -241,7 +266,7 @@ function displayNews() {
 
         col.appendChild(card);
 
-        newsdetails.appendChild(col);
+        founded_news.appendChild(col);
     });
 
 }

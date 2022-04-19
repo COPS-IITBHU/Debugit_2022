@@ -20,15 +20,34 @@
 </head>
 
 <body class="m-0 p-0">
+    <!-- ========== Start preloader ========== -->
 
-    <div class="container-fluid m-0 p-0">
+    <div id='preloader' class="loader">
+        <div>
+            <h1 id='loader-title'>Get Your News</h1>
+            <div class='rectangles'>
+                <div class='rect q'></div>
+                <div class='rect w'></div>
+                <div class='rect e'></div>
+                <div class='rect r'></div>
+            </div>
+            <div class='inscription'>
+                <i>Loading</i>
+                <span>...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== End preloader ========== -->
+
+    <div class="container-fluid m-0 p-0 main">
 
         <!-- ========== Start top nav bar ========== -->
 
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark nav-style">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-warning" href="#">News Here</a>
+                    <a class="navbar-brand text-warning" href="./index.html">News Here</a>
                     <button class="navbar-toggler button-style" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -37,24 +56,24 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#genral" id="genral">General</a>
+                                <a class="nav-link" href="#general-btn" id="general-btn">General</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#business" id="business">Business</a>
+                                <a class="nav-link" href="#business=btn" id="business-btn">Business</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#sports" id="sport">Sports</a>
+                                <a class="nav-link" href="#sport-btn" id="sport-btn">Sports</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#tehnology" id="technology">Tech</a>
+                                <a class="nav-link" href="#tech-btn" id="tech-btn">Tech</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#entertainment" id="entertainment">Movie</a>
+                                <a class="nav-link" href="#movie-btn" id="movie-btn">Movie</a>
                             </li>
                         </ul>
                         <form class="d-flex">
                             <input class="form-control me-2" type="text" id="newsQuery" placeholder="Find News">
-                            <button class="btn btn-danger" type="button" id="searchBtn">Find</button>
+                            <span id="findbtn"><a href="#" id="search-btn"></a></span>
                         </form>
                     </div>
                 </div>
@@ -66,8 +85,8 @@
         <!-- ========== Start main body ========== -->
 
         <div class="m-0 p-2 body-style">
-            <div class="row m-3 p-2" id="newsType"></div>
-            <div class="row me-2 ms-2 mt-3 mb-3" id="newsdetails"></div>
+            <div class="row m-3 p-2" id="news-sub-headline"></div>
+            <div class="row me-2 ms-2 mt-3 mb-3" id="founded_news"></div>
         </div>
 
         <!-- ========== End main body ========== -->
@@ -77,9 +96,11 @@
         <div class="mt-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid m-0 p-0">
-                    <h5 class="meetthe-style me-auto ms-auto">Meet The <span class="creator-style"> Creator</span>
-                    </h5>
+                    <a href="../portfilio/index.html" class="text-decoration-none me-auto ms-auto">
+                        <h5 class="meetthe-style me-auto ms-auto">Meet The <span class="creator-style"> Creator</span>
+                        </h5>
                 </div>
+                </a>
             </nav>
         </div>
     </div>

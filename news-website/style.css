@@ -43,3 +43,197 @@
     color: #F05454;
     ;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+#findbtn {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 55px;
+
+    margin-right: 60px;
+    /* perspective: 1000px; */
+}
+
+#findbtn a {
+    font-size: 10px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#findbtn a:before,
+#findbtn a:after {
+    position: absolute;
+    font-size: 20px;
+    content: "find";
+    height: 55px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#findbtn a:before {
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+#findbtn a:after {
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+#findbtn a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+@media (max-width: 990px) {
+    #findbtn {
+        margin-right: 50px;
+    }
+}
+
+
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+}
+
+#preloader>div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#preloader>div>h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.inscription {
+    width: 13ch;
+    display: flex;
+}
+
+.inscription>i {
+    color: white;
+    padding-right: 0.3rem;
+    padding-left: 0.7rem;
+    font-family: monospace;
+    font-style: italic;
+}
+
+.inscription>span {
+    color: white;
+    font-family: monospace;
+    width: 4ch;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slashes 4s steps(4) infinite;
+}
+
+.rectangles {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    justify-content: center;
+}
+
+.rect {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px double black;
+    border-radius: 10px;
+    animation: spinner 3s ease-in-out infinite;
+}
+
+.rect.q {
+    top: 0;
+    left: 0;
+    border-color: red;
+}
+
+.rect.r {
+    top: 0;
+    right: 0;
+    border-color: blue;
+}
+
+.rect.w {
+    bottom: 0;
+    left: 0;
+    border-color: yellow;
+}
+
+.rect.e {
+    bottom: 0;
+    right: 0;
+    border-color: green;
+}
+
+@keyframes spinner {
+    45% {
+        border-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    55% {
+        border-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes slashes {
+    0% {
+        width: 0;
+    }
+}
+
+
+
+@media (max-width:992px) {
+    .display {
+        display: none;
+    }
+}

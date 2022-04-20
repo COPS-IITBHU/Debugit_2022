@@ -1,7 +1,7 @@
 function getElementToAdd(index) {
     var template = `
     <div class="card text-center" style="width: 18rem; padding:2%; margin:2%;">
-        <img src="replaceIMAGENAME" class="card-img-top" alt="replaceBOARDNAME">
+        <img src="replaceIMAGENAME" class="card-img-top" onerror="this.src = 'replaceDEFAULTLINK';">
         <div class="card-body">
             <h4 class="card-title">replaceBOARDNAME</h5>
             <p class="card-text">replaceBOARDDESC</p>
@@ -12,7 +12,7 @@ function getElementToAdd(index) {
     `;
 
     var board = gameBoardsList[index];
-    let r1 = template.replace("replaceBOARDNAME", board.name);
+    let r1 = template.replace("replaceDEFAULTLINK", "./assets/images/default.jpg");
     let r2 = r1.replace("replaceBOARDNAME", board.name);
     let r3 = r2.replace("replaceBOARDDESC", board.desc);
     let r4 = r3.replace("replaceID", "layoutOption" + board.id);
@@ -47,7 +47,7 @@ function setLayoutOptions() {
 
     var lastCard = `
     <div class="card" aria-hidden="true" style="width: 18rem; padding:2%; margin:2%;">
-    <img src="./assets/images/custom_layout.png" class="card-img-top" alt="./assets/images/default.jpg">
+    <img src="./assets/images/custom_layout.png" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title"> Create your Own Layout
         <span class="placeholder col-6"></span>
@@ -83,5 +83,5 @@ function changeBoard(id) {
     }
 
     setLayoutOptions();
-    main();
+    gameEngine();
 }

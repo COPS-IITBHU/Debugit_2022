@@ -45,7 +45,7 @@ function parseBoard() {
     gameBoardsList.push(board);
     localStorage.setItem("gameBoardsList", JSON.stringify(gameBoardsList));
     console.log(gameBoardsList);
-    alert("The Board is added successfully!");
+    alert("The board is added successfully!");
     
 }
 

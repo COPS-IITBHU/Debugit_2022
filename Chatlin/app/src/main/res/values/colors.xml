@@ -10,4 +10,16 @@
     <color name="first_Color">#ffeb3b</color>
     <color name="second_Color">#69f0ae</color>
     <color name="background_color">#fafafa</color>
+    <color name="background_chat_color">#393359</color>
+    <color name="primary">#fec200</color>
+    <color name="background_received_messages">#14a637</color>
+    <color name="background_chat_input_color1">#ef9b0f</color>
+    <color name="secondary_text">#535252</color>
+    <color name="grey">#8f8c8c</color>
+    <color name="red">#CC0808</color>
+
+
+
+
+
 </resources>

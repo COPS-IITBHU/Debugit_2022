@@ -1,4 +1,4 @@
-var gameBoardsList = [
+var gameList = [
     { 
         id : 0,
         name : "Classic",

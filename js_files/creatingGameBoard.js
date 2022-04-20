@@ -22,7 +22,9 @@ function getIdFromIndex(i, j) {
 }
 
 function parseBoard() {
+    gameBoardsList = JSON.parse(localStorage.getItem("gameBoardsList"));
 
+    console.log("Top");
     var boardLayout = getBoard();
     var boardName = document.getElementById("layoutName").value;
     var boardDesc = document.getElementById("layoutDesc").value;
@@ -41,10 +43,10 @@ function parseBoard() {
     }
     
     gameBoardsList.push(board);
+    localStorage.setItem("gameBoardsList", JSON.stringify(gameBoardsList));
     console.log(gameBoardsList);
-    alert("Thhe Board is added successfully!");
+    alert("The Board is added successfully!");
     
-    console.log("Wait Ended");
 }
 
 function syncDelay(milliseconds) {

@@ -16,10 +16,24 @@ let musicSound = new Audio('./assets/music/music.mp3');
 let lastPaintTime = 0
 var gameBoard = document.getElementById('gameBoard');
 var gameBoardIndex = 0;
+var gameBoardsList = [];
+
+var boardsString = localStorage.getItem("gameBoardsList")
+if (boardsString){
+    gameBoardsList = JSON.parse(boardsString);
+}
+else{
+    localStorage.setItem("gameBoardsList", JSON.stringify(gameList));
+    gameBoardsList = gameList;
+}
+
+console.log(gameBoardsList);
+
 while (gameBoardsList[gameBoardIndex].status != 1) gameBoardIndex++;
 var gameBoardName = gameBoardsList[gameBoardIndex].name;
 var boardLayout = gameBoardsList[gameBoardIndex].board;
 var renderSpeed = renderSpeedIntial;
+
 
 setLayoutOptions();
 

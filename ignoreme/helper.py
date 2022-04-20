@@ -65,3 +65,14 @@
 # a = [[0 for j in range(20)] for i in range(20)]
 # spiralFill(20, 20, a)
 # print(a)
+
+# def change(x):
+#     a = "".join(x.split())[1:-1]
+#     b = a.split(",")
+#     c = []
+#     for i in b:
+#         j = "".join(i.split())[1:-1]
+#         c.append(j)
+#     return c
+
+# print(change("['Action', 'Adventure', 'Sci-Fi', 'Thriller'] "))

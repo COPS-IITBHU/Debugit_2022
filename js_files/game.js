@@ -57,6 +57,8 @@ function gameOver() {
 
     renderSpeed = renderSpeedIntial;
     score = 0;
+    var points = document.getElementById("points");
+    points.innerHTML = 0;
     snake = [{ ...getRandomCellInGrid() }];
     if (playGameMusic) {
         musicSound.play();
@@ -73,7 +75,8 @@ function growSnake() {
 
     checkSnakeHead();
 
-    incrementScore(100);
+    incrementScore(pointsIncrement);
+    pointsIncrement += 10;
     food = { ...getRandomCellInGrid() };
     renderSpeed = renderSpeed + renderSpeedIncrement;
 
@@ -207,7 +210,24 @@ function displayFood() {
 
 }
 
-function incrementScore(x) {
+function incrementScore(toAdd) {
 
+    ele = document.getElementById("points");
+    endNum = score + toAdd;
 
+    animateRec(score, ele, endNum - 1);
+    score += toAdd;
+    console.log("Score " + score);
+
+}
+
+function animateRec(i, ele, endNum) {
+
+    if (Number(ele.innerHTML) <= endNum) {
+        ele.innerHTML = i;
+        console.log("i " + i);
+        setTimeout(function () {
+            animateRec(i + 1, ele, endNum);
+        }, pointsSpeed);
+    }
 }

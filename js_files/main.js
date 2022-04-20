@@ -17,6 +17,8 @@ let lastPaintTime = 0
 var gameBoard = document.getElementById('gameBoard');
 var gameBoardIndex = 0;
 var gameBoardsList = [];
+var pointsSpeed = 10;
+var pointsIncrement = 50;
 
 var boardsString = localStorage.getItem("gameBoardsList")
 if (boardsString){

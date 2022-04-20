@@ -3,7 +3,7 @@ var gameBoardsList = [
         id : 0,
         name : "Classic",
         status : 0,
-        imgName : "board_classic.bmp",
+        imgName : "./assets/images/board_classic.bmp",
         desc : "The simple yet difficult square board that you all are too familiar with.",
         board : [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
@@ -32,7 +32,7 @@ var gameBoardsList = [
         id : 1,
         name : "Imperfect Diamond",
         status : 1,
-        imgName : "board_diamond.bmp",
+        imgName : "./assets/images/board_diamond.bmp",
         desc : "This diamond shaped board is more conjusted and more fun to play with.",
         board : [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 

@@ -1,7 +1,7 @@
-function getElementToAdd(index){
+function getElementToAdd(index) {
     var template = `
     <div class="card text-center" style="width: 18rem; padding:2%; margin:2%;">
-        <img src="./assets/images/replaceIMAGENAME" class="card-img-top" alt="replaceBOARDNAME">
+        <img src="replaceIMAGENAME" class="card-img-top" alt="replaceBOARDNAME">
         <div class="card-body">
             <h4 class="card-title">replaceBOARDNAME</h5>
             <p class="card-text">replaceBOARDDESC</p>
@@ -17,14 +17,14 @@ function getElementToAdd(index){
     let r3 = r2.replace("replaceBOARDDESC", board.desc);
     let r4 = r3.replace("replaceID", "layoutOption" + board.id);
 
-    let rd =  "";
+    let rd = "";
     let rbs = "";
 
-    if (board.status==0){
+    if (board.status == 0) {
         rd = "";
         rbs = "Play Here!";
     }
-    else{
+    else {
         rd = "disabled";
         rbs = "Already Here!";
     }
@@ -37,18 +37,18 @@ function getElementToAdd(index){
 }
 
 
-function setLayoutOptions(){
+function setLayoutOptions() {
     var ele = document.getElementById("gameLayoutOptions");
     var innerHTML = "";
 
-    for (var i=0; i<gameBoardsList.length; i++){
+    for (var i = 0; i < gameBoardsList.length; i++) {
         innerHTML = innerHTML + getElementToAdd(i);
     }
 
     ele.innerHTML = innerHTML;
 }
 
-function changeBoard(id){
+function changeBoard(id) {
     console.log("Function Called");
     console.log(id);
 
@@ -57,11 +57,11 @@ function changeBoard(id){
     gameBoardName = gameBoardsList[gameBoardIndex].name;
     boardLayout = gameBoardsList[gameBoardIndex].board;
 
-    for (var i=0; i<gameBoardsList.length; i++){
-        if (i==index) gameBoardsList[i].status = 1;
+    for (var i = 0; i < gameBoardsList.length; i++) {
+        if (i == index) gameBoardsList[i].status = 1;
         else gameBoardsList[i].status = 0;
     }
-    
+
     setLayoutOptions();
     main();
 }

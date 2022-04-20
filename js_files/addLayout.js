@@ -3,7 +3,7 @@ addBoard = document.getElementById("addGameBoard");
 function getButtonElement(i, j) {
 
     ele = `
-    <button type="button" class="btn replaceSTATUS" id="replaceID" onClick = "changeButtonState(this.id)"> </button>
+    <button type="button" class="btn replaceSTATUS" id="replaceID" replaceDISABLED onClick = "changeButtonState(this.id)"> </button>
     `;
 
     var elementId = "R" + (j + 1) + "C" + (i + 1) + "E";
@@ -13,8 +13,12 @@ function getButtonElement(i, j) {
     else r1 = ele.replace("replaceSTATUS", "btn-secondary");
 
     let r2 = r1.replace("replaceID", elementId);
+    let r3;
 
-    return r2;
+    if ((i == 0 || i == 19 || j == 0 || j == 19)) r3 = r2.replace("replaceDISABLED", "disabled");
+    else r3 = r2.replace("replaceDISABLED", "");
+
+    return r3;
 }
 
 

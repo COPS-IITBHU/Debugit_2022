@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChildCare Online Service</title>
-    <link rel="shortcut icon" href="./assets/title.jpg">
+    <link rel="shortcut icon" href="./assets/title.jpg" />
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -62,9 +62,6 @@
           <h1>Login Page</h1>
           <hr />
           <form>
-            <!-- <label for="username"><b>Username :</b></label><br/>
-				<input type="text" name="username" id="username" />
-				<br/><br/> -->
             <label for="email"><b>Orphanage Emailid :</b></label
             ><br />
             <input type="email" name="email" id="email" />
@@ -75,10 +72,14 @@
             <input type="password" name="password" id="password" />
             <br /><br />
 
-            <button type="submit" onclick="signIn()" id="login-btn">
+            <button type="submit" onclick="ValidLog()" id="login-btn">
               Login
             </button>
-            <button type="submit" id="login-btn"><a href="./register.html" style="color: white;">Register New User</a></button>
+            <button type="submit" id="login-btn">
+              <a href="./register.html" style="color: white"
+                >Register New User</a
+              >
+            </button>
             <br /><br />
             <p>Forget Password ? <a href="./register.html">Click Here</a></p>
           </form>
@@ -129,9 +130,7 @@
     </section>
 
     <!-- contact section ends -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
-    <script src="../login/script.js"></script>
-    <script src="./script.js"></script> -->
+
+    <script src="./script.js"></script>
   </body>
 </html>

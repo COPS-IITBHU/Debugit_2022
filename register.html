@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ChildCare Online Service</title>
-    <link rel="shortcut icon" href="./assets/title.jpg">
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChildCare Online Service</title>
+    <link rel="shortcut icon" href="./assets/title.jpg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oswald:wght@300;400&family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet"> 
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oswald:wght@300;400&family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header section starts  -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-</head>
-<body>
-	<!-- header section starts  -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <i class="fas fa-heartbeat"></i> ChildCare.
+      </a>
 
-<header class="header">
-
-    <a href="./index.html" class="logo"> <i class="fas fa-heartbeat"></i> ChildCare. </a>
-
-    <nav class="navbar">
+      <nav class="navbar">
         <a href="./chart.html">Chart</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -34,165 +48,101 @@
         <a href="#contact">Contact</a>
         <a href="./register.html">Register</a>
         <a href="./login.html">Login</a>
-    </nav>
+      </nav>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
 
-</header>
+    <!-- header section ends -->
 
-<!-- header section ends -->
+    <!-- Start Register form Coding-->
+    <section>
+      <div class="w-80">
+        <div class="form-box">
+          <h1>User Registration Page</h1>
+          <hr />
+          <form>
+            <label for="name"><b>Orphanage Name :</b></label
+            ><br />
+            <input type="text" name="name" id="name" />
+            <br /><br />
 
-<!-- Start Register form Coding-->
-<section>
-	<div class="w-80">
-     <div class="form-box">
-     	<h1>User Registration Page</h1>
-     	<hr>
-     	<form>
-				<label for="name"><b>Orphanage Name :</b></label><br/>
-				<input type="text" name="name" id="name" />
-				<br/><br/>
+            <label for="email"><b>Orphanage Emailid :</b></label
+            ><br />
+            <input type="text" name="email" id="email" />
+            <br /><br />
 
-				<label for="email"><b>Orphanage Emailid :</b></label><br/>
-				<input type="text" name="email" id="email" />
-				<br/><br/>
+            <label for="mobile"><b>Working Mobile Number :</b></label
+            ><br />
+            <input type="number" name="mobile" id="mobile" />
+            <br /><br />
 
-				<label for="mobile"><b>Working Mobile Number :</b></label><br/>
-				<input type="number" name="mobile" id="mobile" />
-				<br/><br/>
+            <label for="username"><b>Address :</b></label
+            ><br />
+            <input type="text" name="address" id="address" />
+            <br /><br />
 
-				<label for="username"><b>Address :</b></label><br/>
-				<input type="text" name="address" id="address" />
-				<br/><br/>
+            <label for="password"><b>Password :</b></label>
+            <br />
+            <input type="text" name="password" id="password" />
+            <br /><br />
 
-				<label for="password"><b>Password :</b></label>
-				<br/>
-				<input type="text" name="password" id="password" />
-				<br/><br/>
+            <label for="re-password"><b>Confirm Password :</b></label>
+            <br />
+            <input type="password" name="re-password" id="re-password" />
+            <br /><br />
 
-				<label for="re-password"><b>Confirm Password :</b></label>
-				<br/>
-				<input type="password" name="re-password" id="re-password" />
-				<br/><br/>
+            <button type="submit" onclick="ValidReg()" id="register-btn">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-				<button type="submit" onclick="Register()" id="register-btn">Submit</button>
-				
-			</form>
-     </div>
-    </div>
-</section>
+    <!-- contact section starts  -->
 
-<!-- contact section starts  -->
-
-<section class="contact"  id="contact">
-
-    <div class="box-container">
-
-        
-
+    <section class="contact" id="contact">
+      <div class="box-container">
         <div class="box">
-            <h3>Our Services</h3>
-            <a href="#"> <i class="fas fa-chevron-right"></i> Total care </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> Expert Doctors </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> Appointments</a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> Checkups </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> Ambulance service </a>
+          <h3>Our Services</h3>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Total care </a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Expert Doctors </a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Appointments</a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Checkups </a>
+          <a href="#">
+            <i class="fas fa-chevron-right"></i> Ambulance service
+          </a>
         </div>
 
         <div class="box">
-            <h3>Contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> xyz@gmail.com </a>
-            <a href="#"> <i class="fas fa-envelope"></i> abc@gmail.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Mumbai, India - 400104 </a>
+          <h3>Contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> xyz@gmail.com </a>
+          <a href="#"> <i class="fas fa-envelope"></i> abc@gmail.com </a>
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i> Mumbai, India - 400104
+          </a>
         </div>
 
         <div class="box">
-            <h3>Follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> Linkedin </a>
-            <a href="#"> <i class="fab fa-pinterest"></i> Pinterest </a>
+          <h3>Follow us</h3>
+          <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
+          <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+          <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+          <a href="#"> <i class="fab fa-linkedin"></i> Linkedin </a>
+          <a href="#"> <i class="fab fa-pinterest"></i> Pinterest </a>
         </div>
+      </div>
 
-    </div>
+      <div class="credit">
+        Created by <span>Team RuntimeTerror</span> | All rights reserved
+      </div>
+    </section>
 
-    <div class="credit"> Created by <span>Team RuntimeTerror</span> | All rights reserved </div>
+    <!-- contact section ends -->
 
-</section>
-
-<!-- contact section ends -->
-
-<!-- <script type="module">
-    // import { initializeApp } from 'firebase/app';
-// import { getDatabase } from "firebase/database";
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyD8lbZaBCmPByWxTAwvxyB2GP1mU-w05MY",
-      authDomain: "childcare-b7777.firebaseapp.com",
-      databaseURL: "https://childcare-b7777-default-rtdb.firebaseio.com",
-      projectId: "childcare-b7777",
-      storageBucket: "childcare-b7777.appspot.com",
-      messagingSenderId: "615274645162",
-      appId: "1:615274645162:web:772fd84309d1cbf432f2d3"
-    };
-    
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    import { getDatabase,ref,set,child,get } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
-     
-    const db=getDatabase(app);
-
-     const email= document.getElementById('email');
-     const password= document.getElementById('password');
-    //  console.log(email.value);
-    //  console.log(password.value);
-     function Validation(){
-         let nameregex= /^[a-zA-Z0-9]+$/;
-         let email = /^[a-zA-Z0-9]+@(gmail|yahoo)\.com$/; 
-
-         if(!nameregex.test(password.value)){
-              alert("enter valid password of letters");
-              return false;
-         }
-         if(!email.test(email.value)){
-              alert("enter valid emailid");
-              return false;
-         }
-         return true;
-     }
-    function Register(){
-        if(!Validation()){
-            return;
-        };
-        const dbRef = ref(db);
-
-        get(child(dbRef,"UsersList/"+email.value)).then((snapshot)=>{
-           if(snapshot.exists()){
-               alert("Account already exists");
-           }
-           else{
-               set(ref(db,"UsersList/"+email.value),{
-                   password: password.value
-               })
-               .then(()=>{
-                   alert("user added successfully");
-               })
-               .catch((error)=>{
-                 alert("arror"+error); 
-               })
-           }
-        });
-    }
-   
-  </script> -->
-<!-- <script src="./script.js"></script> -->
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>

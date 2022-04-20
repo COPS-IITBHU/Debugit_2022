@@ -366,3 +366,58 @@
 .contact .credit span {
   color: var(--blue);
 }
+
+section .form-box {
+  padding: 20px;
+}
+.form-box {
+  margin-top: 100px;
+  margin-left: 80px;
+}
+section .form-box form {
+  margin-top: 20px;
+}
+section .form-box input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+section .form-box input,
+textarea {
+  width: 50%;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+}
+textarea {
+  height: 100px;
+}
+section .form-box form #register-btn,
+#login-btn,
+#contact-btn {
+  font-family: Muli;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+section .form-box form #login-btn {
+  background: #007bff;
+}
+section .form-box form #register-btn {
+  background: #007bff;
+}
+section .form-box form #login-btn:hover {
+  background: blue;
+}
+section .form-box form #register-btn:hover {
+  background: blue;
+}
+.form-box p {
+  font-size: 24px;
+}

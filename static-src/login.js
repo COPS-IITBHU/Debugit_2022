@@ -1,13 +1,13 @@
-console.log("registration.js successfully loaded");
+console.log("login.js successfully loaded");
 
-const form = document.querySelector("#reg-form");
+const form = document.querySelector("#login-form");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const uname = document.querySelector("#uname");
     const pwd = document.querySelector("#pwd");
 
-    const data = await fetch("/api/register", {
+    const data = await fetch("/api/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -18,17 +18,20 @@ form.addEventListener("submit", async (event) => {
         })
     });
 
-    uname.value = "";
-    pwd.value = "";
-    const resjson = await data.json();
+    const resjson = await data.json(); 
     console.log(resjson);
-    if (resjson.code === "Error") {
-        alert("Username already exists");
-    } else if (resjson.code === "ok") {
-        alert("user registered successfully");     
+    if (resjson.status === "ok") {
+        console.log("Got the token", resjson.data);
+        alert("login successful");
+        window.location.href = "/";
+    } else {
+        alert(resjson.error);
     }
+
     console.log("fetch done");
     // const resJson = await data.json();
 
+    uname.value = "";
+    pwd.value = "";
     
 });

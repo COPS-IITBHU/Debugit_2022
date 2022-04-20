@@ -58,14 +58,30 @@ router.post("/api/register", async (req, res) => {
 });
 
 router.post("/api/createRes", async (req, res) => {
-    console.log(req.body);
 
-    const title = req.body.title;
-    const from = req.body.from;
+    try {
+        const authToken = req.cookies["auth-token"];
+        console.log(authToken);
+        const infoToken = authToken.split(".")[1];
+        console.log(infoToken);
+        const infoObj = atob(infoToken);
+        console.log(req.body);
 
-    const resource = new Resource({ title, from });
-    const result = await resource.save();
-    console.log(result); 
+        console.log(infoObj);
+        const username = JSON.parse(infoObj).uname;
+
+        const title = req.body.title;
+        const about = req.body.about;
+
+        const resource = new Resource({ title, from: username, about });
+        const result = await resource.save();
+        console.log(result);
+
+        res.json({ status: "ok", data: "Resource created successfully" });
+    } catch {
+        res.json({ status: "Error", error: "Could not create this resource" });
+    }
+     
 });
 
 router.get("/users", (req, res) => {

@@ -77,7 +77,25 @@ router.get("/resources", (req, res) => {
 });
 
 router.get("/createRes", (req, res) => {
-  res.render("createRes", { title: "Create a New Resource :)" });  
+    try {
+        const authToken = req.cookies["auth-token"];
+        if (!authToken) {
+            res.render("index", { title: "This is a title lmao" });
+          } else {
+                try {
+                    const validToken = jwt.verify(authToken, JWT_SECRET);
+                    if (validToken) {
+                        res.render("createRes", { title: "Create a New Resource :)" });  
+                    }
+                } catch (error) {
+                    console.log("error: ", error);  
+                }
+            }
+    } catch (error) {
+        console.log(error);
+        res.redirect("/");
+    }  
+  
 })
 
 module.exports = router;

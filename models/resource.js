@@ -7,8 +7,10 @@ const resourceSchema = new Schema({
         required: true
     }, 
     from: {
-        type: String,
-        required: true
+        type: String
+    },
+    about: {
+        type: String
     }
 });
 

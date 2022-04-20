@@ -36,7 +36,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select_user"
+        android:text="@string/Scroll_and_Select"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
@@ -44,37 +44,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ImageBack"/>
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="@dimen/_16sdp"-->
-<!--        android:background="@drawable/background_content_bottom"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ImageBack"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        >-->
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/usersRecyclerView"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_16sdp"
         android:background="@drawable/background_content_bottom"
-        android:orientation="vertical"
-        tools:listitem="@layout/item_container_user"
+        app:layout_constraintTop_toBottomOf="@+id/ImageBack"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/usersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:padding="@dimen/_20sdp"
 
-        android:padding="@dimen/_20sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_container_user"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageBack" />
+            />
 
+        <TextView
+            android:id="@+id/textErrorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"/>
 
-    <!--            />-->
-
-
-<!--    </FrameLayout>-->
+    </FrameLayout>
 
 
 

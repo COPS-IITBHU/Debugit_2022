@@ -1,12 +1,15 @@
 package com.yashacker.chatlin.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.yashacker.chatlin.ChatActivity
 import com.yashacker.chatlin.R
 import com.yashacker.chatlin.User
 import java.util.ArrayList
@@ -23,8 +26,18 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>):
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
 
-        val current = userList[position]
-        holder.textName.text =current.name
+        val currentUser = userList[position]
+        holder.textName.text =currentUser.name
+        holder.textEmail.text =currentUser.email
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context,ChatActivity::class.java)
+
+            //name of the user been clicked
+            intent.putExtra("name",currentUser.name)
+            intent.putExtra("uid",currentUser.uid)
+            context.startActivity(intent)
+        }
 
 
     }
@@ -35,6 +48,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>):
     }
     class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val textName = itemView.findViewById<TextView>(R.id.textName)
+        val textEmail = itemView.findViewById<TextView>(R.id.textEmail)
 
 
 

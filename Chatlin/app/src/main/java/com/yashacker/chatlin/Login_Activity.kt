@@ -7,6 +7,8 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 
 class Login_Activity : AppCompatActivity() {
@@ -35,6 +37,7 @@ class Login_Activity : AppCompatActivity() {
         btnlogin.setOnClickListener{
 
             credential_check()
+
         }
         textsignup.setOnClickListener{
             val intent = Intent(this@Login_Activity, SignUp_Activity::class.java)
@@ -51,7 +54,11 @@ class Login_Activity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
                     val intent = Intent(this@Login_Activity, MainActivity::class.java)
+                    finish()
+
                     startActivity(intent)
+
+
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right )
 
 
@@ -94,4 +101,5 @@ class Login_Activity : AppCompatActivity() {
             login(email, password)
         }
     }
+
 }

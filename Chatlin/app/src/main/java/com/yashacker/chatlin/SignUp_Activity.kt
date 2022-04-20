@@ -8,6 +8,8 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUp_Activity : AppCompatActivity() {
     private lateinit var signupbacktowelcome : ImageView
@@ -17,6 +19,7 @@ class SignUp_Activity : AppCompatActivity() {
     private lateinit var  editPassword : EditText
     private lateinit var btnsignup : Button
     private lateinit var mAuth : FirebaseAuth
+    private lateinit var mDbRef: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,15 +45,17 @@ class SignUp_Activity : AppCompatActivity() {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out )
         }
     }
-    private fun signUp(email: String, password: String){
+    private fun signUp(name: String, email: String, password: String){
         //logic for creating user
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "createUserWithEmail:success")
+                    addUserToDatabase(name,email,mAuth.currentUser?.uid!!)
 
                     // Sign in success, update UI with the signed-in user's information
                     val intent = Intent(this@SignUp_Activity, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right )
 
@@ -93,7 +98,19 @@ class SignUp_Activity : AppCompatActivity() {
             Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()
         ) {
 
-            signUp(email, password)
+            signUp(username, email, password)
         }
     }
+    private fun addUserToDatabase(name: String, email: String, uid: String){
+        mDbRef = FirebaseDatabase.getInstance().reference
+
+        mDbRef.child("user").child(uid).setValue(User(name,email,uid))
+
+
+    }
+
+
+
+
+
 }

@@ -6,7 +6,7 @@ const resourceSchema = new Schema({
         type: String,
         required: true
     }, 
-    from : {
+    from: {
         type: String,
         required: true
     }

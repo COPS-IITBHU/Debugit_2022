@@ -5,7 +5,7 @@ const resourceRouter = require("./routes/resourceRouter");
 const apiRouter = require("./routes/apiRouter");
 
 const app = express();
-const dbURI = "mongodb+srv://@cluster0.jgtvt.mongodb.net/dev0?retryWrites=true&w=majority";
+const dbURI = "mongodb+srv://debugit22:debugit22abhinav@cluster0.jgtvt.mongodb.net/dev0?retryWrites=true&w=majority";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })    
     .then(results => {
@@ -20,9 +20,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // setting important middleware
 app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: true }));
 app.use(express.static("static-src"));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
     console.log("Request details: ");
@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
     console.log("sending index.ejs as response...");
-    res.render("index");
+    res.render("index", { title: "Home Page of this website that is yet to be named" });
 });
 
 // '/all' will redirect to '/resources', which is a list of all the resources

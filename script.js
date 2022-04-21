@@ -78,17 +78,19 @@ function ValidReg() {
         return false;
     }
     // create account
+    else{
     const person = {
         Name: a.value,
         Mobile: c.value,
         Address: d.value,
         Password: e.value,
     }
-    x=a.value;
-    document.getElementById("nage").innerHTML = x;
+    // x=a.value;
+    // document.getElementById("nage").innerHTML = x;
     window.localStorage.setItem(b.value, JSON.stringify(person));
     openchart();
     alert("Account created successfully");
+    }
 }
 
 function login(){

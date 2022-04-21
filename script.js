@@ -1,3 +1,4 @@
+// Navbar show js
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 
@@ -11,6 +12,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+// Valid Registeration and Login
 function ValidReg() {
     let a = document.getElementById('name');
     let b = document.getElementById('email');
@@ -66,4 +68,127 @@ function ValidLog() {
         alert("Password incorrect as it has to be more than 6 char");
         return false;
     }
+}
+
+// Add row of Children when adding details
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var list5 = [];
+
+var n = 1;
+var x = 0;
+
+function AddRow() {
+
+    var AddRown = document.getElementById('show');
+    var NewRow = AddRown.insertRow(n);
+
+    list1[x] = document.getElementById("fname").value;
+    list2[x] = document.getElementById("lname").value;
+    list3[x] = document.getElementById("age").value;
+    list4[x] = document.getElementById("gender").value;
+    list5[x] = document.getElementById("health").value;
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+    var cel5 = NewRow.insertCell(4);
+
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = list4[x];
+    cel5.innerHTML = list5[x];
+    n++;
+    x++;
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach((input) => (input.value = ""));
+}
+
+// Validation of Add row and then add
+function Validation() {
+    let a = document.getElementById('fname');
+    let b = document.getElementById('lname');
+    let c = document.getElementById('age');
+    let d = document.getElementById('gender');
+    let e = document.getElementById('health');
+
+    let nameregex = /^[a-zA-Z]+$/;
+    let num = /^[0-9]+$/;
+
+    if (!nameregex.test(a.value)) {
+        alert("Enter valid Firstname");
+        return false;
+    }
+    if (!nameregex.test(b.value)) {
+        alert("Enter valid Lastname");
+        return false;
+    }
+    if (!num.test(c.value)) {
+        alert("Enter valid Age");
+        return false;
+    }
+    if (d.value == "") {
+        alert("Gender must be filled out");
+        return false;
+    }
+    if (e.value == "") {
+        alert("Health issues must be filled out.Fill None if NA");
+        return false;
+    }
+    AddRow();
+}
+
+// Book Appointment 
+var lis1 = [];
+var lis2 = [];
+var lis3 = [];
+var lis4 = [];
+
+var number = 1;
+var t = 0;
+
+function BookApo() {
+    var AddRown = document.getElementById('appos');
+    var NewRow = AddRown.insertRow(number);
+
+    lis1[x] = document.getElementById("name").value;
+    lis2[x] = document.getElementById("num").value;
+    lis3[x] = document.getElementById("reason").value;
+    lis4[x] = document.getElementById("date").value;
+
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+
+
+    cel1.innerHTML = lis4[x];
+    cel2.innerHTML = "Ram Sharma";
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = "Upcoming";
+    number++;
+    t++;
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach((input) => (input.value = ""));
+}
+
+//Validation of Book Appo then add
+function Valid() {
+	let a = document.getElementById('name');
+	let e = document.getElementById('reason');
+	let nameregex = /^[a-zA-Z]+$/;
+	if (!nameregex.test(a.value)) {
+		alert("Enter valid Name");
+		return false;
+	}
+	if (e.value == "") {
+		alert("Reason for Appointment must be filled out.");
+		return false;
+	}
+	BookApo();
 }

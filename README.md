@@ -1,10 +1,10 @@
 ## Debugit 2022 - Revenge of the Snake
 
 ## Introduction
-How hasn't played the infamous Snake Game?! This is an attempt to replicate the same classic "Nokia" phone Snake game, but with better customisations (as each player has his own asthetic choices) and a variety of never-seen-before boards that will challenge even the best of players.
+How hasn't played the infamous Snake Game?! This is an attempt to replicate the same classic "Nokia" phone Snake game, but with better customizations (as each player has his own asthetic choices) and a variety of never-seen-before boards that will challenge even the best of players.
 
 ## How to run the game?
-You can either run the game online at [Revenege of the Snake](deployment-link) or you can also clone this repository and then run index.html in your web browser. No need for any fancy installations!
+You can either run the game online at [Revenege of the Snake](https://eshaanagg.github.io/Debugit_2022/index.html) or you can also clone this repository and then run index.html in your web browser. No need for any fancy installations!
 
 ## Tech Stack Used
   - HTML to provide the skeleton for the web-page.
@@ -12,65 +12,31 @@ You can either run the game online at [Revenege of the Snake](deployment-link) o
   - Javascript to provide the brain.
   - Bootstrap to make the iterface prettier.
 
-## Here is a detailed step by step walkthrough if you don't know how to make a Debugit submission.
+## Features
 
-- Create a fork of this [repository](https://github.com/COPS-IITBHU/Debugit_2022)
- A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
-   1. Click on the fork icon in the repository that you might find at the top right corner.
+- The Game (Duhhh)
+   Use the Arrow keys or WASD keys to jump right into the game.
+- Customizations
+   - Play the game in 4 modes - Easy, Medium, Difficult and Impossible.
+   - Change the music playback settings.
+   - Boundaries can be treated as being `connected` or `standalone` to play similar, yet drastically different version of the same game.
+   - Change the layout of the board that you are playing on. By default you get the `Classic` square grid and the `Imperfect Diamond` grid. 
+- Create Your Own Grid
+   - Go to Game Layout option and choose the last card to be redirected to 
 
-   Demo:
-   ![](./lib/fork.png)
-
-   2. It will ask you what would you like to name the forked repository. By default they are named the same as the parent directory. Lets keep the name as it is.
-
-   Demo:
-   ![](./lib/fork_name.png)
-
-- Clone the repository that you forked
-  1. Find the link which you would need to clone and copy it.
-
-   Demo:
-   ![](./lib/clone_link.png)
-
-  2. Go to the directory in which you want to clone your repository and open the terminal.
-
-   Demo:
-   ![](./lib/open_terminal.png)
-
-  3. Run the `git clone` command in the terminal (in case of windows, git bash terminal) and append the link that you copied.
-     ```
-     git clone <repository_link>
-     ```
-
-     Demo:
-     ![](./lib/clone.png)
-
-  4. You will find that the repository is cloned in the directory.
-- Now you can open the directory in vs code and play with the code and complete your project. 
-- After completing the project, its time to push your code:
-  1. Open the vs code (or any other editor of your choice) terminal in the project folder. 
-  2. Create a new branch in which you want to push your code using the following code.
-     ```
-     git checkout -b <branch_name>
-     ```
-     You can name your branch whatever you like.
-
-     Demo:
-     ![](./lib/create_branch.png)
-
-  3. Check which branch are you on using the `git branch` command.
+  1. Check which branch are you on using the `git branch` command.
      ```
      git branch
      ```
-  4. The branch name with a `*` on it is the current branch. If it is different from the branch that you created, then switch to your branch using the `git checkout`
+  2. The branch name with a `*` on it is the current branch. If it is different from the branch that you created, then switch to your branch using the `git checkout`
      ```
      git checkout <branch_name>
      ```
-  5. You can check the status of the files using 
+  3. You can check the status of the files using 
      ```
      git status
      ```
-  6. Add (Stage) all the files you want to upload using the `git add` command.
+  4. Add (Stage) all the files you want to upload using the `git add` command.
     To add individual files run the following command:
      ```
      git add <filename>
@@ -84,7 +50,7 @@ You can either run the game online at [Revenege of the Snake](deployment-link) o
      Demo:
      ![](./lib/add_files.png)
 
-  6. Commmit your code.
+  5. Commmit your code.
      You can commit all your staged code (to the local git repository) using the `git commit` command
     Run the following command:
      ```
@@ -95,7 +61,7 @@ You can either run the game online at [Revenege of the Snake](deployment-link) o
      Demo:
      ![](./lib/commit.png)
 
-  7. Push your code.
+  6. Push your code.
      Push all of your commited code using the `git push` command.
     Run the following command:
      ```

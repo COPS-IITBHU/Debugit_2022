@@ -1,5 +1,6 @@
 ## Debugit 2022
 My DebugIt_2022 hackathon project.
+
 Contact Info:
 - Name: Priti Kumari
 - Roll No. : 21084021 
@@ -20,4 +21,4 @@ You can browse to the deployed link below or just download the code and execute 
   - Javascript
 
 ## Deployed at
-[ChildCare](https://debugit-2022-three.vercel.app/)
+It is hosted using the service Vercel and is available at the [ChildCare](https://debugit-2022-three.vercel.app/)

@@ -89,6 +89,7 @@ function login(){
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
+        setTimeout(openchart, 1000);
         alert("Successfully logged in");
         // // x=1;
         // // console.log(x);
@@ -98,7 +99,6 @@ function login(){
         // window.location.assign("http://127.0.0.1:5500/chart.html/");
         // location.href="http://127.0.0.1:5500/chart.html";
         
-        setTimeout(openchart, 1000);
     }
     else{
         alert("Your credintials are wrong");

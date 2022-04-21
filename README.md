@@ -21,3 +21,10 @@ This Application Has Following Features:
     -   Display Of News With Website of Original NEWS
     -   A Functional Drawer
     -   Beautiful And Attractive UI
+    
+    
+#############################
+Name: Shubham Jaiswal
+Email: shubham.jaiswal.ece21@itbhu.ac.in    
+Mobile/WhatsApp No: 9005508692
+############################

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@600&family=Montserrat:wght@100;400&display=swap');
+.card label{
+    font-size: medium;
+    text-decoration: underline;
+    color: rgb(197, 65, 87);
+    font-family: 'Anek Odia', sans-serif;
+}
+.card{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem 3rem 0.5rem 1rem;
+    font-weight: bolder;
+   
+}
+.card h4{
+    padding: -1rem 0rem;
+}
+.mapboxgl-popup-content {
+    border-top: 2rem solid rgb(170, 58, 58);
+    border-bottom: 2rem solid rgb(170, 58, 58);
+    border-radius: 0.6rem;
+}
+.username{
+    color: rgb(22, 244, 56);
+    font-weight: bolder;
+    
+}
+#selectRating {
+    width: 100%;
+   
+}
+.card form input{
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.card form button{
+    margin-top: 1rem;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+     background-image: linear-gradient(to right, #fa7b6a, #eb1717);
+    padding: 0.4rem 0.7rem;
+    border: none;
+    border-radius: 1rem;
+    opacity: 0.6;
+    color: white;
+    cursor: pointer;
+}
+.card form button:hover{
+    opacity: 1;
+}

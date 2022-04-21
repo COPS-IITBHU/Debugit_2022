@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/textName"
+            android:background="@drawable/background_user"
             android:layout_alignBottom="@+id/textEmail"
             android:layout_marginBottom="-1dp" />
 
@@ -20,10 +21,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="18dp"
 
+
             android:text="Abhay"
 
 
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -43,5 +45,5 @@
             android:textSize="13sp" />
 
 
-        <!--        />-->
+
 </RelativeLayout>

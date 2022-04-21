@@ -89,7 +89,8 @@ function login(){
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
-        setTimeout(openchart, 1000);
+        // setTimeout(openchart, 1000);
+        openchart();
         alert("Successfully logged in");
         // // x=1;
         // // console.log(x);
@@ -97,8 +98,7 @@ function login(){
         // window.location.replace("http://127.0.0.1:5500/chart.html/");
         // window.location.href="./chart.html";
         // window.location.assign("http://127.0.0.1:5500/chart.html/");
-        // location.href="http://127.0.0.1:5500/chart.html";
-        
+        // location.href="http://127.0.0.1:5500/chart.html"; 
     }
     else{
         alert("Your credintials are wrong");

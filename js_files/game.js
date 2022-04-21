@@ -44,6 +44,14 @@ function updateGameVariables() {
     moveSnake();
 }
 
+function displayGameOverModal(){
+    gameOverModal.style.display = "block";
+    var ele = document.getElementById("displayScore");
+    ele.innerHTML = `
+    You scored a whoopinngggg &nbsp; <strong class="scoreDisplay">` + score + `</strong> &nbsp;   points!`
+    ;
+}
+
 function gameOver() {
     if (playGameMusic) {
         gameOverSound.play();
@@ -51,9 +59,9 @@ function gameOver() {
     }
 
     moveDirection = { x: 0, y: 0 };
-
-    // TODO : Implement a better game over scenario 
-    alert("Game Over.")
+    
+    displayGameOverModal();
+    
 
     renderSpeed = renderSpeedIntial;
     score = 0;

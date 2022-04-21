@@ -21,10 +21,10 @@ var pointsSpeed = 10;
 var pointsIncrement = 50;
 
 var boardsString = localStorage.getItem("gameBoardsList")
-if (boardsString){
+if (boardsString) {
     gameBoardsList = JSON.parse(boardsString);
 }
-else{
+else {
     localStorage.setItem("gameBoardsList", JSON.stringify(gameList));
     gameBoardsList = gameList;
 }
@@ -58,3 +58,19 @@ function main(ctime) {
 // Main Logic for the Program
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', handleInput, false);
+
+var gameOverModal = document.getElementById("myModal");
+var gameOverSpan = document.getElementsByClassName("modalClose")[0];
+
+gameOverSpan.onclick = function () {
+    gameOverModal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == gameOverModal) {
+        gameOverModal.style.display = "none";
+    }
+}
+
+// For testing purposes
+// displayGameOverModal();

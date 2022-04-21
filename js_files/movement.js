@@ -33,8 +33,33 @@ function handleInput(key) {
                 moveDirection.x = 1;
                 moveDirection.y = 0;
                 break;
+            
+            case "w":
+            // console.log("Up");
+            moveDirection.x = 0;
+            moveDirection.y = -1;
+                        break;
+
+            case "s":
+                // console.log("Down");       
+                moveDirection.x = 0;
+                moveDirection.y = 1;
+                break;
+
+            case "a":
+                // console.log("Left");
+                moveDirection.x = -1;
+                moveDirection.y = 0;
+                break;
+
+            case "d":
+                // console.log("Right");
+                moveDirection.x = 1;
+                moveDirection.y = 0;
+                break;
 
             default:
+                // console.log(key);
                 break
         }
 

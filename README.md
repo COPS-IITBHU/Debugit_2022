@@ -1,10 +1,15 @@
 Debugit 2022
+
 Name: Anika Singh
+
 Branch: Civil
+
 Roll No: 21065015
+
 Contact Info: anika.singh.civ21@itbhu.ac.in
 
 Project Description
+
 This is Anika Singh's Debug It' 22 project. Ladder is a website developed by me which basicaly aims to nurutre and provide a way for ideas by newbies/beginners.
 This project is made using HTML, CSS and JS.
 
@@ -15,13 +20,18 @@ registered with the site can also fund your idea if they find it good enough. Ap
 
 
 How to run the code?
+
 Download the code and run it , no special installation required.
 
 
 Tech Stack used
+
 HTML
+
 CSS
+
 Javascript
 
 Deployed at
+
 Vercel

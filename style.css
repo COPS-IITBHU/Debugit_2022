@@ -399,7 +399,7 @@ textarea {
   height: 100px;
 }
 section .form-box form #register-btn,
-#login-btn,
+#login-btn,#registernew-btn,
 #contact-btn {
   font-family: Muli;
   font-size: 20px;
@@ -409,13 +409,13 @@ section .form-box form #register-btn,
   cursor: pointer;
   border-radius: 3px;
 }
-section .form-box form #login-btn {
+section .form-box form #login-btn,#registernew-btn {
   background: #007bff;
 }
 section .form-box form #register-btn {
   background: #007bff;
 }
-section .form-box form #login-btn:hover {
+section .form-box form #login-btn:hover,#registernew-btn:hover  {
   background: blue;
 }
 section .form-box form #register-btn:hover {

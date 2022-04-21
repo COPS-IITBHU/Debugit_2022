@@ -12,6 +12,25 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+// Chart opens when logged in
+// why not working
+var x=0;
+// function chartshow(){
+//     if(x==0){
+//        alert("You must be logged in to use this");
+//        return false;
+//     }
+//     if(x==1){
+//        return true;
+//     }
+// }
+
+// stop chart from opening
+document.getElementById("dont").addEventListener("click", function(event){
+    event.preventDefault()
+    alert("You need to login to access this page");
+  });
+
 // Valid Registeration and Login
 function ValidReg() {
     let a = document.getElementById('name');
@@ -50,6 +69,40 @@ function ValidReg() {
         alert("Password is not same in both columns");
         return false;
     }
+    // create account
+    const person = {
+        Name: a.value,
+        Mobile: c.value,
+        Address: d.value,
+        Password: e.value,
+    }
+    
+    window.localStorage.setItem(b.value, JSON.stringify(person));
+    alert("Account created successfully");
+}
+// open only after login
+function openchart() {
+    location.replace("https://debugit-2022-three.vercel.app/chart.html");
+  }
+function login(){
+    let b = document.getElementById('email');
+    let e = document.getElementById('password');
+    let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
+    if(e.value==z){
+        alert("Successfully logged in");
+        // // x=1;
+        // // console.log(x);
+        // // return false;
+        // window.location.replace("http://127.0.0.1:5500/chart.html/");
+        // window.location.href="./chart.html";
+        // window.location.assign("http://127.0.0.1:5500/chart.html/");
+        // location.href="http://127.0.0.1:5500/chart.html";
+        
+        setTimeout(openchart, 1000);
+    }
+    else{
+        alert("Your credintials are wrong");
+    }
 }
 function ValidLog() {
 
@@ -68,6 +121,8 @@ function ValidLog() {
         alert("Password incorrect as it has to be more than 6 char");
         return false;
     }
+    // check if details available or not
+    login();
 }
 
 // Add row of Children when adding details
@@ -76,6 +131,7 @@ var list2 = [];
 var list3 = [];
 var list4 = [];
 var list5 = [];
+var list6 = [];
 
 var n = 1;
 var x = 0;
@@ -90,18 +146,21 @@ function AddRow() {
     list3[x] = document.getElementById("age").value;
     list4[x] = document.getElementById("gender").value;
     list5[x] = document.getElementById("health").value;
+    list6[x] = "Details";
 
     var cel1 = NewRow.insertCell(0);
     var cel2 = NewRow.insertCell(1);
     var cel3 = NewRow.insertCell(2);
     var cel4 = NewRow.insertCell(3);
     var cel5 = NewRow.insertCell(4);
+    var cel6 = NewRow.insertCell(5);
 
     cel1.innerHTML = list1[x];
     cel2.innerHTML = list2[x];
     cel3.innerHTML = list3[x];
     cel4.innerHTML = list4[x];
     cel5.innerHTML = list5[x];
+    cel6.innerHTML = list6[x];
     n++;
     x++;
     let inputs = document.querySelectorAll("input");

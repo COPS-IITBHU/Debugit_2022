@@ -35,10 +35,10 @@ function handleInput(key) {
                 break;
             
             case "w":
-            // console.log("Up");
-            moveDirection.x = 0;
-            moveDirection.y = -1;
-                        break;
+                // console.log("Up");
+                moveDirection.x = 0;
+                moveDirection.y = -1;
+                break;
 
             case "s":
                 // console.log("Down");       

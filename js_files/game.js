@@ -48,25 +48,25 @@ function displayGameOverModal(){
     gameOverModal.style.display = "block";
     var ele = document.getElementById("displayScore");
     ele.innerHTML = `
-    You scored a whoopinngggg &nbsp; <strong class="scoreDisplay">` + score + `</strong> &nbsp;   points!`
+    You scored a whoopinngggg &nbsp; <strong class="scoreDisplay">` + score + `</strong> &nbsp; points!`
     ;
 }
 
 function gameOver() {
     if (playGameMusic) {
         gameOverSound.play();
-        musicSound.pause();
     }
+    musicSound.pause();
 
     moveDirection = { x: 0, y: 0 };
     
     displayGameOverModal();
-    
 
     renderSpeed = renderSpeedIntial;
     score = 0;
+    pointsIncrement = 50;
     var points = document.getElementById("points");
-    points.innerHTML = 0;
+    points.innerHTML = "0";
     snake = [{ ...getRandomCellInGrid() }];
     if (playGameMusic) {
         musicSound.play();
@@ -218,10 +218,26 @@ function displayFood() {
 
 }
 
+
+function addOnAnimate(toAdd){
+    var ele = document.getElementById("addition");
+    ele.innerHTML = "+" + toAdd;
+    ele.classList.add("animating");
+
+    var listener = ele.addEventListener("animationend", function (){
+        ele.classList.remove("animating");
+    })
+
+    ele.removeEventListener("animationend", listener);
+    // ele.innerHTML = "";
+}
+
 function incrementScore(toAdd) {
 
     ele = document.getElementById("points");
     endNum = score + toAdd;
+
+    addOnAnimate(toAdd);
 
     animateRec(score, ele, endNum - 1);
     score += toAdd;

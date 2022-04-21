@@ -12,8 +12,9 @@
 
 A basic news app which uses newsapi to fetch news have feature 
 to catagorise news also it shows Top headline from different country
-
+##
 This Application Has Following Features:
+##
     -   Search
     -   Catagorise News On Basis Of 
         -   Country  
@@ -23,8 +24,10 @@ This Application Has Following Features:
     -   Beautiful And Attractive UI
     
     
-#############################
+##
 Name: Shubham Jaiswal
-Email: shubham.jaiswal.ece21@itbhu.ac.in    
+
+Email: shubham.jaiswal.ece21@itbhu.ac.in 
+
 Mobile/WhatsApp No: 9005508692
-############################
+

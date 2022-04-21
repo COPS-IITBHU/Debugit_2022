@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="debug.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
 <body>
     <section id="header">
        <a href="#"><img src="img/ladder.png" class="logo" alt ="" ></a>
@@ -19,14 +21,16 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
 
+
     </div>
+    
     </section>
     <section id="main">
-      <div class="info">
+      <div class="info" data-aos="zoom-in">
       <h2>Ladder</h2>
       <h4>Gateway for Beginner Start up Ideas</h4>
-      <p> Thought of an innovative Idea? Participated in a competition, made a ppt, couldn’t qualify <br>for further rounds, dropped the golden Idea? <br>Don’t worry we at Ladder are here to help you out.
-        Ladder is created with the aim to support<br> innovative and creative ideas for start-ups developed by beginners.<br> Ladder is where one can upload their ideas no matter what their scalability and requirements are. <br>The uploaded ideas are rated by viewers of this site and professional companies registered<br> with the site can also fund your idea if they find it good enough. Apart from this free<br> mentorship can also be provided by people who have worked on that type of idea before<br> to help the beginners grow and make their way out.
+      <p> Thought of an innovative Idea? But couldn't give the golden Idea wings due to lack of guidance or fundings?<br>Don’t worry we at Ladder are here to help you out.
+        Ladder is created with the aim to support<br> innovative and creative ideas for start-ups developed by beginners. Ladder is where one can upload their<br> ideas no matter what their scalability and requirements are. We provide the feature of free<br> mentorship by people who have worked on that type of idea before to help the beginners grow and<br> make their way out.
         </p>
       <a href="https://accounts.google.com/accountchooser/signinchooser?flowName=GlifWebSignIn&flowEntry=AccountChooser">
       <button> Sign in</button>
@@ -37,19 +41,27 @@
 
     </section>
     <section id="feature" class="section-p1">
-      <div class="fe-box">
-        <img id="mentor" src="img/mentorship.jpg" alt="">
+      <div class="fe-box" data-aos="fade-right"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine">
+        <img id="mentor" src="img/mentorship.jpg"  alt="">
         <h6>Free mentorship</h6>
       </div>
-      <div class="fe-box">
+      <div class="fe-box" data-aos="fade-right"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine">
         <img id="bba" src="img/bba.jpg" alt="">
         <h6>Proffesional hiring</h6>
       </div>
-      <div class="fe-box">
+      <div class="fe-box" data-aos="fade-left"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine">
         <img id="ide" src="img/ideeea.jpg" alt="">
         <h6>Innovative Ideas</h6>
       </div>
-      <div class="fe-box">
+      <div class="fe-box" data-aos="fade-left"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-sine">
         <img id="friends" src="img/friends.jpg" alt="">
         <h6>Beginner Friendly</h6>
       </div>
@@ -96,29 +108,26 @@
         </div>
           
       
-        <div class="pro" onclick="window.location.href='sideaskill.html';">
-          <img src="img/skill4.jpg" alt="">
+        <div class="pro" onclick="window.location.href='sideafood.html';">
+          <img src="img/food.jpg" alt="">
           <div class="petcare">
-            <span>Share your skill with others</span>
-            <h3> Skill Share</h3>
+            <span>Smart plate to reduce food waste</span>
+            <h3>Smart Plate</h3>
             <div class="star">
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
+            
               </div>
-              <h4> 5 star</h4>
+              <h4> 4 star</h4>
   
             </div>
             
           </div>
-       
-      
-      </div>
     </section>
     <section id="banner" >
-      <div class="ban">
+      <div class="ban" data-aos="zoom-out">
       <h1>Stuck in confusion?</h1>
       <h3>Need great ideas for you company?</h3>
       <p> Register yourself as a company to get brilliant ideas out of curious minds</p>
@@ -128,10 +137,12 @@
 
     </section>
     <section id="whyus" class="section-m1">
+    <div class="hehe">
       <h1>ABOUT US</h1>
       <h2> Why should you work with us?</h2>
-      <p>chwevdjgdkw.h kdhkjgfjegferjgfkjrgfjkgch</p><br>gdhfhfh</p><br>jfgdg</p>
-       
+      <p>We are first year average engineering students studying at IIT BHU who created this site called Ladder.<br> Ladder is created with the aim to support innovative and creative ideas for start-ups developed by beginners.<br> The problem faced initially by beginners is that though their idea is good but is rejected at many competitions/<br>hackathons due to high competition. To solve this problem this site is made where one can upload their ideas no matter<br> what their scalability and requirements are. The uploaded ideas are rated by viewers of this and professional companies <br>registered with the site can also fund your idea if they find it good enough. Apart from this free mentorship can also be<br> provided by people who have worked on that type of idea before to help the beginners grow and make their way out.</p>
+       </div>
+       <img src="img/bulb.jpg" alt="">
     
      
     </section>
@@ -191,5 +202,14 @@
       </div>
     </section>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:250,
+        duration:600,
+      });
+      
+  
+    </script>
 </body>
 </html>

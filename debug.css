@@ -1,7 +1,8 @@
 /* header start*/
 body{ margin:0;}
 #header{
-
+position: sticky; top:0;
+z-index:1;
 display:flex;
 align-items:center;
 justify-content:space-beween ;
@@ -52,7 +53,7 @@ left: 0;
     }
 /*homepage*/
 #main{
-    background-image:url("img/start.jpg");
+    background-image:url("img/strt.jpg");
     height: 80vh ;
     width: 89%;
     background-size: cover;
@@ -65,7 +66,7 @@ left: 0;
     
 }
 #main .info{
-    background-color: rgba(0, 0, 0, 0.396);
+    background-color: rgba(0, 0, 0, 0.67);
     padding-left: 30px;
     padding-bottom: 30px;
     padding-right:30px;
@@ -74,6 +75,12 @@ left: 0;
    font-size:30px;
     color:#AFD275;
    
+}
+#prodetails .thumbnail:hover{
+    transform:scale(2.75) ;
+}
+#prodetails .thumbnail1:hover{
+    transform:scale(1.2) ;
 }
 
 #main h2{
@@ -87,9 +94,28 @@ left: 0;
 #main button{
     background-color:#AFD275;
     color:white;
-    padding: 14px 80px 14px 65px;
-    font-size: 20px;
+    padding: 7px 40px 7px 30px;
+    font-size: 15px;
+    cursor: pointer;
+   
+    border-radius: 5px;
 }
+#main button:hover{
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+
+#prodetails .single-pro-details button{
+    background-color:#AFD275;
+    color:white;
+    padding: 7px 10px 7px 10px;
+    font-size: 15px;
+    cursor: pointer;
+   
+    border-radius: 5px;
+}
+#prodetails .single-pro-details button:hover{
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 #mentor{
     width:190px;
@@ -244,17 +270,29 @@ left: 0;
     border-radius: 20px;
 }
 #idea1 .pro span
-{  color:#ff6600;
+{  color:#078602ec;
+    font-size: 18px;
 
 }
-  
+  #blog-detail .blog-box h3{
+      font-style: normal;
+      font-family: Abril Fatface;
+  }
 
 #whyus{
     background-color:white;
     padding-left: 20px;
+    text-align: left;
+    display:flex;
+    flex-direction: row;
+}
+#whyus .hehe{
+    padding-left: 20px;
+    padding-right:400px;
 }
 #idea1 .pro i{
     color:#F6BE00;
+  
 }
 .section-m1{
     margin: 40px 0;
@@ -390,7 +428,7 @@ left: 0;
       }
      #footer .col {
         display: flex;
-       background-color:#a0d5fe;
+       background-color:#F2EDD7FF;
         justify-content:space-between;
         flex-direction: row;
         padding-right: 20px;
@@ -411,7 +449,7 @@ left: 0;
         padding: 20px 20px 20px 20px;
       }
       #footer h4{
-          color:rgb(0, 7, 134);
+          color:#6e5a4e;
           font-size: 18px;
       }
       #footer .acha{
@@ -448,13 +486,19 @@ left: 0;
                flex-direction: column;
                align-items:flex-start;
                justify-content: flex-start;
-               position:fixed;
-           
+               position:fixed;           
            top:0;
-           right: 0px;
+           right: 160px;
            height:100vh;
-           width: 300px;
-           background-color: white
+           width: 150px;
+           background-color: white;
+           box-shadow: 0 40px 60px  rgba(0,0,0,0.1);
+           padding: 80px 0 0 10px;
+           
+           
+           }
+           #navbar li{
+               margin-bottom:25px ;
            }
        }
        /*shop page*/

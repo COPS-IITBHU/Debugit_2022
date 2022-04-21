@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="debug.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
 <body>
     <section id="header">
         <img src="img/ladder.png" class="logo" alt ="" ></a>
@@ -22,10 +24,11 @@
      </div>
      </section>
      <section id="page">
+       <div class="yuhi" data-aos="zoom-in">
         <h2>#Explore Now</h2>
        
         <p> Mind blowing ideas from Newbies </p>
-       
+     </div>
         
   
       </section>
@@ -82,9 +85,9 @@
             <i class="fa fa-star checked"></i>
             <i class="fa fa-star checked"></i>
             <i class="fa fa-star checked"></i>
-            <i class="fa fa-star checked"></i>
+            
             </div>
-            <h4> 5 star</h4>
+            <h4> 4 star</h4>
 
           </div>
           
@@ -99,7 +102,7 @@
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
+              
               </div>
               <h4> 4 star</h4>
   
@@ -116,9 +119,9 @@
                 <i class="fa fa-star checked"></i>
                 <i class="fa fa-star checked"></i>
                 <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
+              
                 </div>
-                <h4> 5 star</h4>
+                <h4> 4 star</h4>
     
               </div>
               
@@ -132,10 +135,9 @@
                   <i class="fa fa-star checked"></i>
                   <i class="fa fa-star checked"></i>
                   <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
+                 
                   </div>
-                  <h4> 5 star</h4>
+                  <h4> 3 star</h4>
       
                 </div>
                 
@@ -150,7 +152,7 @@
     </section>
     
       <section id="blog-detail" class="section-p1">
-        <div class="blog-box">
+        <div  class="blog-box" data-aos="fade-right">
           <div class="blog1andar">
        <h3> Start Up India</h3>
        <p>In 2012, If you told me that in the coming year, I would be elbow deep in garbage, I wouldn’t have believed you.
@@ -163,7 +165,7 @@
         <img id="joote" src="img/blog1.jpg" alt="">
         
          </div>
-        <div class="pitchright">
+        <div class="pitchright" data-aos="fade-left">
           <div class="blog2andar">
         <h3>Pitch It Right</h3>
        <p>Entrepreneurs often have to tap unorthodox sources of money to get their new business idea from the conceptual stage to actualization. In fact, launching a startup may feel like entering a distinct subculture with its own rules and logic. Within that subculture, there are a number of different ways to get your foot in the door for financing.</p>
@@ -173,7 +175,7 @@
        
        
        </div>
-        <div class="innovative">
+        <div class="innovative" data-aos="fade-right">
           <div class="blog3andar">
           <h3> Innnovative Ideas</h3>
           <p>Want to create a startup company? Our guides will help you come up with the best startup ideas, and we’ll share plenty of tools and resources to help you reach success. We also recommend checking out our articles on startups, entrepreneurs, and how to start a startup.</p>
@@ -242,5 +244,14 @@
         </div>
       </section>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:150,
+      duration:500,
+    });
+    
+
+  </script>
 </body>
 </html>

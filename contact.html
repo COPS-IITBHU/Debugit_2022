@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="debug.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <section id="header">
@@ -77,19 +78,27 @@
      
       
       <section id="feature" class="section-p1">
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
           <img id="mentor" src="img/mentorship.jpg" alt="">
           <h6>Free mentorship</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
           <img id="bba" src="img/bba.jpg" alt="">
           <h6>Proffesional hiring</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box" data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
           <img id="ide" src="img/ideeea.jpg" alt="">
           <h6>Innovative Ideas</h6>
         </div>
-        <div class="fe-box">
+        <div class="fe-box"  data-aos="fade-left"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine">
           <img id="friends" src="img/friends.jpg" alt="">
           <h6>Beginner Friendly</h6>
         </div>
@@ -154,5 +163,12 @@
         </div>
       </section>
     <script src="script.js"></script>
+    <script>
+      AOS.init({
+        
+      });
+      
+  
+    </script>
 </body>
 </html>

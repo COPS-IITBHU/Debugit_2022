@@ -1,9 +1,13 @@
+body {
+    background-color: #262626;
+}
+
 .box {
-    background-color: orangered;
+    background-color: #262626;
 }
 
 #header {
-    background-color: orangered;
+    background-color: #262626;
 }
 
 .head {
@@ -13,9 +17,14 @@
     padding-top: 10px;
     font-size: 35px;
     font-weight: bold;
-    background-color: violet;
-    border: black solid 2px;
+    background-color: #262626;
+    border: #262626 solid 2px;
     border-radius: 10px;
+    color: orangered;
+}
+
+hr {
+    background-color: white;
 }
 
 .box {
@@ -30,7 +39,7 @@
     height: 200px;
     margin: 20px;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: orange;
     border: solid black 3px;
     border-radius: 50px;
     font-size: 50;

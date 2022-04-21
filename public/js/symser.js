@@ -14,9 +14,9 @@ document.getElementById('mm').addEventListener('click', show2)
 document.getElementById('nn').addEventListener('click', show2)
 document.getElementById('oo').addEventListener('click', show2)
 document.getElementById('pp').addEventListener('click', show2)
-let m = "You are at high risk!Contact doctor and hospital immediately"
-let n = "You are at low risk"
-let p = "You are at medium risk.Stay with touch in Doctor"
+let m = "You are at high risk!You should prefer to stay in direct monitoring of doctor"
+let n = "You are at low risk.Follow the prescription given by doctor and monitor yourself."
+let p = "You are at medium risk.Stay with touch in Doctor directly and follow prescription."
 
 function show0() {
     document.getElementById('drake').innerHTML = n;

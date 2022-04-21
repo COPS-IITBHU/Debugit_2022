@@ -1,3 +1,12 @@
+body {
+    background-color: #262626;
+    color: white;
+}
+
+hr {
+    background-color: white;
+}
+
 .img img {
     width: 100%;
 }

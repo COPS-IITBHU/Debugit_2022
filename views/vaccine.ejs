@@ -1,70 +1,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/vaccine.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Vaccine</title>
+    <%-include('navbar')%>
+        <hr>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/vaccine.css">
+        <!-- CSS only -->
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+        <title>Vaccination</title>
 </head>
 
 <body>
-    <%-include('navbar')%>
 
-        <h1 class="heading">Vaccination</h1>
-        <img src="./img/covidvaccine.jpeg" alt="">
-        <div class="imp">
-            <h2>Why getting Vaccinated is important?</h2>
-            <h4>Once you are vaccinated, your body is much better prepared to shield off more viruses by making your immune system stronger. At the same time, when you are protecting yourself, you are also protecting those around you.</h4>
+    <h1 class="heading">Vaccination</h1>
+    <img src="./img/covidvaccine.jpeg" alt="">
+    <div class="imp">
+        <h2>Why getting Vaccinated is important?</h2>
+        <h4>Once you are vaccinated, your body is much better prepared to shield off more viruses by making your immune system stronger. At the same time, when you are protecting yourself, you are also protecting those around you.</h4>
+    </div>
+    <div class="che">
+        <h3>Check if you can get vaccinated by clicking on your age group</h3>
+        <div class="aww">
+            <button class="btn btn-info" id="yes">Above 12 years</button>
+            <button class="btn btn-info" id="no">Below 12 years</button>
         </div>
-        <div class="che">
-            <h3>Check if you can get vaccinated by clicking on your age group</h3>
-            <div class="aww">
-                <button class="btn btn-info" id="yes">Above 12 years</button>
-                <button class="btn btn-info" id="no">Below 12 years</button>
-            </div>
-            <div class="cc" id="cf"></div>
+        <div class="cc" id="cf"></div>
+    </div>
+    <div class="chan">
+        <h3>Do check out CoWIN Portal of Government Of India</h3>
+        <div class="wow">
+            cowin.gov.in Portal is on of the Government of India`s web portal, which was launched on 16 January 2021 to provide the SARS-CoV-2 vaccination registration, using this portal an individual can`t only takes an appointment for vaccine, but he / she can
+            use this portal to download vaccine certificate make correction in vaccination certificate and many more, cowin.gov.in Portal provides various of services to indian citizens.Moreover it is available in many languages.
         </div>
-        <div class="chan">
-            <h3>Do check out CoWIN Portal of Government Of India</h3>
-            <div class="wow">
-                cowin.gov.in Portal is on of the Government of India`s web portal, which was launched on 16 January 2021 to provide the SARS-CoV-2 vaccination registration, using this portal an individual can`t only takes an appointment for vaccine, but he / she can
-                use this portal to download vaccine certificate make correction in vaccination certificate and many more, cowin.gov.in Portal provides various of services to indian citizens.Moreover it is available in many languages.
-            </div>
-            <a class="btn btn-warning" id="nota" href="https://www.cowin.gov.in/" target="blank">Take me to CoWIN Portal</a>
+        <a class="btn btn-warning" id="nota" href="https://www.cowin.gov.in/" target="blank">Take me to CoWIN Portal</a>
+    </div>
+    <div class="vaccines">
+        <h2 class="ki">Steps to get Vaccinated</h2>
+        <div class="xo">
+            <h3>Step-1</h3>
+            Register yourself on CoWIN portal or offline centre for vaccination.
         </div>
-        <div class="vaccines">
-            <h2 class="ki">Steps to get Vaccinated</h2>
-            <div class="xo">
-                <h3>Step-1</h3>
-                Register yourself on CoWIN portal or offline centre for vaccination.
-            </div>
-            <div class="xo">
-                <h3>Step-2</h3>
-                Vaccination details would be sent to your registered mobile number.
-            </div>
-            <div class="xo">
-                <h3>Step-3</h3>
-                Vaccine would be given
-            </div>
-            <div class="xo">
-                <h3>Step-4</h3>
-                Once the vaccine is administered, the beneficiary will be asked to wait in the “observation area” for 30 minutes to keep a check on any kind of minor to major side-effects.
-            </div>
-            <div class="xo">
-                <h3>Step-5</h3>
-                As specified in the SMS received after the first dose of vaccine, the beneficiaries will have to come for the second dose on the due date to ensure complete protection against COVID-19.
-            </div>
-            <div class="xo">
-                <h3>Step-6</h3>
-                Get booster dose when you are eleigible
-            </div>
+        <div class="xo">
+            <h3>Step-2</h3>
+            Vaccination details would be sent to your registered mobile number.
         </div>
-        <script src="./js/vaccine.js"></script>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="xo">
+            <h3>Step-3</h3>
+            Vaccine would be given
+        </div>
+        <div class="xo">
+            <h3>Step-4</h3>
+            Once the vaccine is administered, the beneficiary will be asked to wait in the “observation area” for 30 minutes to keep a check on any kind of minor to major side-effects.
+        </div>
+        <div class="xo">
+            <h3>Step-5</h3>
+            As specified in the SMS received after the first dose of vaccine, the beneficiaries will have to come for the second dose on the due date to ensure complete protection against COVID-19.
+        </div>
+        <div class="xo">
+            <h3>Step-6</h3>
+            Get booster dose when you are eleigible
+        </div>
+    </div>
+    <script src="./js/vaccine.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
 </body>
 
 </html>

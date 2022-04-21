@@ -1,3 +1,7 @@
+body {
+    background-color: #262626;
+}
+
 .headi {
     width: 100%;
     text-align: center;
@@ -17,7 +21,7 @@
     height: auto;
     padding-top: 10px;
     font-size: 25px;
-    color: orangered;
+    color: brown;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -31,7 +35,7 @@
     background-color: lightskyblue;
     border: black solid 2px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .x {
@@ -56,4 +60,27 @@
     color: orangered;
     font-weight: bold;
     margin: 10px 0;
+}
+
+.fff {
+    text-align: center;
+}
+
+.end {
+    color: brown;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    margin: 10px;
+}
+
+.html {
+    background-color: #262626;
+}
+
+hr {
+    background-color: white;
 }

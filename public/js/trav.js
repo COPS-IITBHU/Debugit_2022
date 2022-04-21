@@ -56,6 +56,8 @@ function change1() {
 }
 
 function change2() {
-    kkr = kkr + 1;
+    if (kkr < 193) {
+        kkr = kkr + 1;
+    }
     amy2()
 }

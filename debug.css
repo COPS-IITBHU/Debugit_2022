@@ -418,6 +418,9 @@ left: 0;
         text-decoration: none;
       
       }
+     body{
+         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
      
             
       .fa-facebook:hover {

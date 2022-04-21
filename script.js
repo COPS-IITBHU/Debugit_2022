@@ -37,7 +37,7 @@ function openchart() {
   }
 
 // trying to change orphoange name to right info
-var x= "XYZ";
+// var x= "XYZ";
 // console.log(x);
 
 // Valid Registeration and Login
@@ -88,8 +88,8 @@ function ValidReg() {
     // x=a.value;
     // document.getElementById("nage").innerHTML = x;
     window.localStorage.setItem(b.value, JSON.stringify(person));
-    openchart();
-    alert("Account created successfully");
+    // openchart();
+    alert("Account created successfully.Now go to login");
     }
 }
 

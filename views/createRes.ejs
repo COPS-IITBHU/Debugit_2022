@@ -3,20 +3,22 @@
 
 <%- include("./partials/head.ejs") %> 
 
-<body>
-    <header class="flex justify-center align-items text-3xl p-8"> Create a New Resource :) </header>
+<body class="bg-[url('/img/bg.png')]">
+    <header class="flex justify-center align-items text-3xl p-5 mb-2 backdrop-blur-md bg-white/40 "> Create a New Resource :) </header>
 
     <div class="flex min-h-screen">
         <%- include("./partials/nav.ejs") %>
 
-        <form action="" id="create-res">
-            <input type="text" placeholder="title" id="create-res-title" maxlength="80" required>
-            <textarea type="text" name="" id="create-res-about" placeholder="About the item" maxlength="500" required>
-            </textarea>
-            <input type="Submit">
+        <form action="" id="create-res" class="grow flex flex-col gap-12 p-8 mr-8 max-h-96 backdrop-blur-md bg-white/30 rounded-lg">
+            <input class="focus:ring-2 focus:ring-cyan-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-6 ring-1 ring-slate-200 shadow-sm" type="text" placeholder="title" id="create-res-title" maxlength="80" required>
+            <textarea type="text" name="" id="create-res-about" placeholder="About the item" maxlength="500" required class="focus:ring-2 focus:ring-cyan-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-6 ring-1 ring-slate-200 shadow-sm"></textarea>
+            <input type="Submit" class="w-20 align-items bg-pink-400 hover:bg-pink-300 p-2 rounded-lg">
         </form>
+
     </div>
 
     <script src="/createRes.js"></script>
 </body>
 </html>
+
+<input class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"

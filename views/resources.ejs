@@ -3,15 +3,23 @@
 
 <%- include("./partials/head.ejs") %> 
 
-<body>
-    <header class="flex justify-center align-items text-3xl p-8"> All resources </header>
+<body class="bg-[url('/img/bg.png')]">
+    <header class="flex justify-center align-items text-3xl p-5 mb-2 backdrop-blur-md bg-white/40 "> All resources </header>
 
-    <%- include("./partials/nav.ejs") %>
+    <div class="flex min-h-screen">
+        <%- include("./partials/nav.ejs") %>
 
-    <% for ( let i = 0; i < resources.length; i++ ) { %>
-        <h3> <%= resources[i].title %>  </h3>
-        <p> <%= resources[i].from %>  </p>
-        <p> About : <%= resources[i].about %>  </p>
-    <% } %>
+        <div class="grow flex flex-col gap-12 p-8 mr-8 backdrop-blur-md bg-white/30 rounded-lg">
+            <% for ( let i = 0; i < resources.length; i++ ) { %>
+                <div class="bg-pink-100 p-4 rounded-lg">
+                    <h3 class="text-center underline underline-offset-4 text-xl"> <%= resources[i].title %>  </h3>
+                    <br>
+                    <p> From: <span class="text-center"> <%= resources[i].from %> </span> </p>
+                    <br>
+                    <p class="bg-gradient-to-r from-purple-300 to-pink-300 p-4 rounded-md"><%= resources[i].about %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shuddha_samachar/widgets/drawer.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -43,12 +44,14 @@ class _ArticalPageState extends State<ArticalPage> {
             ],),
 
         ),
-      body: _loading?LinearProgressIndicator():Container(
+      body: _loading?const LinearProgressIndicator():Container(
         child: WebView(
+          
           initialUrl: widget.articalUrl,
           // onWebViewCreated: completer.complete(),
         ),
       ),
+      drawer: const MyDrawer(),
     )
       
     ;

@@ -5,7 +5,7 @@
 // import 'package:shuddh_samachar/pages/login_page.dart';
 // import 'package:apk/widget/themes.dart';
 import 'package:flutter/material.dart';
-import 'package:shuddha_samachar/pages/search_page.dart';
+
 
 import 'pages/home_page.dart';
 

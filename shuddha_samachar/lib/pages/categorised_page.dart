@@ -4,6 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../models/catagorised_news_model.dart';
 import '../models/default_news_model.dart';
+import '../widgets/drawer.dart';
 import '../widgets/home_widgets/home_widget_tile.dart';
 import 'home_page.dart';
 
@@ -54,7 +55,7 @@ class _CategorisedPageState extends State<CategorisedPage> {
             ],),
 
         ),
-
+        drawer: const MyDrawer(),
           body: 
         SafeArea(
           child: 

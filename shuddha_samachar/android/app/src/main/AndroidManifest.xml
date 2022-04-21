@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shuddha_samachar">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Shuddha Samachar"
+        android:label="शुद्ध Samachar"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

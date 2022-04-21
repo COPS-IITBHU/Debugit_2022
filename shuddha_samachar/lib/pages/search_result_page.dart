@@ -4,6 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../models/search_model.dart';
 import '../models/default_news_model.dart';
+import '../widgets/drawer.dart';
 import '../widgets/home_widgets/home_widget_tile.dart';
 import 'home_page.dart';
 
@@ -55,7 +56,7 @@ class _SearchedPageState extends State<SearchedPage> {
             ],),
 
         ),
-
+        drawer: MyDrawer(),
           body: 
         SafeArea(
           child: 

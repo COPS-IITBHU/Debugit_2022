@@ -8,6 +8,7 @@ import 'package:english_words/english_words.dart' as english_words;
 import '../models/catagory.dart';
 import '../models/country_catagory.dart';
 import '../models/default_news_model.dart';
+import '../widgets/drawer.dart';
 import '../widgets/home_widgets/home_widget_tile.dart';
 import 'artical_web_page.dart';
 import 'search_result_page.dart';
@@ -171,7 +172,7 @@ class _HomePageState extends State<HomePage> {
           ),
 
     ),  
-    drawer: const Drawer(),
+    drawer: const MyDrawer(),
     );
   }
 }

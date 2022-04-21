@@ -26,3 +26,26 @@ typewriter= function(){
 }
 
 window.addEventListener("load",typewriter);
+
+
+
+//add text to poll
+var polltext = document.getElementById("polltext").innerText;
+var addpoll = document.getElementById("addpoll").value;
+
+addpoll.onclick = function(){
+    var singlepoll = document.getElementById("single");
+
+    var item = document.createElement("input");
+    item.setAttribute("type","radio");
+    item.setAttribute("name","lexRadioDefault");
+    item.classList.add("flexRadioDefault");
+
+    var label = document.createElementById("label");
+    label.classList.add("form-check-label");
+    label.innerText = polltext;
+
+    singlepoll.appendChild(item);
+    item.appendChild(label);
+
+}

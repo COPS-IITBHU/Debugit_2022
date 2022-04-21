@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- font 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <!-- font 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap" rel="stylesheet">
+    <!-- font 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Election Comittee</title>
+</head>
+
+<body>
+    <div class="whole">
+        <!-- top bar -->
+        <div class="top-container">
+            <!-- dark mode icon -->
+            <img src="sun.png" alt="" id="darkmode-icon">
+            <!-- other top bar items -->
+            <div class="page-title glow">ISSA VOTING THINGY</div>
+            <div class="btn one"><a href="home.html">Home</a></div>
+            <div class="dropdown">
+                <!-- dropdown -->
+                <div class="btn three">Create <i class="arrow right"></i>
+                    <div class="dropdown-content">
+                        <a href="#">Create</a>
+                        <a href="#">Vote</a>
+                        <a href="#">Rickroll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- middle container -->
+        <div class="middle">
+            <div class="poll-box">
+                <form action="">
+                    <div class="box email">
+                        <label for="Email ID">Email ID:</label>
+                        <input class="input-box" type="email" id="email" name="Email ID" placeholder="abcd@domain.com"
+                            required>
+                    </div>
+                    <div class="poll-menu">
+                        <select class="form-select" id="select-poll" aria-label="Default select example">
+                            <option >--Choose the type of poll--</option>
+                            <option value="1">Single Choice</option>
+                            <option value="2">Multiple Choice</option>
+                        </select>
+                    </div>
+                    <div class="box add-to-poll">
+                        <label for="add poll">Add:</label>
+                        <input type="text" class="input-box" name="add poll" placeholder="Add to Poll" id="polltext">
+                    </div>
+                    <div class="add-button" >
+                        <p id="addpoll">Add to the Poll</p>
+                    </div>
+                    <div class="single invisible" id="single">
+                        
+                    </div>
+                    <div class="multiple poll" id="multiple">
+                        
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default  radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked radio
+                            </label>
+                        </div> -->
+
+                    </div>
+                    <div class="add-button sec" >
+                        <button type="submit" id="submitbtn">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="console copy.js"></script>
+</body>
+
+</html>

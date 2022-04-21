@@ -17,7 +17,7 @@
             android:layout_marginRight="5dp"
             android:background="@drawable/background_sent_message"
             android:padding="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintWidth_percent="0.8"
             app:layout_constraintEnd_toEndOf="parent"

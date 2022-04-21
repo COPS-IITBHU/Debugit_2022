@@ -54,7 +54,9 @@ class Login_Activity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
                     val intent = Intent(this@Login_Activity, MainActivity::class.java)
+
                     finish()
+                    Toast.makeText(this@Login_Activity, "wait till the users load :)) ", Toast.LENGTH_SHORT).show()
 
                     startActivity(intent)
 

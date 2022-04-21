@@ -77,7 +77,8 @@ class ChatActivity : AppCompatActivity() {
             Toast.makeText(this@ChatActivity, "Your are talking to $name ;) ", Toast.LENGTH_LONG).show()
         }
         backButton.setOnClickListener {
-            val intent = Intent(this@ChatActivity, MainActivity::class.java)
+
+            Toast.makeText(this@ChatActivity, "Your were talking to $name ;) ", Toast.LENGTH_SHORT).show()
             finish()
         }
         //adding the message to the database

@@ -46,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         }
         backButton.setOnClickListener {
             val intent = Intent(this@MainActivity, Login_Activity::class.java)
-            finish()
+            mAuth.signOut()
+            startActivity(intent)
         }
         usersRecyclerView =findViewById(R.id.usersRecyclerView)
 

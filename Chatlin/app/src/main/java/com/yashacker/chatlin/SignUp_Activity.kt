@@ -34,7 +34,8 @@ class SignUp_Activity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         signupbacktowelcome.setOnClickListener {
-            finish()
+            val intent = Intent(this@SignUp_Activity, Welcome::class.java)
+            startActivity(intent)
         }
         btnsignup.setOnClickListener {
             credential_check()
@@ -56,6 +57,7 @@ class SignUp_Activity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     val intent = Intent(this@SignUp_Activity, MainActivity::class.java)
                     finish()
+                    Toast.makeText(this@SignUp_Activity, "wait till the users load :)) ", Toast.LENGTH_SHORT).show()
                     startActivity(intent)
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right )
 

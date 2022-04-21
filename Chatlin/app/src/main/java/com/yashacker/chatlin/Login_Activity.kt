@@ -32,7 +32,8 @@ class Login_Activity : AppCompatActivity() {
 
 
         loginbacktowelcome.setOnClickListener {
-            finish()
+            val intent = Intent(this@Login_Activity, Welcome::class.java)
+            startActivity(intent)
         }
         btnlogin.setOnClickListener{
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.View.INVISIBLE
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
@@ -60,9 +61,10 @@ class MainActivity : AppCompatActivity() {
 
                 for(postSnapshot in snapshot.children){
                     val currentUser = postSnapshot.getValue(User::class.java)
-                    if(mAuth.currentUser?.uid != currentUser?.uid ){
+                    if(mAuth.currentUser?.uid != currentUser?.uid && mAuth.currentUser?.email != currentUser?.email && mDbRef.child("user").child("name").toString() != currentUser?.name){
                         userList.add(currentUser!!)
                     }
+
 
 
 

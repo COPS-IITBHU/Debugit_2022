@@ -31,6 +31,15 @@ document.getElementById("dont").addEventListener("click", function(event){
     alert("You need to login to access this page");
   });
 
+// open only after login and signup
+function openchart() {
+    location.replace("https://debugit-2022-three.vercel.app/chart.html");
+  }
+
+// trying to change orphoange name to right info
+var x= "XYZ";
+// console.log(x);
+
 // Valid Registeration and Login
 function ValidReg() {
     let a = document.getElementById('name');
@@ -39,7 +48,6 @@ function ValidReg() {
     let d = document.getElementById('address');
     let e = document.getElementById('password');
     let f = document.getElementById('re-password');
-
     let nameregex = /^[a-zA-Z]+$/;
     let num = /^[0-9]+$/;
     let mail = /^[a-zA-Z0-9]+@(gmail|yahoo)\.com$/;
@@ -76,14 +84,13 @@ function ValidReg() {
         Address: d.value,
         Password: e.value,
     }
-    
+    x=a.value;
+    document.getElementById("nage").innerHTML = x;
     window.localStorage.setItem(b.value, JSON.stringify(person));
+    openchart();
     alert("Account created successfully");
 }
-// open only after login
-function openchart() {
-    location.replace("https://debugit-2022-three.vercel.app/chart.html");
-  }
+
 function login(){
     let b = document.getElementById('email');
     let e = document.getElementById('password');

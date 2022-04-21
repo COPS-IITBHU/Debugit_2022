@@ -87,7 +87,7 @@ router.post("/api/createRes", async (req, res) => {
 router.get("/users", (req, res) => {
     User.find().sort({ createdAt: -1 })
         .then(results => {
-            res.render("users", { resources: results });
+            res.render("users", { title: "this is the list of all users", resources: results });
         })
 });
 

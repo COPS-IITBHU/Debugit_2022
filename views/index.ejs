@@ -4,18 +4,21 @@
 <%- include("./partials/head.ejs") %> 
 
 <body class="">
-    <header class="flex justify-center align-items text-3xl p-8"> Hey there! </header>
+    <header class="flex justify-center align-items text-3xl p-8"> welcome to resourceJS, it sucks, you're gonna love it :) </header>
     
     <div class="flex min-h-screen">
         <%- include("./partials/nav.ejs") %> 
         
         <div class="flex flex-col gap-20">
             <form action="" id="reg-form" class="flex flex-col" >
+                <p> Register A New User </p>
                 <input type="text" placeholder="username" id="uname" minlength="5">
                 <input type="password" placeholder="pwd" id="pwd" minlength="8">
                 <input type="submit">              
             </form>
-
+            <div>
+                OR
+            </div>
             <div>
                 <a href="/login">Login</a>
             </div>

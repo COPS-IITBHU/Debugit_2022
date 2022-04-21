@@ -32,9 +32,7 @@ document.getElementById("dont").addEventListener("click", function(event){
   });
 
 // open only after login and signup
-function openchart() {
-    location.replace("https://debugit-2022-three.vercel.app/chart.html");
-  }
+
 
 // trying to change orphoange name to right info
 // var x= "XYZ";
@@ -92,7 +90,9 @@ function ValidReg() {
     alert("Account created successfully.Now go to login");
     }
 }
-
+function openchart() {
+    location.replace("https://debugit-2022-three.vercel.app/chart.html");
+}
 function login(){
     let b = document.getElementById('email');
     let e = document.getElementById('password');

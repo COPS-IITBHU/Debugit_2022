@@ -12,7 +12,7 @@ const dbURI = "mongodb+srv://debugit22:debugit22abhinav@cluster0.jgtvt.mongodb.n
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })    
     .then(results => {
         console.log("successfully connected to the database");
-        app.listen(8888, () => {
+        app.listen(process.env.PORT || 8888, () => {
             console.log("the server for debugIt 2022 is now live at port 8888");
         });
     })

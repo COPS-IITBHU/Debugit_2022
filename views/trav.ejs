@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/trav.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <%-include('navbar')%>
+        <div class="heading">Covid Risk Checker (Country wise)</div>
+        <div class="sta">Here you can check covid risk of various countries before traveling.</div>
+        <div id="ri">Risk would appear here</div>
+        <div class="box">
+            <div id="f"></div>
+            <div id="g"></div>
+            <div id="h"></div>
+        </div>
+        <div class="mi">
+            <button class="btn btn-warning" id="pre">Previous</button>
+            <button class="btn btn-warning" id="nex">Next</button>
+        </div>
+        <div class="para">**You can check the covid risk of the countries by clicking next and previous buttons.The risk of covid in the country would appear in the box above the buttons</div>
+        <script src="./js/trav.js"></script>
+</body>
+
+</html>

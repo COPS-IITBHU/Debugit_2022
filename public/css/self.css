@@ -1,0 +1,63 @@
+body {
+    background-color: #262626;
+}
+
+.img img {
+    width: 100%;
+}
+
+.box {
+    background-color: wheat;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    border: solid black 2px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.one {
+    border: black solid 1px;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 100%;
+}
+
+.two {
+    border: black solid 1px;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 100%;
+}
+
+.three {
+    border: black solid 1px;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 100%;
+}
+
+.four {
+    border: black solid 1px;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 100%;
+}
+
+.five {
+    border: black solid 1px;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 100%;
+}

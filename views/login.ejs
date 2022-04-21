@@ -3,21 +3,27 @@
 
 <%- include("./partials/head.ejs") %> 
 
-<body class="">
-    <header class="flex justify-center align-items text-3xl p-8"> Hey there! </header>
+<body class="bg-gradient-to-r from-purple-400 to-pink-400">
+    <header class="flex justify-center align-items text-3xl p-5 mb-2 backdrop-blur-md bg-white/40 "> Hey there! </header>
     
-    <div class="flex min-h-screen">
-        <%- include("./partials/nav.ejs") %> 
+    <div class="flex justify-center">
+        <!-- <%- include("./partials/nav.ejs") %>  -->
         
-        <div class="flex flex-col gap-20">
+        <div class="flex flex-col gap-20 flex flex-col gap-12 mt-20 p-8 mr-8 backdrop-blur-lg bg-white/50 rounded-lg">
             <form action="" id="login-form" class="flex flex-col" >
-                <input type="text" placeholder="username" id="uname" minlength="5">
-                <input type="password" placeholder="pwd" id="pwd" minlength="8">
-                <input type="submit">              
+                <h1 class="text-center underline underline-offset-4 text-lg"> Login </h1>
+                <br>
+                <input type="text" placeholder="username" id="uname" minlength="5" class="focus:ring-2 focus:ring-cyan-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-6 ring-1 ring-slate-200 shadow-sm">
+                <br>
+                <input type="password" placeholder="pwd" id="pwd" minlength="8" class="focus:ring-2 focus:ring-cyan-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-6 ring-1 ring-slate-200 shadow-sm">
+                <br>
+                <input type="submit"  class="w-20 align-items bg-pink-400 hover:bg-pink-300 p-1 rounded-lg">              
             </form>
 
             <div>
-                just a test!
+                <h2 class="text-md">Don't have an account or want to create a new one(probably for stalking your crush)?
+                    <a href="/" class="flex justify-center w-20 bg-pink-400 hover:bg-pink-300 p-1 rounded-lg ">Sign Up</a>    
+                </h2>
             </div>
         </div>
     </div>

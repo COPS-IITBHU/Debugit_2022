@@ -1,6 +1,6 @@
  function at() {
-     var m = Math.floor(Math.random() * 20);
-     fetch('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=37ec4f203d6041c89304425c3cb6bccb').then(response => response.json())
+     var m = Math.floor(Math.random() * 68);
+     fetch('https://saurav.tech/NewsAPI/top-headlines/category/health/in.json').then(response => response.json())
          .then(data => {
              console.log(data);
              document.getElementById('n1').innerHTML = `<h3>${data.articles[m].title}</h3>`

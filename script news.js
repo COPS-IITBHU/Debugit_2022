@@ -20,7 +20,7 @@ var newsDataArr = [];
 
 // API DATA Start
 // * differ as per login API key
-const API_KEY = "96adeef0758b4c128bc7b05706e38ef7";
+const API_KEY = "d40c10c8503a4311b9130fdd9b39dd46";
 // * differ as per login API key
 const HEADLINES_NEWS =
     "https://newsapi.org/v2/top-headlines?country=in&apiKey=";

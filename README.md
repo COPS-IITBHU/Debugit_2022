@@ -7,10 +7,10 @@ SecondCycle strives to bridge the gap and bring sellers and buyers on the same p
 
 ## Technologies:
 
--[]ReactJS (with React Router) as the Javascript library
--[]TailwindCSS as the styling library
--[]Firestore as the database
--[]Firebase for authentication and hosting
+- [ ] ReactJS (with React Router) as the Javascript library
+- [ ] TailwindCSS as the styling library
+- [ ] Firestore as the database
+- [ ] Firebase for authentication and hosting
 
 I only set up Google Auth, as we need to signin with our institute ids only.
 

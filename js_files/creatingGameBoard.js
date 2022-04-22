@@ -17,7 +17,7 @@ function getIndexFromId(id) {
 }
 
 function getIdFromIndex(i, j) {
-    var elementId = "R" + (j + 1) + "C" + (i + 1) + "E";
+    var elementId = "R" + (i + 1) + "C" + (j + 1) + "E";
     return elementId;
 }
 

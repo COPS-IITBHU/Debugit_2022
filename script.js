@@ -81,15 +81,15 @@ function ValidReg() {
     alert("Account created successfully");
 }
 // open only after login
-// function openchart() {
-//     location.replace("https://debugit-2022-three.vercel.app/chart.html");
-//   }
+function openchart() {
+    window.location.assign("https://www.w3schools.com")
+  }
 function login(){
     let b = document.getElementById('email');
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
-       
+        openchart();
         // setTimeout(openchart, 1000);
         // openchart();
         // alert("Successfully logged in");
@@ -97,10 +97,10 @@ function login(){
         // // console.log(x);
         // // return false;
         // window.location.replace("http://127.0.0.1:5500/chart.html/");
-        // window.location.href="./chart.html";
+        
         // window.location.assign("http://127.0.0.1:5500/chart.html/");
         // location.href="http://127.0.0.1:5500/chart.html";
-        return  location.replace("https://debugit-2022-three.vercel.app/chart.html");
+        // return  location.replace("https://debugit-2022-three.vercel.app/chart.html");
     }
     else{
         alert("Your credintials are wrong");

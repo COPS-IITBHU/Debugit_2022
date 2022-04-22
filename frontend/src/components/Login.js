@@ -21,8 +21,6 @@ function Login({setUser}) {
         password:pass,
       }
      const res = await axios.post("http://localhost:7000/api/user/login",user);
-     console.log(res.data.id);
-     console.log(res.data);
      setLogin(true);
      setAlert(res.data);
      setUser(res.data);

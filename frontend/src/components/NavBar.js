@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Navigate, Route, Routes} from 'react-router-dom'
 import "./NavBar.css"
+import Login from './Login'
 
 function NavBar({setUser,user}) {
 
@@ -46,9 +47,9 @@ function NavBar({setUser,user}) {
       <button className='logOut'><Link to="/" className='logOutLink' onClick={()=>{setUser(null)}}>Log Out</Link></button>
       {user===null && <>
       <Routes>
-        <Route exact path='/' />
+        <Route exact path='*' element={<Login />} />
       </Routes>
-      <Navigate to="/" />
+      <Navigate to="*" />
       </>
       }
     </div>

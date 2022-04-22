@@ -17,7 +17,7 @@ function App() {
   return (
     <> 
     <Routes>
-          <Route exact path='/' element={<Login setUser={setUser} /> } /> 
+          <Route exact path='*' element={<Login setUser={setUser} /> } /> 
           <Route exact path='/signup' element={<Signup /> } /> 
           <Route exact path='/home' element={<Home setUser={setUser} user={user} />} />
           <Route exact path='/travelmap' element ={<TravelMap user={user} />} />

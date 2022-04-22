@@ -43,7 +43,7 @@ function Signup() {
         </form>
         {success && <p style={{color:"green"}}>Account Created You can login now</p> }
         {failure && <p style={{color:"red"}}>Something went wrong try again</p> }
-        <p>Have an Account?<Link to="/">Login</Link></p>
+        <p>Have an Account?<Link to="*">Login</Link></p>
     </div>
     </div>
     <div className="loginImage">

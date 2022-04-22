@@ -5,7 +5,7 @@
 - This is a simple quiz game which has unlimited questions and can be played for as long as you want.
 
 ## how to run the game
--Use the link given at the end of this file
+- Use the link given at the end of this file
 - Clone my git repository in your local system. Open index.html on any web server you have access to.
 
 ## Tech Stack Used
@@ -29,4 +29,4 @@
 ## Video Demonstration
 -https://youtu.be/SRVj7U8BPv4
 ## link to the game
--debugit-shivansh12032004.vercel.app
+debugit-shivansh12032004.vercel.app

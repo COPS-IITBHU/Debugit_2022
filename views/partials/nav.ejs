@@ -1,25 +1,24 @@
-<nav class="flex flex-col p-2 pt-5 pr-10 gap-12 mr-4 backdrop-blur-md bg-white/50 rounded-lg">
-    <ul class="flex flex-col p-8 pt-4 gap-8 grow-1">
-        <li><a href="/" class="flex gap-4 hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
+<nav class="flex grow w-[100%] h-[10%] md:w-[18rem] md:min-h-screen md:p-4 md:pt-10 md:pr-10 md:gap-12 md:mr-4 backdrop-blur-md bg-white/50 rounded-lg">
+    <ul class="flex flex-row md:flex-col p-2 justify-center md:justify-start items-center md:p-8 pt-0.5 md:pt-4 gap-10 md:gap-8 grow">
+        <li><a href="/" class="flex md:gap-4 md:hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
                 <img class="w-6 h-6" src="/img/h.png" alt="" />
-                <span class="text-lg">Home</span>
+                <span class="text-lg  hidden md:block">Home</span>
             </a>
         </li>
-        <li><a href="/all" class="flex gap-4 hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
+        <li><a href="/all" class="flex md:gap-4 md:hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
                 <img class="w-6 h-6" src="/img/list.png" alt="" />
-                <span class="text-lg">All Resources</span>
+                <span class="text-lg  hidden md:block">All Resources</span>
             </a>
         </li>
-        <li><a href="/createRes" class="flex gap-4 hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
+        <li><a href="/createRes" class="flex md:gap-4 md:hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
                 <img class="w-6 h-6" src="/img/new.png" alt="" />
-                <span class="text-lg">Add Resource</span>
+                <span class="text-lg hidden md:block">Add Resource</span>
             </a>
         </li>
-        <li><a href="/search" class="flex gap-4 hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
+        <li><a href="/search" class="flex md:gap-4 md:hover:bg-pink-300 transform-y-2 transition ease-in-out delay-80 hover:shadow-xl hover:underline hover:scale-110 p-2 rounded-lg">
                 <img class="w-6 h-6" src="/img/magnifying-glass.png" alt="" />
-                <span class="text-lg">Search</span>
+                <span class="text-lg  hidden md:block">Search</span>
             </a>
         </li>
-        <li><a href="/users" class="hover:bg-pink-300 p-2 rounded-lg"> => For Dev only, View all users <=</a></li>
     </ul>
 </nav>

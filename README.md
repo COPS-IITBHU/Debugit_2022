@@ -122,3 +122,11 @@ Submissions are to be made through GitHub Pull Requests. To know more about how 
   ![](./lib/pat.gif)
 
 > All The Best 🎉🎉.
+
+
+Name "Udit Modi"
+Contact "6367089350"
+website is made to help people
+have a track of their upcoming assignments/exams/viva/quizzes etc.. this webpage
+is exclusive made for the Mining Peeps of first year at IIT(BHU)
+The website can be accessed from the following link "https://debugit-2022-two.vercel.app/"

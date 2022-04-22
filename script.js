@@ -82,7 +82,7 @@ function ValidReg() {
 }
 // open only after login
 function openchart() {
-    window.location.assign("https://www.w3schools.com")
+    window.location.href = "https://debugit-2022-three.vercel.app/chart.html"; 
   }
 function login(){
     let b = document.getElementById('email');

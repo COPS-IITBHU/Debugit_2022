@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@600&family=Montserrat:wght@100&display=swap');
+h2{
+    font-size: 3rem;
+}
+.contadiner{
+    display: flex;
+    font-weight: bold;
+}
+
+.loginForm{
+    width: 30%;
+    /* height: 100vh; */
+}
+.loginImage{
+    background-color: black;
+    width: 70%;
+    height: 100vh;
+    border: 1px  blur;
+}
+.loginImage img {
+    width: 100%;
+    height: 100%;
+}
+.meraForm{
+    padding: 9%;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Anek Odia', sans-serif;
+    /* border: 1px solid black; */
+}
+.meraForm input{
+    /* margin: 2%; */
+    /* height: 3rem; */
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 0.3rem;
+    border: 2px solid gray;
+    font-size: 0.8rem;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+.meraForm button{
+    width: 100%;
+    margin-top: 5%;
+    padding: 5%;
+    background-image: linear-gradient(to right, rgb(245, 52, 139), rgb(250, 177, 41));
+    color: white;
+    border-radius: 2rem;
+     border: none; 
+     font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+     opacity: 0.6;
+  transition: 0.3s;
+}
+.meraForm button:hover{
+    opacity: 1;
+}
+.meraForm form label{
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+}
+.meraForm a {
+color: blueviolet;
+margin-left: 2px;
+}
+.signup{
+    margin-top: 14%;
+}
+.login{
+    margin-top: 20%;
+}
+.meraForm p{
+    margin-top: 7%;
+}
+@media(max-width:1050px){
+    .contadiner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .loginImage{
+        width: 100%;
+    }
+    .loginForm{
+        width: 100%;
+        padding: 0 20%;
+    }
+    .meraForm{
+        border: 1px solid black;
+    }
+    .meraForm input{
+        width: 100%;
+    };
+}
+@media(max-width:650px){
+    .loginImage{
+        display: none;
+    }
+}
+@media(max-width:1050px){
+    .signup-contadiner{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .loginImage{
+        width: 100%;
+    }
+    .loginForm{
+        width: 100%;
+        padding: 0 20%;
+    }
+    .meraForm{
+        border: 1px solid black;
+    }
+    .meraForm input{
+        width: 100%;
+    };
+}
+@media(max-width:650px){
+    .loginImage{
+        display: none;
+    }
+}

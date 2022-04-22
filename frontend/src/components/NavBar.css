@@ -1,0 +1,139 @@
+ @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@600&family=Montserrat:wght@500&display=swap');
+/*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    position: sticky;
+    background-color: #0082e6;
+    height: 4rem;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 1.5rem;
+   padding: 0 10rem;
+   font-weight: bold;
+   margin-top: 10px;
+}
+nav ul{
+    margin-top: 1rem;
+    float: right;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+nav ul li:last-child{
+}
+.activer {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+}
+.activer:hover{
+    background-color: #0c6eb9;
+    color: white;
+    transition: 0.5s;
+    text-decoration: underline;
+}
+.logOut{
+    padding: 0.4rem 0.8rem;
+   background-image: linear-gradient(to right,rgb(19, 18, 18),rgb(58, 58, 59));
+   border: none;
+   opacity: 0.8;
+}
+.logOut:hover{
+    opacity: 1;
+}
+.logOutLink {
+text-decoration: none;
+color: white;
+}
+.logOutLink:hover{
+    text-decoration: underline;
+    color: white;
+}
+.icon{
+    float: left;
+    color: black;
+    color:white;
+    float:right;
+    margin-top:10px;
+    margin-right:2rem;
+    cursor:pointer;
+}
+@media (max-width:950px){
+    label.logo{
+        font-size: 1rem;
+        padding-left: 5rem;
+    }
+    nav ul li a{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width :858px){
+    #check{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        background-color: #2c3e50;
+        top: 6rem;
+        left: 0;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+} */
+.navbar navbar-expand-lg{
+    background-image: linear-gradient(to bottom,rgb(44, 215, 44),rgb(19, 148, 29));
+}
+.container-fluid{
+color: white;
+font-family: 'Montserrat', sans-serif;
+}
+.navbar-brand{
+    margin-right: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px black;
+    /* background-color: black; */
+}
+.nav-link:hover{
+    text-decoration: underline;
+    background-color: rgb(36, 105, 36);
+}
+.logOut{
+    padding: 0.4rem 0.8rem;
+   background-image: linear-gradient(to right,rgb(254, 131, 8),rgb(254, 96, 5));
+   border: none;
+   opacity: 0.8;
+   border-radius: 1rem;
+}
+.logOut:hover{
+    opacity: 1;
+}
+.logOutLink {
+    text-decoration: none;
+    color: white;
+    }
+    .logOutLink:hover{
+        text-decoration: underline;
+        color: white;
+    }

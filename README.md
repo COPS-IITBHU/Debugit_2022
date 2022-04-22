@@ -1,4 +1,6 @@
 # Description
+Submission by: Bhav Khurana, CSE
+Contact: 7087341267
 
 ## TechStack Used:
 - [ ] Flutter

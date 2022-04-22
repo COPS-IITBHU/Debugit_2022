@@ -2,7 +2,7 @@
 ![Website Preview](./assets/images/github_cover.bmp "Revenge of the Snake")
 
 ## Introduction
-Who hasn't played the infamous Snake Game?! This is an attempt to replicate the same classic "Nokia" phone game, but with better customizations (as each player has his own asthetic choices) and a variety of never-seen-before boards that will challenge even the best of players.
+Who hasn't played the infamous Snake Game?! This is an attempt to replicate the same classic "Nokia" phone game, but with better customizations (as each player has his own aesthetic choices) and a variety of never-seen-before boards that will challenge even the best of players.
 
 ## How to run the game?
 You can either run the game online at [Revenge of the Snake](https://eshaanagg.github.io/Debugit_2022/index.html) or you can also clone this repository and then run `index.html` in your web browser. No need for any fancy installations!

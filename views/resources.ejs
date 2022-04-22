@@ -11,7 +11,7 @@
     <div class="flex z-0">
         <%- include("./partials/nav.ejs") %>
 
-        <div id="body" class="relative z-10 grow flex flex-col gap-12 p-8 mr-8 mt-20 z-0 backdrop-blur-md bg-white/40 rounded-lg">
+        <div id="body" class="relative z-10 grow flex flex-col gap-4 md:gap-10 p-6 md:p-8 mr-8 mt-20 z-0 backdrop-blur-md bg-white/40 rounded-lg">
             <% for ( let i = 0; i < resources.length; i++ ) { %>
                 <div class="bg-pink-100 p-4 rounded-lg">
                     <h3 class="text-center underline underline-offset-4 text-xl"> <%= resources[i].title %>  </h3>

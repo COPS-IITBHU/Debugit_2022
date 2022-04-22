@@ -1,124 +1,28 @@
-## Debugit 2022
-[![Debugit](./lib/copsWeek_debugit.png)](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022)
+Welcome to the Arena of Gaming!
 
-## Introduction
-Debugit is a week long hackathon open to ideas in a very literal sense. You can make anything from the projects' list we'll share or ignite the inquisitive Bob the Builder inside you to make something exciting and completely new!
+Games are always incredibly fun as they take us to new dimensions partially away from reality, thus refreshing and relaxing our mind. Here I present a simple Gaming Website which offers the users three games namely - Guess My Number, Tic Tac Toe and Color Picker.
 
-## How to make a submission?
-Submissions are to be made through GitHub Pull Requests. To know more about how to make a GitHub Pull Request you can refer the [Fundamentals of Git](https://www.youtube.com/playlist?list=PLLt4yMoVgczVgFcTzT60U5IXtNX1qjHL9) playlist which contains everything that you would need.
+Technologies used include - 
+HTML
+CSS
+JavaScript
+Bootstrap
+Firebase
 
-## Make sure to include
-  - A README.md file with your name, contact information, project description and how to run the code (and other necessary information).
-  - A folder containing a demo video of your project.
+You may have a look at the demo video to get an idea about the demonstration and here I present an overview of the same.
 
-## Here is a detailed step by step walkthrough if you don't know how to make a Debugit submission.
+In the first page, you can register yourself by entering your email address and setting up the password respectively. Further, you may sign in or skip the process and enter as a guest.
 
-- Create a fork of this [repository](https://github.com/COPS-IITBHU/Debugit_2022)
- A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
-   1. Click on the fork icon in the repository that you might find at the top right corner.
+Then comes the gaming home page which offers you three interesting fun games. You can click on any game and explore them.
 
-   Demo:
-   ![](./lib/fork.png)
+The first game is - Guess My Number In this game, a random number would be generated between 1 and 20 and you need to guess the correct number with the given hints in minimum attempts. Lesser the attempts, greater would be your score. Well, it might sound that the game is totally based on luck? But no, implementation of the Binary Search Technique would always land you with a great score. Well, do not ponder and try to guess the number 🙂
 
-   2. It will ask you what would you like to name the forked repository. By default they are named the same as the parent directory. Lets keep the name as it is.
+Then we have the famous game which would refresh your childhood memories - Tic Tac Toe There are two modes in the game - Single Player which allows you to play with the AI and the Multi Player mode in which you can play with your friend. You need to fill in noughts or crosses and as soon as you put them three in a row, Voila, you win!
 
-   Demo:
-   ![](./lib/fork_name.png)
+Then, there comes the color picker game which shall display a random RGB value on the top, three colored cards in easy mode and six colored cards in hard mode. On selecting the colored card that matches the RGB code displayed on the top, you win!
 
-- Clone the repository that you forked
-  1. Find the link which you would need to clone and copy it.
+Enjoy the games! Happy gaming!
 
-   Demo:
-   ![](./lib/clone_link.png)
-
-  2. Go to the directory in which you want to clone your repository and open the terminal.
-
-   Demo:
-   ![](./lib/open_terminal.png)
-
-  3. Run the `git clone` command in the terminal (in case of windows, git bash terminal) and append the link that you copied.
-     ```
-     git clone <repository_link>
-     ```
-
-     Demo:
-     ![](./lib/clone.png)
-
-  4. You will find that the repository is cloned in the directory.
-- Now you can open the directory in vs code and play with the code and complete your project. 
-- After completing the project, its time to push your code:
-  1. Open the vs code (or any other editor of your choice) terminal in the project folder. 
-  2. Create a new branch in which you want to push your code using the following code.
-     ```
-     git checkout -b <branch_name>
-     ```
-     You can name your branch whatever you like.
-
-     Demo:
-     ![](./lib/create_branch.png)
-
-  3. Check which branch are you on using the `git branch` command.
-     ```
-     git branch
-     ```
-  4. The branch name with a `*` on it is the current branch. If it is different from the branch that you created, then switch to your branch using the `git checkout`
-     ```
-     git checkout <branch_name>
-     ```
-  5. You can check the status of the files using 
-     ```
-     git status
-     ```
-  6. Add (Stage) all the files you want to upload using the `git add` command.
-    To add individual files run the following command:
-     ```
-     git add <filename>
-     ```
-     If you want to add all the files from your project directory you can run
-     ```
-     git add .
-     ```
-     It is recommended not to add the some directories like node_modules directory in your commit. You can prevent it by adding it in a `.gitignore` file (For more reference [here](https://www.w3schools.com/git/git_ignore.asp?remote=github)).
-
-     Demo:
-     ![](./lib/add_files.png)
-
-  6. Commmit your code.
-     You can commit all your staged code (to the local git repository) using the `git commit` command
-    Run the following command:
-     ```
-     git commit -m "first commit"
-     ```
-     You can replace `first commit` with anything. It is actually a message to let you keep a brief track of what changes has been done in that commit.
-
-     Demo:
-     ![](./lib/commit.png)
-
-  7. Push your code.
-     Push all of your commited code using the `git push` command.
-    Run the following command:
-     ```
-     git push --set-upstream origin <branch_name>
-     ```
-
-     Demo:
-     ![](./lib/push.png)
-
-- Make the Pull Request and submit your code.
-  1. After you push your code, it gets uploaded to your forked directory and creates a new branch that you created.
-  2. If it notices any difference in the code of your forked repo and the parent repo. It automatically shows you an option to create a pull request.
-
-    Demo:
-    ![](./lib/pull_request.png)
-
-  3. Write down a brief description of your project in the Pull Request description and give the PR a proper title and click on create pull request. Now GitHub might run some checks. If you pass all the checks, you are good to go.
-
-    Demo:
-    ![](./lib/submission.png) 
-
-
-- Pat yourself on the back
-
-  ![](./lib/pat.gif)
-
-> All The Best 🎉🎉.
+Name - Vedika Chandra
+Mobile Number - 6205181088
+Email Address - vedika.chandra.cse21@itbhu.ac.in

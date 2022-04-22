@@ -24,7 +24,7 @@ To  setup:
 ```
 git clone --branch vaibhav-secondcycle https://github.com/crsdvaibhav/Debugit_2022.git
 ```
-2. The in the terminal run(for dependencies):
+2. Then go inside the DebugIT folder and open your code editor and in its terminal run(for dependencies):
 ```
 npm install
 ```

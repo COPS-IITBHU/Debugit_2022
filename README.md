@@ -46,6 +46,13 @@ Debugit_2022> npm install --production
   ```
 
   6. Open your web browser and navigate to `localhost:8888/`. You should see the following on your first run:
+   ![](./lib/sign-up.png)
+   ![](./lib/Home.png)
+   ![](./lib/search.png)
+   ![](./lib/all.png)
+   ![](./lib/new.png)
+   Responsive design
+   ![](./lib/oppo-responsive.jpeg)
 ## Source Code Run-through
   
 ### A quick glance at the project structure will show the 4 most important folders in this project:

@@ -34,6 +34,7 @@ async function amy2() {
                 document.getElementById('ri').innerHTML = `<h3>This country has high covid risk</h3>`
             }
         })
+
 }
 amy2();
 /*

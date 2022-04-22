@@ -59,9 +59,15 @@ hr {
     margin: 15px 0;
 }
 
-h4 {
+a {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 8px;
     margin-right: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
 }

@@ -53,6 +53,8 @@ Debugit_2022> npm install --production
    ![](./lib/new.png)
    Responsive design
    ![](./lib/oppo-responsive.jpeg)
+
+   7. Note: Clicking on the `Your Posts` text on the Home page toggles your posts, meaning it either hides or shows posts made by your account.
 ## Source Code Run-through
   
 ### A quick glance at the project structure will show the 4 most important folders in this project:

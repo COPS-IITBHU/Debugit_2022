@@ -811,7 +811,7 @@ b {
   padding: 60px;
   margin: 70px;
   margin-right: 30px;
-  /* margin-top: 150px; */
+  margin-top: 150px;
   height: 30%;
   width: 60%;
 }
@@ -823,14 +823,4 @@ b {
 }
 .formbook btn{
     background-color: #000;
-}
-
-.orpho{
-  margin: 20px;
-  margin-top:150px;
-  text-align: center;
-  font-size:28px;
-}
-.orpho span{
-  color: rgb(1, 64, 88);
 }

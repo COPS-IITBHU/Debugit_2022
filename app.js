@@ -77,9 +77,8 @@ app.get("/about", function(req, res){
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3007;
+  port = 3009;
 }
 app.listen(port, function() {
-  console.log("Server started on port 3007");
+  console.log("Server started on port 3009");
 });
-

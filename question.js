@@ -26,7 +26,8 @@ function useApiData(data){
 window.onload =sendApiRequest
 let answer = Array.from(document.querySelectorAll('.ans'))
 async function sendApiRequest(){
-    
+    d=0
+    console.log(d)
     let response = await fetch`https://opentdb.com/api.php?amount=10&type=multiple`
     let data = await response.json()
     useApiData(data)
@@ -38,43 +39,45 @@ let a=0;
 let b=1;
 //b gives current question
 console.log(x);
+let d=0
 answer.forEach(function(option) {
     
     option.addEventListener('click', lesgo)
     function lesgo() {
 
-         
-     
-        
-        // answer[x].style.backgroundColor = 'green';
-        // console.log(event.target.innerHTML.toLowerCase())
-        // console.log(answer[x].innerHTML.toLowerCase());
-        if (event.target.innerHTML.toLowerCase() == answer[x].innerHTML.toLowerCase()) {
-            a=a+1;
-            document.getElementById('score').innerHTML= a;
-            answer[x].style.backgroundColor = 'green';
-            var i= document.getElementById('positive')
-            window.setTimeout(correct,0001)
-            function correct() {
-                i.play()
+        if(d==0){
+            console.log(d)
+            if (event.target.innerHTML.toLowerCase() == answer[x].innerHTML.toLowerCase()) {
+                a=a+1;
+                document.getElementById('score').innerHTML= a;
+                answer[x].style.backgroundColor = 'green';
+                var i= document.getElementById('positive')
+                window.setTimeout(correct,0001)
+                function correct() {
+                    i.play()
+                }
+            } 
+            else{
+                event.target.style.backgroundColor = 'red';
+                answer[x].style.backgroundColor = 'green';
+                var j= document.getElementById('negative')
+                window.setTimeout(wrong,0001)
+                function wrong() {
+                    j.play()
+                }
             }
-        } 
-        else{
-            event.target.style.backgroundColor = 'red';
-            answer[x].style.backgroundColor = 'green';
-            var j= document.getElementById('negative')
-            window.setTimeout(wrong,0001)
-            function wrong() {
-                j.play()
+            d=1
+            console.log(d)
+            window.setTimeout(timeout,3000)
+            function timeout(){
+                b=b+1;
+                document.getElementById('question-number').innerHTML= b;
+                // d=0
+                // console.log(d)
+                sendApiRequest();
             }
+            
         }
-        window.setTimeout(timeout,2500)
-        function timeout(){
-            b=b+1;
-            document.getElementById('question-number').innerHTML= b;
-            sendApiRequest();
-        }
-   
         
     }
 })

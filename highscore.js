@@ -12,10 +12,8 @@ function store(){
 
 const scorearray = JSON.parse(localStorage.getItem('highScores')) || [];
 
-
 function savescore(e) {
     e.preventDefault();
-
     const score = {
         score: wowscore,
         name: name.value,
@@ -27,5 +25,11 @@ function savescore(e) {
     scorearray.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(scorearray));
-    window.location.assign('highscore.html');
-}
+    
+    dude()
+    }
+    
+   function dude(){
+        save.style.display = 'none'
+   }
+

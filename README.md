@@ -1,9 +1,9 @@
-Submission by: Bhav Khurana, CSE
-Contact: 7087341267
+# Description
 
-Description
-TechStack Used:
- Flutter
- Firebase
+## TechStack Used:
+- [ ] Flutter
+- [ ] Firebase
 
-Your Github Repository link - https://github.com/bhav-khurana/Debugit-22-Quiz-App
+
+
+**Your Github Repository link** - https://github.com/bhav-khurana/Debugit-22-Quiz-App

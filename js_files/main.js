@@ -68,7 +68,7 @@ gameOverSpan.onclick = function () {
 
 window.onclick = function (event) {
     if (event.target == gameOverModal) {
-        gameOverModal.style.display = "none";
+        gameOverSpan.click();
     }
 }
 

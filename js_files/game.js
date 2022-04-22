@@ -123,13 +123,16 @@ function moveSnake() {
 }
 
 function isCollide() {
-
+    var points = document.getElementById("points");
     for (let i = 1; i < snake.length; i++) {
-        if (snake[i].x == snake[0].x && snake[i].y == snake[0].y) return true;
+        if (snake[i].x == snake[0].x && snake[i].y == snake[0].y){ 
+            points.innerHTML = "0";
+            return true};
     }
 
     if (!allowLoop) {
         if (boardLayout[snake[0].y - 1][snake[0].x - 1] == 0) {
+            points.innerHTML = "0";
             return true;
         }
     }

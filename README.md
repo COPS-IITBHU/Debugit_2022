@@ -29,4 +29,4 @@
 ## Video Demonstration
 -https://youtu.be/SRVj7U8BPv4
 ## link to the game
-debugit-shivansh12032004.vercel.app
+- debugit-shivansh12032004.vercel.app

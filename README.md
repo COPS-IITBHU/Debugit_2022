@@ -1,5 +1,5 @@
 ## Debugit 2022
-[![Debugit](./lib/copsWeek_debugit.png)](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022)
+[![Debugit](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022)
 
 ## Introduction
 Debugit is a week long hackathon open to ideas in a very literal sense. You can make anything from the projects' list we'll share or ignite the inquisitive Bob the Builder inside you to make something exciting and completely new!

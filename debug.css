@@ -7,6 +7,7 @@ display:flex;
 align-items:center;
 justify-content:space-beween ;
 padding:20px 80px;
+
 background: #7E685A ;
 box-shadow: 100px 30px 30px rgba(0, 0, 0, 0.06);
 position:sticky;
@@ -17,6 +18,17 @@ left: 0;
 #header .img{
     width:20%;
 }
+#header .u{
+    padding-left:600px;
+}
+
+#header h1{
+    padding-left:20px;
+    color:white;
+   font-size:40px;
+    font-family: archivo;
+}    
+
 
 #navbar{
     display:flex;
@@ -384,6 +396,7 @@ left: 0;
         color: white;
         white-space: nowrap;
         padding: 10px 10px ;
+       margin-right: 20px;
 
     }
     #newsletter .form{

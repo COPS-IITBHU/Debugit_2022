@@ -50,7 +50,7 @@ bottomsection.addEventListener("click",function(e){
     let k;
    if(e.target==buttons[window.d])
    {
-       result.textContent="Friday Ae Penchoo";
+       result.textContent="Correct!!";
        result.style.color="LightGreen";
        for(k=0;k<6;k++)
        {
@@ -63,7 +63,7 @@ bottomsection.addEventListener("click",function(e){
    
    else
    {
-       result.textContent="Choti Bacchi ho Kya";
+       result.textContent="Try Again";
        e.target.style.opacity="0";
        result.style.color="Red";
    }

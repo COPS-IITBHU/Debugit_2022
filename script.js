@@ -59,7 +59,7 @@ function ValidReg() {
         alert("Enter valid Emailid");
         return false;
     }
-    if (localStorage.getItem(b.value) !== null) {
+    if (localStorage.getItem(b.value) != null) {
         console.log("Email address already exists");
     }
     if (!num.test(c.value)) {

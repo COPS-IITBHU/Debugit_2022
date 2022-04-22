@@ -89,9 +89,10 @@ function login(){
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
+        location.replace("https://debugit-2022-three.vercel.app/chart.html");
         // setTimeout(openchart, 1000);
-        openchart();
-        alert("Successfully logged in");
+        // openchart();
+        // alert("Successfully logged in");
         // // x=1;
         // // console.log(x);
         // // return false;

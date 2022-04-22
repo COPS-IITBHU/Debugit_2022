@@ -1,0 +1,4 @@
+iManage
+
+This app allows the user to add and delete tasks. 
+when adding a new task, the user sets a time to receive a reminder and the app sends a reminder to the user at the specified time.

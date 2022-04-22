@@ -36,6 +36,6 @@ You can either run the game online at [Revenge of the Snake](https://eshaanagg.g
    - Designing an Arcade Mode in which different levels consist of different boards and aim to reach different scores.
   
 ## Video Demonstration
-[Video](https://drive.google.com/file/d/1XK00AMvnaqawqBq5WZxSLlirqyo3TMqZ/view?usp=sharing)
+[Video](./VideoDemonstration.mp4)
 
 `Note` : Due to some bug in the recording software, the color picker wasn't captured in the video around the 1:30 minute mark. 

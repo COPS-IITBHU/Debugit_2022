@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web_css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="jv.js"></script>
+    <link rel="icon" href="image/iitbhu.png" type="image/x-icon">
+</head>
+<body>
+<nav class="navigation backgroundnav">
+<ul class="navigation_items">
+    <div class="logo">
+        <img src="image/iitbhu.png" alt="IIT-BHU">
+    </div>
+    <li><a href="index.html">MAIN</a></li>
+    <li>
+        <div class="dropdown">
+            <button class="dropbtn">BRANCH</button>
+            <div class="dropdown-content">
+              <a href="branch-cse.html">CSE</a>
+              <a href="branch-mnc.html">MNC</a>
+              <!--
+              <a href="#ECE">ECE</a>
+              <a href="#EEE">EEE</a>
+              <a href="#MEC">MEC</a>
+              <a href="#CHEM">CHEM</a>
+              <a href="#EP">EP</a>
+              <a href="#CIV">CIV</a>
+              <a href="#MIN">MIN</a>
+              <a href="#MET">MET</a>
+              <a href="#MEC">MEC</a>
+              <a href="#PHE">PHE</a>
+              <a href="#CERA">CERA</a>
+              <a href="#ICE">ICE</a>
+              <a href="#MST">MST</a>
+              <a href="#BME">BME</a>
+              <a href="#BCE">BCE</a>
+              <a href="#ARCH">ARCH</a>
+              -->
+            </div>
+          </div>
+    </li>
+    <li><button class="dropbtn2" onclick="scrollto('about-section',0)">CONTACT</button></li>
+    <li><button class="dropbtn2" onclick="scrollto('feedback',-100)">FEEDBACK</button></li>
+    <li><a href="mess.html">MESS</a></li>
+    <li><button class="dropbtn2" onclick="openNav()">EVENTS</button></li>
+</ul>
+<div class="rightNav">
+    <input type="text" name="search" id="search">
+    <button class="btn btn-sm">Search</button>
+</div>
+</nav>
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="https://iitbhu.ac.in/">IIT BHU Official</a>
+      <a href="https://www.kashiyatra.org/">Kashiyatra</a>
+      <a href="https://www.fmcweekend.in/">FMC Weekend</a>
+      <a href="https://www.iitbhusports.org/#/">Games & Sports Council</a>
+      <a href="https://spardha.co.in/">Spardha</a>
+    </div>
+  </div>
+<section class="background firstSection">
+    <div class="box-main">
+        <div class="firstHalf">
+            <p class="text-big">WELCOME TO IIT-BHU</p>
+            <p class="text-small">IIT-BHU is ranked 11th in NIRF-ranking 2020!</p>
+            <!--
+            <div class="buttons">
+                <button class="btn">Subscribe</button>
+                <button class="btn">Watch</button>
+            </div>
+        -->
+            
+        </div>
+        <div class="secondHalf">
+            <img src="image/iitbhu.png" alt="IIT BHU">
+        </div>
+    </div>
+</section>
+
+<section class="section-signup container background_feedback" id="feedback">
+    <h2>FEEDBACK FORM</h2>
+    <form class="signup-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Binod"/>
+        </div>
+        <div class="form-group">
+            <label for="branch">Branch</label>
+            <input type="password" name="password" id="password" placeholder="Cera OP" />
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact No.</label>
+            <input type="number" name="contact" id="contact" placeholder="9996942057" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="email" name="email" id="email" placeholder="Noobmaster69@gmail.com" />
+        </div>
+        <div class="form-group">
+            <label for="about">Feedback</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn signup-btn">Submit</button>
+    </form>
+</section>
+
+<!--ABOUT SECTION-->
+<div class="about-section" id="about-section">
+    <hr>
+    <h1>~Follow our Creator~</h1>
+    <br>
+    <p>Aaryan Kumar, IIT BHU CSE</p>
+    <p>9821891500</p>
+    <p>aaryan.kumar.cse21@itbhu.ac.in</p>
+    <a href="https://www.instagram.com/Aaryan.K666/" class="fa fa-instagram"></a>
+  </div>
+  
+ 
+
+</body>
+</html>

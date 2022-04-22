@@ -1,8 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:ital,wght@0,300;1,500&family=Roboto:wght@300&display=swap');
 .container{
     color: red;
 }
+.card1{
+    background-image: linear-gradient(to bottom,#766c83,#bfb8b8);
+    /* background-color: black; */
+}
 .icon1{
-    height: 3rem;
+    height: 6rem;
     /* background-color: black; */
     float: right;
+    width: 100%;
+    /* text-align: center;
+     */
+     display: flex;
+     align-items: center;
+}
+.place1{
+    color: rgb(55, 125, 109);
+    text-shadow: 1px 1px rgb(10, 10, 84);
+}
+.main{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgb(15, 169, 177);
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+}
+.temp{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px black;
+    color: rgb(128, 124, 218);
+}
+.tempEx{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-around;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+}
+.description{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.43rem;
+    margin-top: 1rem;
+    color: rgb(19, 155, 240);
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* text-decoration: underline; */
+}
+.wiHu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    color: white;
 }

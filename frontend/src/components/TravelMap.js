@@ -8,6 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import "./TravelMap.css"
 import axios from 'axios';
 import NavBar from './NavBar';
+import { Navigate } from 'react-router-dom';
 function TravelMap({user}) {
     const [Favorite, setFavorite] = useState([]);
     const [currentId, setCurrentId] = useState(null)
@@ -19,7 +20,6 @@ function TravelMap({user}) {
     useEffect(() => {
       async function getFavorites(){
           try {
-            console.log("i");
             const favoriteUrl = "http://localhost:7000/api/favorite/favorite" ;
             const response= await axios.get(favoriteUrl);
             setFavorite(response.data);
@@ -28,13 +28,28 @@ function TravelMap({user}) {
           }
      }
      getFavorites();
-    }, [])
+    }, [Favorite])
     function handleIconClick(id) {
       setCurrentId(id);
     }
     function handleDblClick(params) {
       console.log(params);
       setNewLocation(params.lngLat)
+    }
+   async function handleDlt() {
+      try {
+        const delUrl="http://localhost:7000/api/favorite/favorite/delete"
+        const x={
+          id:currentId,
+        }
+        console.log(x);
+        // console.log(curre);
+       const res= await axios.delete(delUrl, { data: x });
+       console.log(res);
+        setCurrentId(null);
+      } catch (error) {
+        console.log(error);
+      }
     }
  async function handleSubmit(params) {
     params.preventDefault();
@@ -56,12 +71,13 @@ function TravelMap({user}) {
   }
   return (
     <>
+    {user===null && <Navigate to="/" />}
     <NavBar />
      <Map
       initialViewState={{
-        longitude: 74.8765,
-        latitude: 31.6200,
-        zoom: 6
+        longitude: 82.9894,
+        latitude: 25.2623,
+        zoom: 10
       }}
       style={{width: "100vw", height: "89vh"}}
       mapStyle="mapbox://styles/mapbox/navigation-night-v1"
@@ -84,11 +100,17 @@ function TravelMap({user}) {
             </div>
             <label htmlFor="">Info of User</label>
            <div className="user">Created with <FavoriteIcon style={{fontSize:"medium",color:"red"}} /> By <span className='username'>{sher.username}</span></div>
+           {user.username===sher.username && <button onClick={()=>handleDlt()}>Delete Tag</button>}
         </div>
       </Popup>}
     </div>
       ))} ;
-   {newLocation && <Popup longitude={newLocation.lng} latitude={newLocation.lat}
+   {newLocation && 
+   <>
+     <Marker longitude={newLocation.lng} latitude={newLocation.lat}>
+       <LocationOnIcon style={{color:"5EE6EB",cursor:"pointer"}}/>
+    </Marker>
+    <Popup longitude={newLocation.lng} latitude={newLocation.lat}
         anchor="left" onClose={()=>{setNewLocation(null)}}>
         <div className='card'>
           <form onSubmit={handleSubmit}>
@@ -111,6 +133,8 @@ function TravelMap({user}) {
           </form>
         </div>
       </Popup>
+   </>
+   
       }
        <GeolocateControl /> <NavigationControl />
     </ Map>

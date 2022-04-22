@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { Facebook, Twitter } from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
 
-function Home({setUser}) {
+function Home({setUser,user}) {
 
   const [mail, setMail] = useState(null);
   function handleSubmit(params) {
@@ -22,7 +22,7 @@ function Home({setUser}) {
     });
   }
   return (<>
-    <NavBar setUser={setUser} />
+    <NavBar setUser={setUser} user={user}/>
     
     <div className='carousel'>
     <Carousel>
@@ -32,11 +32,11 @@ function Home({setUser}) {
       src="https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_1280.jpg"
       alt="First slide"
     />
-    <Carousel.Caption style={{textAlign:"center"}}>
+    <Carousel.Caption style={{textAlign:"center", color: "rgb(15, 212, 252)"}}>
       <h1>Welcome to Map Aale,the ultimate travel app</h1>
       <br />
       <h3>Share your experiences about your travels to different locations with the world<br />And check others experiences to plan your journey</h3><br />
-      <h3>Check detailed directions between two locations.</h3>
+      <h3>Explore your next travel destination through the navigater/</h3>
       <h3>Check the weather of locations before planning Link journey</h3>
     </Carousel.Caption>
   </Carousel.Item>
@@ -46,7 +46,7 @@ function Home({setUser}) {
       src="https://images.pexels.com/photos/1078850/pexels-photo-1078850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Second slide"
     />
-    <Carousel.Caption>
+    <Carousel.Caption style={{ color: "rgb(15, 212, 252)"}}>
       <h2>Remeber and share your experiences of any location you have ever visited</h2>
       <p>Create markers to your location in just two click and let others around the world know about the wonderful experiences.</p>
     </Carousel.Caption>
@@ -57,7 +57,7 @@ function Home({setUser}) {
       src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Third slide"
     />
-    <Carousel.Caption>
+    <Carousel.Caption style={{ color: "rgb(15, 212, 252)"}}>
       <h2>Navigate to your desination easily with simple directions</h2>
       <p>Add the start and end location and get the gps started</p>
     </Carousel.Caption>
@@ -68,16 +68,35 @@ function Home({setUser}) {
       src="https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       alt="Fourth slide"
     />
-    <Carousel.Caption>
+    <Carousel.Caption style={{ color: "rgb(15, 212, 252)"}}>
       <h2>Always Check the weather of your destination before starting off.</h2>
       <p>Get the detailed weather report of locations around the globe in just Link double click.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
     </div>
+    <section className="about">
+      <div className="about1">
+        <div className="cardAbout yellow" style={{transition: "all 0.75s ease 0s, opacity 750ms ease 0s, transform 750ms ease 0s" ,opacity: "1" ,transform:"translateX(0px) translateY(0px)"}}>
+          <img src="https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+          <h2>Travel</h2>
+          <p>The travel service provides and easy method to create,delete and check others pins and use that to plan a travel journey!Just a double click on the map will let you create a new pin!</p>
+        </div>
+        <div className="cardAbout" style={{transition: "all 0.75s ease 0s, opacity 750ms ease 0s, transform 750ms ease 0s" ,opacity: "1" ,transform:"translateX(0px) translateY(0px)"}}>
+        <img src="https://images.pexels.com/photos/220147/pexels-photo-220147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+        <h2>Navigate</h2>
+        <p>The navigate service is like a playground that provides a map where one can play around and discover the whole globe!It contains the zoom in and zoom out icons and the can show your real time location in one click!</p>
+        </div>
+        <div className="cardAbout" style={{transition: "all 0.75s ease 0s, opacity 750ms ease 0s, transform 750ms ease 0s" ,opacity: "1" ,transform:"translateX(0px) translateY(0px)"}}>
+        <img src="https://images.pexels.com/photos/459451/pexels-photo-459451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+        <h2>Weather</h2>
+        <p>The weather service provides a service which can show the present weather conditions of any place around the globe!So always check the weather before starting off or may had to suffer adverse weather conditions!</p>
+        </div>
+      </div>
+    </section>
     
     <section className="contactUS">
-        <h1>Having Any Issues or any query?</h1>
+        <h1>Having Any Issues or any query?<br />Send Us an email</h1>
       <div className="meForm">
       {mail && 
     <Alert variant="success" onClose={()=>{setMail(null)}} dismissible>
@@ -110,7 +129,7 @@ function Home({setUser}) {
     <section className='footer-sec'>
     <div className="footer">
       <div className="footerLogo">
-        <img src='https://o.remove.bg/downloads/155c68e0-f53d-4e25-bf50-ef47f556b774/professional-minimalist-letter-m-mc-260nw-1526348054-removebg-preview.png' alt="" />
+        {/* <img src='' alt="" /> */}
       </div>
       <div className="footerChild">
         <h2>Address</h2>

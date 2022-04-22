@@ -6,6 +6,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
 import NavBar from './NavBar';
+import { Air, OpacitySharp } from '@mui/icons-material';
 function Weather() {
 
     const [icon, setIcon] = useState(false);
@@ -45,7 +46,7 @@ function Weather() {
       initialViewState={{
         longitude: 74.8765,
         latitude: 31.6200,
-        zoom: 6
+        zoom: 10
       }}
       style={{width: "100vw", height: "89vh"}}
       mapStyle="mapbox://styles/mapbox/navigation-night-v1"
@@ -58,33 +59,38 @@ function Weather() {
         anchor="left"
         onClose={()=>{setIcon(false)}}
         >
-       <div className="card">
-       <div className="icon1" style={{height:"3rem"}}>
-           <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`} alt="" />
+       <div className="card card1">
+     <div className='place place1' style={{fontSize:"1rem",display:"flex"}}><LocationOnIcon style={{color:"red",fontSize:"1rem"}} />{data.name}</div>
+       <div className="icon1" style={{height:"7rem"}}>
+           <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`} alt="" />
          </div>
-     <label htmlFor="place">Name of The Place</label>
-     <div className='place' style={{fontSize:"1rem",display:"flex"}}>{data.name}
+     <div className='main' style={{fontSize:"0.9rem",display:"flex"}}>{data.weather[0].main}
     
      </div>
-     <label htmlFor="place">Main</label>
-     <div className='place' style={{fontSize:"1rem",display:"flex"}}>{data.weather[0].main}
-    
-     </div>
-            <label htmlFor="description">Description</label>
+            <div className="temp1">
+            <div className="temp">{data.main.temp}&#176;</div>
+            <div className="tempEx">
+              <div className="min">
+                <label htmlFor="tmpMin">Min</label>
+                <div className="tmpMin">{data.main.temp_min}&#176;</div>
+              </div>
+              <div className="max">
+              <label htmlFor="tmpMax">Max</label>
+                <div className="tmpMax">{data.main.temp_max}&#176;</div>
+              </div>
+            </div>
+            </div>
             <div className='description'>{data.weather[0].description}</div>
-            <label htmlFor="temperature">Temperature</label>
-             <div className="temperatureDesc">
-                 <ul>
-                     <li>Temperature:{data.main.temp}&#176;</li>
-                     <li>Feels Like:{data.main.feels_like}&#176;</li>
-                     <li>Temperature Min:{data.main.temp_min}&#176;</li>
-                     <li>Temperature Max:{data.main.temp_max}&#176;</li>
-                     <li>Humidity:{data.main.humidity}</li>
-                 </ul>
-                 <label htmlFor="wind">Wind</label>
-                 <div className="wind">Speed :{data.wind.speed}</div>
+            {/* <label htmlFor="temperature">Temperature</label> */}
+             <div className="wiHu">
+             <div className="wind">
+              <Air style={{color:"#90e0ef"}} /> {data.wind.speed}km/h
              </div>
-        </div>
+             <div className="humid">
+               <OpacitySharp style={{color:"#90e0ef"}} /> {data.main.humidity} %
+             </div>
+             </div>
+                 </div>
       </Popup>
       </>  
 }

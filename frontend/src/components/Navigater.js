@@ -12,7 +12,7 @@ function Navigater() {
       initialViewState={{
         longitude: 74.8765,
         latitude: 31.6200,
-        zoom: 6,
+        zoom: 10,
       }}
       style={{width: "100vw", height: "89vh"}}
       mapStyle="mapbox://styles/mapbox/navigation-night-v1"

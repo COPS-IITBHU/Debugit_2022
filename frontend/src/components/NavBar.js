@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link, Navigate, Route, Routes} from 'react-router-dom'
 import "./NavBar.css"
 
-function NavBar({setUser}) {
+function NavBar({setUser,user}) {
 
   return (
   <>
@@ -44,6 +44,13 @@ function NavBar({setUser}) {
         </li>
       </ul>
       <button className='logOut'><Link to="/" className='logOutLink' onClick={()=>{setUser(null)}}>Log Out</Link></button>
+      {user===null && <>
+      <Routes>
+        <Route exact path='/' />
+      </Routes>
+      <Navigate to="/" />
+      </>
+      }
     </div>
   </div>
 </nav>

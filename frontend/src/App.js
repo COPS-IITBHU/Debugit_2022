@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import {
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 import Home from './components/Home';
 import Navigater from './components/Navigater';
@@ -18,7 +19,7 @@ function App() {
     <Routes>
           <Route exact path='/' element={<Login setUser={setUser} /> } /> 
           <Route exact path='/signup' element={<Signup /> } /> 
-          <Route exact path='/home' element={<Home setUser={setUser} />} />
+          <Route exact path='/home' element={<Home setUser={setUser} user={user} />} />
           <Route exact path='/travelmap' element ={<TravelMap user={user} />} />
           <Route exact path='/navigate' element ={<Navigater />} />
           <Route exact path='/weather' element ={<Weather />} />

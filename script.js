@@ -31,6 +31,13 @@ document.getElementById("dont").addEventListener("click", function(event){
     alert("You need to login to access this page");
   });
 
+// open only after login and signup
+
+
+// trying to change orphoange name to right info
+// var x= "XYZ";
+// console.log(x);
+
 // Valid Registeration and Login
 function ValidReg() {
     let a = document.getElementById('name');
@@ -39,7 +46,6 @@ function ValidReg() {
     let d = document.getElementById('address');
     let e = document.getElementById('password');
     let f = document.getElementById('re-password');
-
     let nameregex = /^[a-zA-Z]+$/;
     let num = /^[0-9]+$/;
     let mail = /^[a-zA-Z0-9]+@(gmail|yahoo)\.com$/;
@@ -52,6 +58,9 @@ function ValidReg() {
     if (!mail.test(b.value)) {
         alert("Enter valid Emailid");
         return false;
+    }
+    if (localStorage.getItem(b.value) !== null) {
+        console.log("Email address already exists");
     }
     if (!num.test(c.value)) {
         alert("Enter valid Mobile No");
@@ -69,6 +78,7 @@ function ValidReg() {
         alert("Password is not same in both columns");
         return false;
     }
+
     // create account
     const person = {
         Name: a.value,
@@ -76,32 +86,30 @@ function ValidReg() {
         Address: d.value,
         Password: e.value,
     }
-    
+    // x=a.value;
+    // document.getElementById("nage").innerHTML = x;
     window.localStorage.setItem(b.value, JSON.stringify(person));
-    alert("Account created successfully");
+    // openchart();
+    alert("Account created successfully.Now go to login");
 }
-// open only after login
 function openchart() {
-    window.location.href = "https://debugit-2022-three.vercel.app/chart.html"; 
-  }
+    window.open("https://debugit-2022-three.vercel.app/chart.html");
+}
 function login(){
     let b = document.getElementById('email');
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
-        window.location= "https://debugit-2022-amyra98.vercel.app/chart.html"; 
-        // openchart();
         // setTimeout(openchart, 1000);
-        // openchart();
-        // alert("Successfully logged in");
+        openchart();
+        alert("Successfully logged in");
         // // x=1;
         // // console.log(x);
         // // return false;
         // window.location.replace("http://127.0.0.1:5500/chart.html/");
-        
+        // window.location.href="./chart.html";
         // window.location.assign("http://127.0.0.1:5500/chart.html/");
-        // location.href="http://127.0.0.1:5500/chart.html";
-        // return  location.replace("https://debugit-2022-three.vercel.app/chart.html");
+        // location.href="http://127.0.0.1:5500/chart.html"; 
     }
     else{
         alert("Your credintials are wrong");
@@ -254,3 +262,43 @@ function Valid() {
 	}
 	BookApo();
 }
+
+// Validation of the data entered and checking with local base data and
+// then setting new password
+function ValidReset(){
+    let b = document.getElementById('emailf');
+    let c = document.getElementById('numberf');
+    let e = document.getElementById('passwordf');
+    let f = document.getElementById('re-passwordf');
+    let num = /^[0-9]+$/;
+    let mail = /^[a-zA-Z0-9]+@(gmail|yahoo)\.com$/;
+    let pass = /^[A-Za-z0-9]\w{6,14}$/;
+   
+    if (!mail.test(b.value)) {
+        alert("Enter valid Emailid");
+        return false;
+    }
+    if (localStorage.getItem(b.value) == null) {
+        console.log("No account with this emaild exist");
+    }
+    if (!num.test(c.value)) {
+        alert("Enter valid Mobile No");
+        return false;
+    }
+    let z= JSON.parse(window.localStorage.getItem(b.value)).Mobile;
+    if (c.value != z) {
+        alert("Incorrect Phone Number");
+        return false;
+    }
+    if (!pass.test(e.value)) {
+        alert("Password must be more than 6 char");
+        return false;
+    }
+    if (e.value != f.value) {
+        alert("Password is not same in both columns");
+        return false;
+    }
+    // change password
+    JSON.parse(window.localStorage.getItem(b.value)).Password = e.value;
+    alert("Password has been reset.Go to login!")
+} 

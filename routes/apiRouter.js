@@ -24,7 +24,7 @@ router.post("/api/login", async (req, res) => {
         if (await bcrypt.compare(password, user[0].password)) {
             const token = await jwt.sign({ id: user._id, uname: email }, JWT_SECRET);
             res.cookie("auth-token", token, {
-                maxAge: 60 * 60 * 1000
+                maxAge: 60 * 60 * 2 * 1000
             });
 
             return res.json({ status: "ok", data: token });

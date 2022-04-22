@@ -3,11 +3,10 @@ console.log("login.js successfully loaded");
 const form = document.querySelector("#login-form");
 
 form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const uname = document.querySelector("#uname");
+    const pwd = document.querySelector("#pwd");
     if (!uname.value.includes(" ") && !pwd.value.includes(" ")) {
-        event.preventDefault();
-        const uname = document.querySelector("#uname");
-        const pwd = document.querySelector("#pwd");
-
         const data = await fetch("/api/login", {
             method: "POST",
             headers: {

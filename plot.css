@@ -1,0 +1,22 @@
+.dec{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding: 10px;
+    line-height: 30px;
+    justify-content: center;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+   
+}
+
+.image{
+    padding-right: 50px;
+    float: left;
+
+}
+
+*{
+    background-color: lavender;
+}

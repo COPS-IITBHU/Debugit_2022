@@ -1,0 +1,82 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+
+}
+
+.language-list {
+  line-height: 80px;
+}
+
+.tech-list {
+  line-height: 45px;
+}
+
+.main {
+
+  background-color: #F6F6F6;
+  color: #212121;
+}
+
+.navbar,
+.btn {
+  background-color: #6D9886;
+  color: #212121;
+}
+
+
+
+.intrested-list {
+  line-height: 60px
+}
+
+.card:hover,
+img:hover,
+#Name:hover {
+  transform: scale(1.15);
+  /* box-shadow: 2px 2px 2px #000; */
+  transition: .5s;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #393E46;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.btn {
+  display: block;
+  min-width: 250px;
+
+}
+
+.card {
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 400px;
+  max-height: 450px;
+  background-color: #D9CAB3;
+  color: #212121;
+}
+
+.margin {
+  margin-top: 33px;
+  margin-left: 15px;
+}
+
+.name-photo>p {
+  max-width: 700px;
+  line-height: 1.5;
+}

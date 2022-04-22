@@ -1,0 +1,168 @@
+.nav-style {
+    background-color: #F05454;
+    color: #121212;
+}
+
+.button-style {
+    background-color: #30475E;
+    color: #F5F5F5;
+}
+
+.line-style {
+    color: #f5f5f5;
+}
+
+.body-style {
+    background-color: #F5F5F5;
+}
+
+.headline-style {
+    color: #121212;
+
+
+}
+
+.date-style {
+    color: #F05454;
+}
+
+.description-style {
+    color: #30475E;
+}
+
+.btn-style {
+    background-color: #F05454;
+    color: #F5F5F5;
+}
+
+.meetthe-style {
+    color: #F5F5F5;
+}
+
+.creator-style {
+    color: #F05454;
+    ;
+}
+
+
+#findbtn {
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 55px;
+
+    margin-right: 60px;
+    /* perspective: 1000px; */
+}
+
+#findbtn a {
+    font-size: 10px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#findbtn a:before,
+#findbtn a:after {
+    position: absolute;
+    font-size: 20px;
+    content: "find";
+    height: 55px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#findbtn a:before {
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+#findbtn a:after {
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+#findbtn a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+@media (max-width: 990px) {
+    #findbtn {
+        margin-right: 50px;
+    }
+}
+
+
+body,
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#preloader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+}
+
+#preloader>div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#preloader>div>h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.inscription {
+    width: 13ch;
+    display: flex;
+}
+
+.inscription>i {
+    color: white;
+    padding-right: 0.3rem;
+    padding-left: 0.7rem;
+    font-family: monospace;
+    font-style: italic;
+}
+
+.inscription>span {
+    color: white;
+    font-family: monospace;
+    width: 4ch;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slashes 4s steps(4) infinite;
+}
+
+@media (max-width:992px) {
+    .display {
+        display: none;
+    }
+}

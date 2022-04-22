@@ -31,8 +31,19 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
       rel="stylesheet"
     />
+
+    <script>          
+      // Reading data
+      function getna() {
+          var key = localStorage.key(0);
+          let x= JSON.parse(window.localStorage.getItem(key)).Name;
+          document.getElementById("nage").innerHTML = x;
+          console.log(x);
+      }
+      
+      </script>
   </head>
-  <body style="overflow-x: hidden">
+  <body style="overflow-x: hidden" onload="getna()">
     <!-- header section starts  -->
 
     <header class="header">

@@ -301,6 +301,14 @@ function ValidReset(){
         return false;
     }
     // change password
-    JSON.parse(window.localStorage.getItem(b.value)).Password = e.value;
+    let x= JSON.parse(window.localStorage.getItem(b.value)).Name;
+    let y= JSON.parse(window.localStorage.getItem(b.value)).Address;
+    const person = {
+        Name: x,
+        Mobile: c.value,
+        Address: y,
+        Password: e.value,
+    }
+    window.localStorage.setItem(b.value, JSON.stringify(person));
     alert("Password has been reset.Go to login!")
 } 

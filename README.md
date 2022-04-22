@@ -8,10 +8,10 @@ Each individual want a good news website to stay up-to-date what is going on aro
 
 ## how to start the website
 
-Clone my git [repository](https://github.com/Eli4479/Debugit_2022)
-in your local system.
-open Index.HTMl on any web server you have access to.
-thats it!!
+- Clone my git [repository](https://github.com/Eli4479/Debugit_2022)
+  in your local system.
+- open Index.HTMl on any web server you have access to.
+- thats it!!
 
 ## Technology Used
 

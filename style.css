@@ -834,3 +834,9 @@ b {
 .orpho span{
   color: rgb(1, 64, 88);
 }
+#pdf-upload{
+  color: #007bff;
+}
+.canvas{
+  color: #007bff;
+}

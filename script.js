@@ -312,3 +312,105 @@ function ValidReset(){
     window.localStorage.setItem(b.value, JSON.stringify(person));
     alert("Password has been reset.Go to login!")
 } 
+
+// trying different method gotta find bugs
+// var _PDF_DOC;
+// var _CANVAS = document.querySelector('#pdf-preview');
+// var _OBJECT_URL;
+// function showPDF(pdf_url) {
+//     PDFJS.getDocument({ url: pdf_url }).then(function(pdf_doc) {
+//         _PDF_DOC = pdf_doc;
+//         showPage(1);
+//         URL.revokeObjectURL(_OBJECT_URL);
+//     }).catch(function(error) {
+//         // if error why
+//         alert(error.message);
+//     });;
+// }
+// // show page of PDF
+// function showPage(page_no) {
+//     _PDF_DOC.getPage(page_no).then(function(page) {
+//         // setting widthviewport
+//         var scale_required = _CANVAS.width / page.getViewport(1).width;
+
+//         //viewport required scale
+//         var viewport = page.getViewport(scale_required);
+
+//         // set canvas height
+//         _CANVAS.height = viewport.height;
+
+//         var renderContext = {
+//             canvasContext: _CANVAS.getContext('2d'),
+//             viewport: viewport
+//         };       
+//         // render the page contents in the canvas
+//         page.render(renderContext).then(function() {
+//             document.querySelector("#pdf-preview").style.display = 'inline-block';
+//             document.querySelector("#pdf-loader").style.display = 'none';
+//         });
+//     });
+// }
+// document.querySelector("#upload-dialog").addEventListener('click', function() {
+//     document.querySelector("#pdf-file").click();
+// });
+// document.querySelector("#pdf-file").addEventListener('change', function() {
+//     // user selected PDF
+//     var file = this.files[0];
+//     // allowed MIME types
+//     var mime_types = [ 'application/pdf' ];   
+//     // validate whether PDF
+//     if(mime_types.indexOf(file.type) == -1) {
+//         alert('Error : Incorrect file type');
+//         return;
+//     }
+//     // validate file size
+//     if(file.size > 10*1024*1024) {
+//         alert('Error : Exceeded size 10MB');
+//         return;
+//     }
+//     // validation successful
+//     // hide upload dialog
+//     document.querySelector("#upload-dialog").style.display = 'none';   
+//     // show PDF preview loader
+//     document.querySelector("#pdf-loader").style.display = 'inline-block';
+//     // object url of PDF 
+//     _OBJECT_URL = URL.createObjectURL(file)
+//     // send the object url of the pdf to the PDF preview function
+//     showPDF(_OBJECT_URL);
+// });
+
+
+//PDF viewer after upload of file
+document.querySelector("#pdf-upload").addEventListener("change", function(e){
+	
+	var file = e.target.files[0];
+	if(file.type != "application/pdf"){
+		alert("Please choose another file of application or pdf format.");
+		return false;
+	}
+	
+	var fileReader = new FileReader();  
+
+	fileReader.onload = function() {
+		var typedarray = new Uint8Array(this.result);
+
+		PDFJS.getDocument(typedarray).then(function(pdf) {
+			console.log("the pdf has ",pdf.numPages, "page(s).")
+			pdf.getPage(pdf.numPages).then(function(page) {
+				
+				var viewport = page.getViewport(2.0);
+				var canvas = document.querySelector("canvas")
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+
+				page.render({
+					canvasContext: canvas.getContext('2d'),
+					viewport: viewport
+				});
+			});
+
+		});
+	};
+
+	fileReader.readAsArrayBuffer(file);
+})

@@ -37,6 +37,8 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
       rel="stylesheet"
     />
+    <script src="pdf.js"></script>
+    <script src="pdf.worker.js"></script>
   </head>
   <body style="overflow-x: hidden">
     <!-- header section starts  -->
@@ -174,11 +176,12 @@
     <div class="profile">
       <table class="content-table" id="appos">
         <thead>
-          <tr>
+          <tr >
             <th>Date</th>
             <th>Doctor</th>
             <th>Issue</th>
             <th>Diagnosis</th>
+            <th>Prescription</th>
           </tr>
         </thead>
         <tbody>
@@ -187,24 +190,36 @@
             <td>Siddarth Singh</td>
             <td>Trouble Breathing</td>
             <td>Medicines given</td>
+            <td><a href="https://docs.google.com/document/d/1eYnr5D-JaJT3p2OZLuWZpJM-05voaOtK/edit">27.03.14_Shayam</a></td>
           </tr>
           <tr>
             <td>04.04.22</td>
             <td>Siddarth Singh</td>
             <td>Problems in digestion</td>
             <td>Due to sideffect</td>
+            <td><a href="https://docs.google.com/document/d/1eYnr5D-JaJT3p2OZLuWZpJM-05voaOtK/edit">04.04.14_Shayam</a></td>
           </tr>
           <tr class="active-row">
             <td>18.04.22</td>
             <td>Darmesh Shah</td>
             <td>Regular checkup</td>
             <td>Upcoming</td>
+            <td><input id="pdf-upload" type="file"/>
+              <hr/>
+              <canvas></canvas></td>
           </tr>
           <tr class="active-row">
             <td>25.04.22</td>
             <td>Darmesh Shah</td>
             <td>Regular checkup</td>
             <td>Upcoming</td>
+            <!-- <td><button id="upload-dialog">Choose PDF</button>
+              <input type="file" id="pdf-file" accept="application/pdf" style="display:none" />
+              <div id="pdf-loader" style="display:none">Loading Preview ..</div>
+              <canvas id="pdf-preview" width="150" style="display:none"></canvas></td> -->
+             <td><input id="pdf-upload" type="file"/>
+              <hr/>
+              <canvas></canvas></td>
           </tr>
         </tbody>
       </table>
@@ -262,7 +277,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
     />
-
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.8.349/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

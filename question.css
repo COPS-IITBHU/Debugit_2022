@@ -53,3 +53,19 @@ li:hover{
 #question{
     color: white;
 }
+#quit:hover{
+    background-color: rgb(255, 0, 255);
+}
+#lifeline{
+    background-color: violet;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 0 rgb(84, 9, 84);
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+#lifeline:hover{
+    background-color: rgb(255, 0, 255);
+}

@@ -53,10 +53,20 @@ answer.forEach(function(option) {
             a=a+1;
             document.getElementById('score').innerHTML= a;
             answer[x].style.backgroundColor = 'green';
+            var i= document.getElementById('positive')
+            window.setTimeout(correct,0001)
+            function correct() {
+                i.play()
+            }
         } 
         else{
             event.target.style.backgroundColor = 'red';
             answer[x].style.backgroundColor = 'green';
+            var j= document.getElementById('negative')
+            window.setTimeout(wrong,0001)
+            function wrong() {
+                j.play()
+            }
         }
         window.setTimeout(timeout,2500)
         function timeout(){
@@ -78,4 +88,21 @@ function save(q) {
     return window.location.assign('highscore.html');
     // document.getElementById('displayhighscore').innerHTML=localStorage.getItem('highscore')
     // // console.log(document.getElementById('score').innerText)
+}
+let p =0
+document.getElementById('lifeline').addEventListener('click', help)
+function help() {
+    
+if(p<3){
+    if(x==0 || x==2){
+        answer[1].innerHTML=''
+        answer[3].innerHTML=''
+    }
+    if(x==1 || x==3){
+        answer[0].innerHTML=''
+        answer[2].innerHTML=''
+    }
+}
+ p=p+1      
+
 }

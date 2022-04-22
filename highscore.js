@@ -1,31 +1,31 @@
+const displayscore = document.querySelector('#displayscore');
+const wowscore = localStorage.getItem('score');
+displayscore.innerText = wowscore;
 
 
-const username = document.getElementById('username');
-const saveScoreBtn = document.getElementById('saveScoreBtn');
-const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('score');
+const name= document.querySelector('#name');
+const save = document.querySelector('#save');
+name.addEventListener('keyup', store)
+function store(){
+    save.disabled = !name.value;
+}
 
-const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const scorearray = JSON.parse(localStorage.getItem('highScores')) || [];
 
-// const MAX_HIGH_SCORES = 10;
 
-finalScore.innerText = mostRecentScore;
-
-username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value;
-});
-
-saveHighScore = (e) => {
+function savescore(e) {
     e.preventDefault();
 
     const score = {
-        score: mostRecentScore,
-        name: username.value,
+        score: wowscore,
+        name: name.value,
     };
-    highScores.push(score);
-    highScores.sort((a, b) => b.score - a.score);
-    highScores.splice(10);
+    scorearray.push(score);
+    scorearray.sort(function(a,b){
+        return b.score-a.score
+    })
+    scorearray.splice(10);
 
-    localStorage.setItem('highScores', JSON.stringify(highScores));
+    localStorage.setItem('highScores', JSON.stringify(scorearray));
     window.location.assign('highscore.html');
-};
+}

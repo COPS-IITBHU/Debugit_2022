@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %> 
+
+<body class="bg-[url('/img/bg.png')] relative bg-repeat">
+    <header class="fixed z-50 w-full flex justify-center align-items text-3xl p-5 mb-2 mr-0 backdrop-blur-md bg-white/40 "> 
+        Search For a Resource
+     </header>
+
+    <div class="flex flex-col z-0">
+        <%- include("./partials/nav.ejs") %>
+
+        <div class="flex flex-col gap-0">
+            <form action="" id="body" class="grow flex gap-12 p-6 mr-8 max-h-96 backdrop-blur-md bg-white/30 rounded-md">
+                <input class="focus:ring-2 focus:ring-cyan-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-6 ring-1 ring-slate-200 shadow-sm" type="text" placeholder="Search" id="search-title" maxlength="40" required>
+                <button id="search-title-btn" class="flex justify-center items-center w-20 bg-pink-400 hover:bg-pink-300 p-2 rounded-lg">Search</button>
+            </form>
+
+            <div id="search-body" class="z-10 grow flex flex-col gap-12 p-8 mr-8 mt-10 backdrop-blur-md bg-white/40 rounded-lg">
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="/search.js"></script>
+</body>
+</html>

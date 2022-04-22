@@ -96,6 +96,27 @@ router.get("/createRes", (req, res) => {
         res.redirect("/");
     }  
   
-})
+});
+
+router.get("/search", (req, res) => {
+    try {
+        const authToken = req.cookies["auth-token"];
+        if (!authToken) {
+            res.render("index", { title: "This is a title lmao" });
+          } else {
+                try {
+                    const validToken = jwt.verify(authToken, JWT_SECRET);
+                    if (validToken) {
+                        res.render("search", { title: "Search" });  
+                    }
+                } catch (error) {
+                    console.log("error: ", error);  
+                }
+            }
+    } catch (error) {
+        console.log(error);
+        res.redirect("/");
+    }
+});
 
 module.exports = router;

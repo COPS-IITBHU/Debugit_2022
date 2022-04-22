@@ -96,5 +96,23 @@ router.get("/api/logout", (req, res) => {
     res.redirect("/");
 });
 
+router.get("/api/search/:id", async (req, res) => {
+    try {
+        const searchedVal = req.params.id;
+        console.log(searchedVal);
+
+        const searchResults = await Resource.find({ title: {$regex: new RegExp(searchedVal, "i")}})
+        console.log(searchResults);
+
+        if (searchResults.length > 0) {
+            res.json({ status: "ok", data: JSON.stringify(searchResults) });
+        } else {
+            res.json({ status: "not-found" });
+        }
+    } catch (err) {
+        res.json({ status: "Error", error: err });
+    }
+});
+
 
 module.exports = router;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Sharing</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div>
+        <h1><u>Set Up Sleep</u></h1>
+        
+        <!--Add few elements to the form-->
+
+        <div>
+            <input type="text" id="txtName" placeholder="Enter your name" />
+        </div>
+        <div>
+            <input type="text" id="txtAge" placeholder="Enter your age" />
+        </div>
+        <div>
+            <fieldset>
+                <legend>Gender</legend>
+            Male<input type="radio" id="gender" name="Male" />
+            
+            Female<input type="radio" id="gender" name="Female" />
+            
+            </fieldset>
+        </div>
+        <div>
+            Sleep Time(pm): <input type="text" name="sleep" id="sleep"/>
+            Wake Up Time(am): <input type="text" name="wakeup" id="wakeup"/>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Average Hours Slept</legend>
+            
+                 <input type="text" name="yes" id="s">
+                
+                 
+                
+    
+            
+        </fieldset>
+        </div>
+        <div>
+        <fieldset>
+            <legend>Average Time In Bed</legend>
+        
+             <input type="text" name="yes" id="y">
+            
+            
+            
+    
+         
+    </fieldset>
+    
+        </div>
+        <div>
+            <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+        </div>
+
+    </div>
+    <script src="WD.js"></script>
+</body>
+</html>

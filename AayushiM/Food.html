@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Check</title>
+    <link rel="stylesheet" href="styles6.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <div>
+        <h1><u>Food and Nutri Regime</u></h1>
+        
+        <!--Add few elements to the form-->
+
+        <div>
+            <input type="text" id="txtName" placeholder="Enter your name" />
+        </div>
+        <div>
+            <input type="text" id="txtAge" placeholder="Enter your age" />
+        </div>
+        <div>
+            <fieldset>
+                <legend>Gender</legend>
+            Male<input type="radio" id="gender" name="Male" />
+            
+            Female<input type="radio" id="gender" name="Female" />
+            
+            </fieldset>
+        </div>
+        <div>
+            Weekly Caffeine Consumption: <input type="text" name="c" id="c"/>
+            Daily Water Consumption: <input type="text" name="w" id="w"/>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Vitamin C Deficinecy</legend>
+            
+                Yes <input type="radio" name="yes" id="yes">
+                
+                No <input type="radio" name="no" id="yes">
+                
+    
+            
+        </fieldset>
+        </div>
+        <div>
+        <fieldset>
+            <legend>Daily Sugar Consumption</legend>
+        
+             <input type="text" name="y" id="y">
+            
+           
+            
+    
+         
+    </fieldset>
+</div>
+<div>
+    <fieldset>
+        <legend>Number Of Meals Daily</legend>
+    
+        Yes <input type="text" name="n" id="n">
+        
+    
+     
+    </fieldset>
+        </div>
+        <div>
+            <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+        </div>
+
+    </div>
+    <script src="Food.js"></script>
+</body>
+</html>

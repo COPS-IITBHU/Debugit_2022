@@ -92,8 +92,17 @@
     display: block;
     margin: 2.5rem;
   }
+  
+.inner-about .inner-about-image img{
+    margin-top: 20px;
+}
 }
 
+@media (max-width: 790px){
+  .background-content{     
+   visibility: hidden;
+  }
+}
 @media (max-width: 450px) {
   html {
     font-size: 50%;
@@ -544,7 +553,7 @@ td {
 .book .row form .btn {
   padding:.75rem;
 }
-.profile {
+.profile, .profile2 {
   margin: 20px;
   margin-top: 150px;
   display: flex;
@@ -839,4 +848,27 @@ b {
 }
 .canvas{
   color: #007bff;
+}
+@media (max-width: 710px){
+  .add{
+    display: flex;
+    flex-direction: column;  
+}
+.imag{
+  width:100%;
+}
+.image{
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+}
+.row{
+  display: flex;
+  flex-direction: column;  
+}
+.formbook{
+  align-items: center;
+  width: 98%;
+  height: 100%;
+}
 }

@@ -224,25 +224,31 @@ var number = 1;
 var t = 0;
 
 function BookApo() {
-    var AddRown = document.getElementById('appos');
+    var AddRown = document.getElementById('appost');
     var NewRow = AddRown.insertRow(number);
 
-    lis1[x] = document.getElementById("name").value;
-    lis2[x] = document.getElementById("num").value;
-    lis3[x] = document.getElementById("reason").value;
-    lis4[x] = document.getElementById("date").value;
-
+    lis1[x] = document.getElementById("date").value;
+    lis2[x] = document.getElementById("name").value;
+    lis3[x] = "Rama Kumar"
+    if(lis1[x]=="2022-05-01"){
+        lis3[x]="Sandhaya Shah";
+    }
+    if(lis1[x]=="2022-05-07"){
+        lis3[x]="Roshni Singhania";
+    }
+    lis4[x] = document.getElementById("reason").value;
+   
 
     var cel1 = NewRow.insertCell(0);
     var cel2 = NewRow.insertCell(1);
     var cel3 = NewRow.insertCell(2);
     var cel4 = NewRow.insertCell(3);
 
-
-    cel1.innerHTML = lis4[x];
-    cel2.innerHTML = "Ram Sharma";
-    cel3.innerHTML = list3[x];
-    cel4.innerHTML = "Upcoming";
+    
+    cel1.innerHTML = lis1[x];
+    cel2.innerHTML = lis2[x];
+    cel3.innerHTML = lis3[x];
+    cel4.innerHTML = lis4[x];
     number++;
     t++;
     let inputs = document.querySelectorAll("input");
@@ -414,3 +420,9 @@ document.querySelector("#pdf-upload").addEventListener("change", function(e){
 
 	fileReader.readAsArrayBuffer(file);
 })
+// const i={};
+// var arr=[1,2];
+// console.log(i);
+// function id(){
+//    var arr[1] = "1";
+// }

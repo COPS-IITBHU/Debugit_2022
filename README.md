@@ -4,8 +4,6 @@
 
 Wanted a place where you can hop on and quickly search for a particular kind of resource shared by other people near you? Books, Bikes, Pen Drives, whatever it is that you want to find and/or share, ResourceJS is the perfect place!
 
----
-
 ## Source Code Description 
 
 ResourceJS utilizes the following technologies:
@@ -16,9 +14,8 @@ ResourceJS utilizes the following technologies:
   - JWT tokens for user authentication
   - TailwindCSS for, well, the CSS (along with some custom CSS)
   - Bcrypt for password hashing
- ---
+
 ## You can find the deployed app [here](https://resource-js.herokuapp.com/)
- ---
 ## Installation
 
 ### Prerequisites:
@@ -49,7 +46,6 @@ Debugit_2022> npm install --production
   ```
 
   6. Open your web browser and navigate to `localhost:8888/`. You should see the following on your first run:
----
 ## Source Code Run-through
   
 ### A quick glance at the project structure will show the 4 most important folders in this project:

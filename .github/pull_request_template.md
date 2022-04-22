@@ -1,15 +1,15 @@
 # Description
 
 ## TechStack Used:
-- [ ] React js
-- [ ] Vue js
-- [ ] Django
+
 - [ ] Express
-- [ ] Flutter
-- [ ] Native Android
-- [ ] other, *specify*- _________
+- [ ] Nodejs
+- [ ] HTML
+- [ ] CSS
+- [ ] JavaScript
+- [ ] MongoDB
 
+**My Github Repository link** -https://github.com/SaiRev0/Second-Wife.git
+**My website explanation** -
 
-**Your Github Repository link** - 
-
-*Don't forget to make your submission in [Hackalog Site](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022 "DebugIt'22") too!* 
+_Don't forget to make your submission in [Hackalog Site](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022 "DebugIt'22") too!_

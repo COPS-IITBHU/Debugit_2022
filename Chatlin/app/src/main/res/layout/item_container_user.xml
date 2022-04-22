@@ -41,7 +41,7 @@
             android:ellipsize="end"
 
             android:text="hello"
-            android:textColor="@color/orange"
+            android:textColor="@color/primary"
             android:textSize="13sp" />
 
 

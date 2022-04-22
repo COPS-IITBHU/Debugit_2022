@@ -39,15 +39,11 @@ npm install
 
 > To start server - 
 
- - If nodemon is installed then run 
-     ``` 
-      npm run server:dev
-     ```
- 
- - If nodemon is not installed then 
-     ```
-      npm run server:prod
-     ```
+``` 
+npm start
+```
+
+Open the App on `http://localhost:5000/`
  
 ### Tech Stack / Tools Used : 
  

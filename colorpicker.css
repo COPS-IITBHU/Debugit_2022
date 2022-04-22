@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Merriweather:wght@300&display=swap');
+
+#topsection{
+    height:120px;
+    width: inherit;
+    background-color: #00ffff;
+    border-radius: 20px;
+    display: flex;
+}
+    
+    .button {
+        
+        text-align: center;
+        font-size: small;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@100&family=Merriweather:wght@300&family=Ubuntu:wght@300&display=swap');
+    h6#playagain{
+        
+        font-size: medium;
+        border-radius: 8px;
+        font-size: 30px;
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgb(0, 125, 171);
+        position: absolute;
+        top: 28%;
+        left: 48%;
+        
+        
+    }
+    h6#result{
+        position: absolute;
+        top:43%;
+        left: 46%;
+        font-size: 25px;
+        
+        font-weight: bold;
+        font-size: larger;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-align: center;
+    }
+    button{
+        background-color: blue;
+        height: 120px;
+        width: 120px;
+        border-radius: 15px;
+        
+        
+    }
+    #difficultrow{
+        position: absolute;
+        left: 40%;
+        top: 76%;
+        
+        
+    }
+    #easyrow{
+        position: absolute;
+        left: 40%;
+        top: 56%;     
+    }
+   
+    
+    .difficulty{
+        background-color: bisque;
+        font-size: medium;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: fit-content;
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 4px;
+        flex-wrap: wrap;
+    }
+    #value{
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 30px;
+    }
+    .options{
+        padding: 8px;
+        
+    }
+    .hard{
+        position: absolute;
+        left: 80%;
+    }
+    .easy{
+        position: absolute;
+        left: 90%;
+    }
+body{
+    background-color: brown;
+}
+
+.custom-btn {
+    
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  a {
+    position: relative;
+  }
+  
+  a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #1e303a;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+    a:hover{
+        font-size: 30px;
+    }
+  
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    
+  }
+  .links{
+      margin-left: 1000px;
+      padding: 20px;
+      font-size: 40px;
+
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+  button:hover {
+    animation: bounce 1s;
+  }
+  button {
+    border: 3px solid #ff7a59;
+  }
+  
+  button:hover {
+    border: 3px dotted #ff7a59;
+    color: #ff7a59;
+    background: #fff;
+  }
+  

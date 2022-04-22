@@ -31,7 +31,7 @@ https://picture-puzzle-game.vercel.app/
 ```sh
 https://picture-puzzle-game-git-main-babyelias.vercel.app/
 ```
-Name : Anoushka Jha
+Name : Anoushka Jha<br>
 Contact Number : 9508046061
 
 

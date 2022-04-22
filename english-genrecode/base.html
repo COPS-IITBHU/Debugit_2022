@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>english-genre</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+    <body>
+        <div class="main">
+            <p id="logo"><i class="fa fa-music" aria-hidden="true">Lilifier</i></p>
+
+            <!--left part-->
+            <div class="left">
+                <!--song image-->
+                <div class="volume">
+                <img id="track_image">
+                <p id="volume_show" style="color:white">90</p>
+                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+            </div>
+        </div>
+        <!--right part-->
+        <div class="right">
+            <div class="show_song_no">
+                <p id="present"></p>
+                <p></p>
+                <p id="total"></p>
+            </div>
+            <!--song title-->
+            <p id="title">istsong</p>
+            <p id="artist">art</p>
+            <!--middle part-->
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+
+            </div>
+            <!--song duration part-->
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+            
+        </div>
+        </div>
+        <script type="text/javascript">
+            let previous=document.querySelector('#pre');
+let play=document.querySelector('#play');
+let next=document.querySelector('#next');
+let title=document.querySelector('#title');
+let recent_volume=document.querySelector('#volume');
+let volume_show=document.querySelector('#volume_show');
+let slider=document.querySelector('#duration_slider');
+let show_duration=document.querySelector('#show_duration');
+let track_image=document.querySelector('#track_image');
+let auto_play=document.querySelector('#auto_play');
+let present=document.querySelector('#present');
+let total=document.querySelector('#total');
+let artist=document.querySelector('#artist');
+let newindex_no=document.getElementById('#newindex_no');
+
+
+let timer;
+let autoplay=0;
+let mute=false;
+
+
+var index_no=0;
+var alp=sessionStorage.getItem('index_no1234');
+index_no=parseInt(alp);
+
+let playing_song=false;
+
+//creating audio element
+let track=document.createElement('audio');
+//All songs list
+let ALL_SONG=[
+    {
+        name:"STAY",
+        path:"english-genre/stay.mp3",
+        img:"images/stay.jpg",
+        singer:"The Kid LAROI - STAY (ft. Justin Bieber)"
+    },
+    {
+        name:"	INDUSTRY BABY",
+        path:"english-genre/industry.mp3",
+        img:"images/INDUSTRYBABY.png",
+        singer:"	Lil Nas X - INDUSTRY BABY"
+    },
+    {
+        name:"PEACHES",
+        path:"english-genre/peaches.mp3",
+        img:"images/PEACHES.jpg",
+        singer:"Justin Bieber - Justice"
+    },
+    {
+        name:"Jalebi Baby",
+        path:"english-genre/jalebi.mp3.crdownload",
+        img:"images/jalebi_Baby.jpeg",
+        singer:"Tesher - Jalebi Baby"
+    },
+    {
+        name:"BAM BAM",
+        path:"english-genre/bambam.mp3",
+        img:"images/bambam.jpg",
+        singer:"Camila Cabello - Bam Bam"
+    },
+    {
+        name:"SIGUE",
+        path:"english-genre/sigue.mp3",
+        img:"images/sigue.jpg",
+        singer:"J Balvin - Sigue/Forever My Love"
+    },
+    {
+        name:"Call Me By Your Name",
+        path:"english-genre/callmebyyourname.mp3",
+        img:"images/montero.jpg",
+        singer:"Lil Nas X-MONTERO (Call Me By Your Name)"
+    },
+    {
+        name:"LET ME LOVE YOU!",
+        path:"english-genre/lemmeloveu.mp3",
+        img:"images/lemmeloveu.jpg",
+        singer:"DJ SNAKE FT.JUSTIN BIEBER"
+    },
+    {
+        name:"ALL WE KNOW",
+        path:"english-genre/allweknow.mp3",
+        img:"images/allweknow.jpg",
+        singer:"THE CHAINSMOKERS FT.PHOEBE RYAN"
+    },
+    {
+        name:"WOW",
+        path:"english-genre/WOW.mp3",
+        img:"images/wow.png",
+        singer:"POST MALONE"
+    },
+    {
+        name:"CHANDELIER",
+        path:"english-genre/chandelier.mp3",
+        img:"images/chandelier1.jpg",
+        singer:"SIA"
+    },
+    {
+        name:"IDGAF",
+        path:"english-genre/idgaf.mp3",
+        img:"images/idgaf.jpg",
+        singer:"DUA LIPA"
+    },
+    {
+        name:"WE DON'T TALK ANYMORE",
+        path:"english-genre/wedont.mp3",
+        img:"images/wedont.jpg",
+        singer:"CHARLIE PUTH FT.SELENA GOMEZ"
+    },
+    {
+        name:"HELLO",
+        path:"english-genre/hello.mp3",
+        img:"images/hello.jpg",
+        singer:"ADELE"
+    },
+    {
+        name:"IN MY FEELINGS",
+        path:"english-genre/inmyfeeling.mp3",
+        img:"images/inmyfeelings.jpg",
+        singer:"DRAKE"
+    },
+    {
+        name:"THIS IS WHAT YOU CAME FOR ",
+        path:"english-genre/thisiswhatyoucamefor.mp3",
+        img:"images/thisiswhatucamefor.png",
+        singer:"CALVIN HARRIS FT.RIHANNA"
+    },
+    {
+        name:"SUGAR",
+        path:"english-genre/sugar.mp3",
+        img:"images/sugar.png",
+        singer:"MAROON 5"
+    },
+    {
+        name:"YOUNGBLOOD",
+        path:"english-genre/youngblood.mp3",
+        img:"images/youngblood.jpg",
+        singer:"5 SECONDS OF SUMMER"
+    },
+    {
+        name:"DEMONS",
+        path:"english-genre/demons.mp3",
+        img:"images/demons.jpg",
+        singer:"IMAGINE DRAGONS"
+    },
+    {
+        name:"ATTENTION",
+        path:"english-genre/attention.mp3",
+        img:"images/attentions.jpg",
+        singer:"CHARLIE PUTH"
+    },
+    {
+        name:"EASTSIDE",
+        path:"english-genre/eastside.mp3",
+        img:"images/eastside.jpg",
+        singer:"BENNY BLANCO,HALSEY,KHALID"
+    },
+    {
+        name:"I LIKE ME BETTER",
+        path:"english-genre/likemebetter.mp3",
+        img:"images/likemebetter.jpg",
+        singer:"LAUV"
+    }
+
+
+
+
+    
+];
+//loading the tracks
+function load_track(index_no){
+    clearInterval(timer);
+    reset_slider();
+    track.src=ALL_SONG[index_no].path;
+    title.innerHTML=ALL_SONG[index_no].name;
+    track_image.src=ALL_SONG[index_no].img;
+    artist.innerHTML=ALL_SONG[index_no].singer;
+    track.load();
+    timer=setInterval(range_slider,1000);
+
+}
+
+load_track(index_no);
+function mute_sound(){
+	track.volume = 0;
+	volume.value = 0;
+	volume_show.innerHTML = 0;
+}
+function justplay(){
+    if(playing_song==false){
+        playsong();
+    }
+    else{
+        pausesong();
+    }
+}
+function reset_slider(){
+    slider.value=0;
+
+}
+
+//play song
+function playsong(){
+    track.play();
+    playing_song=true;
+    play.innerHTML='<i class="fa fa-pause"></i>';
+}
+//pause song
+function pausesong(){
+    track.pause();
+    playing_song=false;
+    play.innerHTML='<i class="fa fa-play"></i>';
+}
+//next song
+function next_song(){
+    if(index_no<ALL_SONG.length-1){
+        index_no+=1;
+        load_track(index_no);
+        playsong();
+    }else{
+        index_no=0;
+        load_track(index_no);
+        playsong();
+    }
+}
+function previous_song(){
+    if(index_no>0){
+        index_no-=1;
+        load_track(index_no);
+        playsong();
+    }else{
+        index_no=ALL_SONG.length;
+        load_track(index_no);
+        playsong();
+    }
+}
+function volume_change(){
+    volume_show.innerHTML=recent_volume.value;
+    track.volume=recent_volume.value / 100;
+}
+//change volume
+function change_duration(){
+    slider_position=track.duration * (slider.value /100);
+    track.currentTime=slider_position;
+}
+function autoplay_switch(){
+	if (autoplay==1){
+       autoplay = 0;
+       auto_play.style.background = "rgba(255,255,255,0.2)";
+	}else{
+       autoplay = 1;
+       auto_play.style.background = "#FF8A65";
+	}
+}
+function range_slider(){
+    let position=0;
+    //update slider position
+    if(!isNaN(track.duration)){
+        position=track.currentTime*(100/track.duration);
+        slider.value=position;
+    }
+    if(track.ended){
+        play.inerHTML='<i class="fa fa-play"></i>';
+        if(index_no==ALL_SONG.length-1){
+            index_no=0;
+            load_track(index_no);
+        playsong();
+        }else{
+            index_no=index_no+1;
+        load_track(index_no);
+        playsong();
+        }
+    }
+}
+
+function mute_sound(){
+    
+        track.volume = 0;
+	volume.value = 0;
+	volume_show.innerHTML = 0;
+    mute=true;
+    
+	
+}
+
+//reset song slider
+
+//function will run whenever the song is over
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script type="text/javascript" src="script1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <title>Valeriser</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><p id="logo"><i class="fa fa-music" aria-hidden="true">Lilifier</i></p></a>
+                <div class="nav-links" style="color:aquamarine">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about/index.html">about</a></li>
+                        <li><a href="comments/index.html">COMMENTS</a></li>
+                        <li><a href="contact/index.html">CONTACT</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </nav>
+            <div class="search-wrapper">
+                
+                <div class="search_box">
+                    <input type="text" placeholder="what are you looking for?(CLICK ON THUMBNAIL TO PLAY)" id="myInput" onkeyup="searchFunc()">
+                    <i class="fas fa-search"></i>
+                </div>
+                <!--<br><br>
+                <div class="user-cards">
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+                    <div class="card">
+                        <div class="header" style="color:white">hemlo</div>
+                        <div class="body">mail</div>
+                    </div>
+
+                    
+                </div>-->
+                
+            </div>
+            <table id="mytable" >
+                
+                    <tr class="header">
+                        <th style="width:200px;color:white">Cover</th>
+                        <th style="width:500px;color:white">SONG</th>
+                        <th style="width:500px;color:white">ARTIST</th>
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white">
+                        <a href="english-genrecode/base.html"><a href="english-genrecode/base.html"><button onclick="func1()"><img src="images/stay.jpg" height="90px" id="icon1"></button></a></div></th>
+                        <td style="width:500px;color:white;text-align: center;" id="newindex_no">STAY </th>
+                        <td style="width:500px;color:white;text-align: center;" >The Kid LAROI - STAY (ft. Justin Bieber)</th>
+                        <script type='text/javascript'>
+                            
+                            function func1(){
+                                
+                                
+                                sessionStorage.setItem('index_no1234','0');
+
+                            }
+                                
+                            
+                                
+                            
+                        </script> 
+                        
+                        <!--<audio id="stay">
+                            <source src="english-genre/Stay.mp3" type="audio/mp3">
+                        </audio>-->
+                        
+
+
+                    </tr><tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func2()"><img src="images/INDUSTRYBABY.png" height="90px" id="icon2"></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">INDUSTRY BABY </th>
+                        <td style="width:500px;color:white;text-align: center;" >Lil Nas X - INDUSTRY BABY</th>
+                            
+                            <script type='text/javascript'>
+                                
+                                
+                                function func2(){
+                                sessionStorage.clear();
+                               
+                                sessionStorage.setItem('index_no1234','1');
+
+                            }
+                                
+                                
+                            
+                            </script>     
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func3()"><img src="images/PEACHES.jpg" height="90px"></button></a></button></th>
+                        <td style="width:500px;color:white;text-align: center;">PEACHES </th>
+                        <td style="width:500px;color:white;text-align: center;" >Justin Bieber - Justice</th>
+                            
+                            <script type='text/javascript'>
+                                function func3(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','2');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func4()"><img src="images/Jalebi_Baby.jpeg" height="90px"></button></a></button></th>
+                        <td style="width:500px;color:white;text-align: center;">Jalebi Baby</th>
+                        <td style="width:500px;color:white;text-align: center;" >Tesher - Jalebi Baby</th>
+                            
+                            <script type='text/javascript'>
+                                function func4(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','3');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func5()"><img src="images/bambam.jpg" height="90px"></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">BAM BAM </th>
+                        <td style="width:500px;color:white;text-align: center;" >Camila Cabello - Bam Bam</th>
+                            <script type='text/javascript'>
+                                function func5(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','4');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func6()"><img src="images/sigue.jpg" height="90px"></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">SIGUE </th>
+                        <td style="width:500px;color:white;text-align: center;" >J Balvin - Sigue/Forever My Love</th>
+                            
+                            <script type='text/javascript'>
+                                function func6(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','5');
+                                }
+                                
+                            </script>
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func7()"><img src="images/montero.jpg" height="90px"></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">MONTERO(Call Me By Your Name) </th>
+                        <td style="width:500px;color:white;text-align: center;" >Lil Nas X - MONTERO (Call Me By Your Name)</th>
+                            <script type='text/javascript'>
+                                function func7(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','6');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func8()"><img src="images/lemmeloveu.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">LET ME LOVE YOU! </th>
+                        <td style="width:500px;color:white;text-align: center;" >DJ SNAKE FT.JUSTIN BIEBER</th>
+                            <script type='text/javascript'>
+                                function func8(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','7');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func9()"><img src="images/allweknow.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">ALL WE KNOW </th>
+                        <td style="width:500px;color:white;text-align: center;" >THE CHAINSMOKERS FT.PHOEBE RYAN</th>
+                            <script type='text/javascript'>
+                                function func9(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','8');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func10()"><img src="images/wow.png" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">WOW</th>
+                        <td style="width:500px;color:white;text-align: center;" >POST MALONE</th>
+                            <script type='text/javascript'>
+                                function func10(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','9');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func11()"><img src="images/chandelier1.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">CHANDELIER</th>
+                        <td style="width:500px;color:white;text-align: center;" >SIA</th>
+                            <script type='text/javascript'>
+                                function func11(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','10');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func12()"><img src="images/idgaf.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">IDGAF</th>
+                        <td style="width:500px;color:white;text-align: center;" >DUA LIPA</th>
+                            <script type='text/javascript'>
+                                function func12(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','11');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func13()"><img src="images/wedont.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">WE DON'T TALK ANYMORE</th>
+                        <td style="width:500px;color:white;text-align: center;" >CHARLIE PUTH FT.SELENA GOMEZ</th>
+                            <script type='text/javascript'>
+                                function func13(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','12');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func14()"><img src="images/hello.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">HELLO</th>
+                        <td style="width:500px;color:white;text-align: center;" >ADELE</th>
+                            <script type='text/javascript'>
+                                function func14(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','13');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func15()"><img src="images/inmyfeelings.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">IN MY FEELINGS</th>
+                        <td style="width:500px;color:white;text-align: center;" >DRAKE</th>
+                            <script type='text/javascript'>
+                                function func15(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','14');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func16()"><img src="images/thisiswhatucamefor.png" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">THIS IS WHAT YOU CAME FOR</th>
+                        <td style="width:500px;color:white;text-align: center;" >CALVIN HARRIS HT.RIHANNA</th>
+                            <script type='text/javascript'>
+                                function func16(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','15');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func17()"><img src="images/sugar.png" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">SUGAR</th>
+                        <td style="width:500px;color:white;text-align: center;" >MAROON 5</th>
+                            <script type='text/javascript'>
+                                function func17(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','16');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func18()"><img src="images/youngblood.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">YOUNGBLOOD</th>
+                        <td style="width:500px;color:white;text-align: center;" >5 SECONDS OF SUMMER</th>
+                            <script type='text/javascript'>
+                                function func18(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','17');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func19()"><img src="images/demons.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">DEMONS</th>
+                        <td style="width:500px;color:white;text-align: center;" >IMAGINE DRAGONS</th>
+                            <script type='text/javascript'>
+                                function func19(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','18');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func20()"><img src="images/attentions.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">ATTENTION</th>
+                        <td style="width:500px;color:white;text-align: center;" >CHARLIE PUTH</th>
+                            <script type='text/javascript'>
+                                function func20(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','19');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func21()"><img src="images/eastside.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">EASTSIDE</th>
+                        <td style="width:500px;color:white;text-align: center;" >BENNY BLANCO, HALSEY,KHALID
+                        </th>
+                            <script type='text/javascript'>
+                                function func21(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','20');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    <tr >
+                        <td style="width:500px;color:white"><a href="english-genrecode/base.html"><button onclick="func22()"><img src="images/likemebetter.jpg" height="90px" ></button></a></th>
+                        <td style="width:500px;color:white;text-align: center;">I LIKE ME BETTER</th>
+                        <td style="width:500px;color:white;text-align: center;" >LAUV
+                        </th>
+                            <script type='text/javascript'>
+                                function func22(){
+                                    sessionStorage.clear();
+                                    sessionStorage.setItem('index_no1234','21');
+                                }
+                                
+                            </script>
+                            
+                    </tr>
+                    
+
+                
+            </table>
+            <script>
+                const searchFunc=() =>{
+                    let filter=document.getElementById('myInput').value.toUpperCase();
+                    let mytable=document.getElementById('mytable');
+                    let tr=mytable.getElementsByTagName('tr');
+                    for(var i=0;i<tr.length;i++){
+                        let td1=tr[i].getElementsByTagName('td')[1];
+                        let td2=tr[i].getElementsByTagName('td')[2];
+                        if(td1 || td2){
+                            let textvalue=td1.textcontent || td1.innerHTML;
+                            let textvalue1=td2.textcontent || td2.innerHTML;
+                            if(textvalue.toUpperCase().indexOf(filter)>-1 || textvalue1.toUpperCase().indexOf(filter)>-1){
+                                tr[i].style.display="";
+                            }else{
+                                tr[i].style.display="none";
+                            }
+                        }
+                    }
+                }
+            </script>
+            
+            
+            
+        
+        </section>
+        
+        
+        
+        
+    </body>
+</html>

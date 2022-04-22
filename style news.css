@@ -45,8 +45,6 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
-
 #findbtn {
     position: relative;
     display: inline-flex;
@@ -162,75 +160,6 @@ h1 {
     overflow: hidden;
     animation: slashes 4s steps(4) infinite;
 }
-
-.rectangles {
-    align-self: center;
-    width: 80px;
-    height: 80px;
-    position: relative;
-    justify-content: center;
-}
-
-.rect {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 4px double black;
-    border-radius: 10px;
-    animation: spinner 3s ease-in-out infinite;
-}
-
-.rect.q {
-    top: 0;
-    left: 0;
-    border-color: red;
-}
-
-.rect.r {
-    top: 0;
-    right: 0;
-    border-color: blue;
-}
-
-.rect.w {
-    bottom: 0;
-    left: 0;
-    border-color: yellow;
-}
-
-.rect.e {
-    bottom: 0;
-    right: 0;
-    border-color: green;
-}
-
-@keyframes spinner {
-    45% {
-        border-color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    55% {
-        border-color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(1turn);
-    }
-
-    100% {
-        transform: rotate(1turn);
-    }
-}
-
-@keyframes slashes {
-    0% {
-        width: 0;
-    }
-}
-
-
 
 @media (max-width:992px) {
     .display {

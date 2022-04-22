@@ -60,7 +60,7 @@ function ValidReg() {
         return false;
     }
     if (localStorage.getItem(b.value) != null) {
-        console.log("Email address already exists");
+        alert("Email address already exists");
     }
     if (!num.test(c.value)) {
         alert("Enter valid Mobile No");
@@ -93,7 +93,7 @@ function ValidReg() {
     alert("Account created successfully.Now go to login");
 }
 function openchart() {
-    window.open("https://debugit-2022-three.vercel.app/chart.html");
+    window.replace("https://debugit-2022-three.vercel.app/chart.html");
 }
 function login(){
     let b = document.getElementById('email');

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="yellow">
+      <div class="homepage">
+        <a href="../gaming.html">
+          <button class="homebutton">Home Page</button>
+        </a>
+      </div>
+      <h1 id="head">THE GREAT</h1>
+      <h1 id="rgb">
+        rgb(<em id="r">r</em>,<em id="g">g</em>,<em id="b">b</em>)
+      </h1>
+      <h1 id="colorgame">COLOR GAME</h1>
+    </div>
+    <div id="white">
+      <button id="newcolor" onclick="rgb()">NEW COLORS</button><br />
+      <button id="tryagain">Click NEW COLORS to begin</button><br />
+      <button id="easy" onclick="easy()">EASY</button>
+      <button id="hard" onclick="hard()">HARD</button>
+    </div>
+    <div id="boxes">
+      <button id="c1" onclick="colorChoice1()"></button>
+      <button id="c2" onclick="colorChoice2()"></button>
+      <button id="c3" onclick="colorChoice3()"></button>
+      <br />
+      <button id="c4" onclick="colorChoice4()"></button>
+      <button id="c5" onclick="colorChoice5()"></button>
+      <button id="c6" onclick="colorChoice6()"></button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

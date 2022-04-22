@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Website</title>
+    <link rel="stylesheet" href="./Gaming-Website-Page/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <h1>01</h1>
+          <h2>Guess My Number</h2>
+          <p>
+            Time is precious, do not ponder! Come ahead, and guess the number!
+          </p>
+          <a href="./GuessMyNumber/index.html">Click Here</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h1>02</h1>
+          <h2>Tic Tac Toe</h2>
+          <p>
+            Tic Tac Toe! Let your childhood memories flow!<br />
+            Can you still put them three in a row?
+          </p>
+          <a href="./Tic-Tac-Toe/index.html">Click Here</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h1>03</h1>
+          <h2>Color Picker</h2>
+          <p>
+            Tick Tock Tick! Think Quick! <br />Win the game with the color you
+            pick!!
+          </p>
+          <a href="./Color-Picker/index.html">Click Here</a>
+        </div>
+      </div>
+      <br />
+      <a href="index.html">
+        <button id="signOut">Sign Out and go to Home Page</button>
+      </a>
+    </div>
+    <script
+      type="text/javascript"
+      src="./Gaming-Website-Page/vanilla-tilt.js"
+    ></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+      });
+    </script>
+  </body>
+</html>

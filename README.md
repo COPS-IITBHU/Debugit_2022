@@ -111,14 +111,5 @@ Submissions are to be made through GitHub Pull Requests. To know more about how 
     Demo:
     ![](./lib/pull_request.png)
 
-  3. Write down a brief description of your project in the Pull Request description and give the PR a proper title and click on create pull request. Now GitHub might run some checks. If you pass all the checks, you are good to go.
-
-    Demo:
-    ![](./lib/submission.png) 
-
-
-- Pat yourself on the back
-
-  ![](./lib/pat.gif)
-
-> All The Best 🎉🎉.
+ Hello, I have created a simple sudoku game using html,css and js
+ The code will run on any platform, you need not install anything additional, simply rum the index.html file.

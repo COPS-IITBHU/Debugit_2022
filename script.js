@@ -89,7 +89,8 @@ function login(){
     let e = document.getElementById('password');
     let z= JSON.parse(window.localStorage.getItem(b.value)).Password;
     if(e.value==z){
-        openchart();
+        window.location= "https://debugit-2022-amyra98.vercel.app/chart.html"; 
+        // openchart();
         // setTimeout(openchart, 1000);
         // openchart();
         // alert("Successfully logged in");

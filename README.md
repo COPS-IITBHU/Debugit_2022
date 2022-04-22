@@ -96,4 +96,4 @@ Submissions are to be made through GitHub Pull Requests. To know more about how 
     
 
  Hello, I have created a simple sudoku game using html,css and js
- The code will run on any platform, you need not install anything additional, simply rum the index.html file.
+ The code will run on any platform, you need not install anything additional, simply run the index.html file.

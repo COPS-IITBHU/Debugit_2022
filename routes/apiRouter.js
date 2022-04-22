@@ -8,6 +8,22 @@ const router = express.Router();
 
 const JWT_SECRET = "qwertyuiopasdfghjkzxcvbnm";
 
+function getUname(req) {
+    try {
+        const authToken = req.cookies["auth-token"];
+        console.log(authToken);
+        const infoToken = authToken.split(".")[1];
+        console.log(infoToken);
+        const infoObj = atob(infoToken);
+        console.log(req.body);
+
+        console.log(infoObj);
+        return JSON.parse(infoObj).uname;
+    } catch (error) {
+        return error;
+    }
+}
+
 router.post("/api/login", async (req, res) => {
         const email = req.body.uname;
         const password = req.body.pwd;
@@ -60,15 +76,7 @@ router.post("/api/register", async (req, res) => {
 router.post("/api/createRes", async (req, res) => {
 
     try {
-        const authToken = req.cookies["auth-token"];
-        console.log(authToken);
-        const infoToken = authToken.split(".")[1];
-        console.log(infoToken);
-        const infoObj = atob(infoToken);
-        console.log(req.body);
-
-        console.log(infoObj);
-        const username = JSON.parse(infoObj).uname;
+        const username = getUname(req);
 
         const title = req.body.title;
         const about = req.body.about;
@@ -96,6 +104,23 @@ router.get("/api/logout", (req, res) => {
     res.redirect("/");
 });
 
+router.get("/api/mine", async (req, res) => {
+    try {
+        const username = getUname(req);
+
+        const myPosts = await Resource.find({ from: username });
+        console.log(myPosts);
+
+        if (myPosts.length > 0) {
+            res.json({ status: "ok", data: JSON.stringify(myPosts) });
+        } else {
+            res.json({ status: "not-found" });
+        }
+    } catch (error) {
+        res.json({ status: "Error", error });
+    }
+});
+
 router.get("/api/search/:id", async (req, res) => {
     try {
         const searchedVal = req.params.id;
@@ -109,8 +134,8 @@ router.get("/api/search/:id", async (req, res) => {
         } else {
             res.json({ status: "not-found" });
         }
-    } catch (err) {
-        res.json({ status: "Error", error: err });
+    } catch (error) {
+        res.json({ status: "Error", error });
     }
 });
 

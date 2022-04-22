@@ -20,7 +20,7 @@ npm install
 ```
 node index.js
 ```
--Now you can run the website on your `localhost:5000` in your browser
+- Now you can run the website on your `localhost:5000` in your browser
 # Deployed link
 This website is deployed at [Link](https://covicare-11.herokuapp.com/)
 # Demo Video

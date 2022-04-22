@@ -1,7 +1,9 @@
-Submission by: Bhav Khurana
-Department: CSE
-Contact No. : 7087341267
+Submission by: Bhav Khurana, CSE
+Contact: 7087341267
 
-Project: Quiz App using Flutter and Firebase
+Description
+TechStack Used:
+ Flutter
+ Firebase
 
-Project link: https://github.com/bhav-khurana/Debugit-22-Quiz-App
+Your Github Repository link - https://github.com/bhav-khurana/Debugit-22-Quiz-App

@@ -1,0 +1,32 @@
+
+
+#brd img {
+    width: 110px;
+    height: 110px;
+    border: 0.5px solid lightblue;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#pieces img {
+    width: 85px;
+    height: 85px;
+    border: 0.5px solid lightblue;
+    
+}
+body{
+    position:relative ;
+}
+
+body {
+    position:relative;
+    z-index: -1;
+    background: url(images/Full.jpeg) no-repeat center center fixed  ;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    
+    background-size: cover;
+    
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+body{
+    background-color: purple;
+    font-family: 'Nova Square', cursive;
+}
+header{
+    font-size: 70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+.container{
+    text-align: center;
+    display: grid;
+    background-color: purple;
+}
+.button{
+    display: grid;
+}
+input{
+    width: 100%;
+    /* margin-bottom: 10px; */
+    height: 55px;
+    border-radius: 10px;
+    background-color: violet;
+    width: 514px;
+    box-shadow: 0 4px 0 0 rgb(84, 9, 84);
+}
+.card{
+    margin-top: 20px;
+    background-color: purple;
+    /* padding: 1px;
+    border: 4px cyan solid; */
+}
+.btn{
+    background-color: violet;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 0 0 rgb(84, 9, 84);
+}
+.container h1{
+    color: pink;
+    margin-bottom: 30px;
+}
+::placeholder{
+    color: black;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+a .btn{
+    width: 514px;
+}
+a:hover{
+    background-color: rgb(255, 0, 255);
+}
+a i{
+    font-size: larger;
+    margin-left: 20px;
+    color: blanchedalmond
+}
+#start{
+    font-size: larger;
+    margin-left: 30px;
+    color: blanchedalmond
+}

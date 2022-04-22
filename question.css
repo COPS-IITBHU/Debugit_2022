@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+body{
+    background-color: purple;
+    font-family: 'Nova Square', cursive;
+    text-align: center;
+}
+header{
+    font-size: 70px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+li{
+    list-style: none;
+    background-color: violet;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 0 rgb(84, 9, 84);
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgb(255, 0, 255);
+}
+.option{
+    margin-top: 30px;
+}
+.head{
+    display: inline;
+}
+.head .score{
+    color: pink;
+    display: inline;
+    float: left;
+}
+.head .question-number{
+    color: pink;
+    display: inline;
+    float: right;
+}
+#quit{
+    background-color: violet;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 0 rgb(84, 9, 84);
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#question{
+    color: white;
+}

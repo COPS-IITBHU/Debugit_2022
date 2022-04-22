@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+body{
+    background-color: purple;
+    font-family: 'Nova Square', cursive;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    }
+#finalScore{
+    font-size: 70px;
+    color: white;
+}
+input{
+    border-radius: 10px;
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+input::placeholder{
+    color: black;
+}
+.btn{
+    color: pink;
+    font-size: 25px;
+}
+.save{
+    color: violet;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.btn:hover{
+    color: white;
+}
+
+

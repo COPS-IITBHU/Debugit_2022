@@ -32,8 +32,8 @@ https://picture-puzzle-game.vercel.app/
 https://picture-puzzle-game-git-main-babyelias.vercel.app/
 ```
 Name : Anoushka Jha<br>
-Contact Number : 9508046061
-
+Email ID: anoushka.jha.che21@itbhu.ac.in<br>
+Team Name : Odin
 
 
 

@@ -16,6 +16,7 @@ ResourceJS utilizes the following technologies:
   - Bcrypt for password hashing
 
 ## You can find the deployed app [here](https://resource-js.herokuapp.com/)
+## You can find the overview video [here](./vid/resourceJSvid.mkv)
 ## Installation
 
 ### Prerequisites:

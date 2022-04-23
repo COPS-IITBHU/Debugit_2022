@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="main.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b93e0fb8d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section class="whole">
+    <section id="f1" class="today">
+      <div class="searchbar">
+        <input
+          type="image"
+          class="input_setting"
+          src="https://img.icons8.com/fluency/48/000000/menu-rounded.png"         
+        />
+        <input type="text" autocomplete="off" class="input_text textFS" placeholder="Enter your city" />
+        <input type="button" class="input_button textFS" value="Search" />
+      </div>
+
+      <div class="area1">
+        <div class="time-u">
+          <h4 class="dora skinnyFS"></h4>
+      </div>
+          <div class="time-u">
+              <h4 class="time skinnyFS"></h4>
+          </div>
+          <br>
+          <div class="description skinnyFS"></div>
+         
+          <div class="location cityLocationFS" style="color: rgba(255, 255, 255, 0.7); font-size: 30px;
+          font-weight: bold;
+          line-height: 37px;"></div>
+          <div class="tempblock">
+            <h2 id="f3" class="temp tempFS"></h2>
+          </div>
+          <button id="location" onclick="location.reload()">
+            <i class="fa fa-map-marker" style='font-size:36px;'aria-hidden="true"></i>
+          </button>
+          <br>
+      </div>
+      <div class="area2">
+        <div class="grid2">
+          <div class="itemss">
+            <img class="weathericons" src="">
+            <i class='weathericons fas fa-wind' style='font-size:30px;color:white;'></i>
+            <div class="lolo">
+              <p class="textFS">Wind</p>
+              <h4 id="not_so" class="windy textFS--bold ">2.57m/s</h4>
+            </div>
+          </div>
+          <div class="itemss">
+            <img class="weathericons" src="">
+            <i class="fa-solid fa-temperature-half"style='font-size:36px;'></i>
+            <div class="lolo">
+              <p class="textFS">Feels like</p>
+              <h4 id="not_so" class="feel textFS--bold">41.95°</h4>
+            </div>
+          </div>
+          <div class="itemss">
+            <img class="weathericons" src="">
+            <i class='fas fa-cloud-rain' style='font-size:36px'></i>
+            <div class="lolo">
+              <p class="textFS">Chance of rain</p>
+              <h4 id="not_so" class="textFS--bold">0%</h4>
+            </div>
+          </div>
+              <div class="itemss">
+            <img class="weathericons " >
+            <i class='fas fa-temperature-high' style='font-size:36px;color:red'></i>
+            <div class="lolo">
+              <p class="textFS">Max Temprature</p>
+              <h4 id="not_so" class="maxtem textFS--bold"></h4>
+            </div>
+          </div>
+          <div class="itemss">
+            <img class="weathericons" src="">
+            <i class='fas fa-temperature-low' style='font-size:36px;color:skyblue'></i>
+            <div class="lolo">
+              <p class="textFS">Min Temprature</p>
+              <h4 id="not_so" class="mintem textFS--bold"></h4>
+            </div>
+          </div>
+          <div class="itemss">
+            <img class="weathericons" src="">
+            <img src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-humidity-weather-justicon-lineal-color-justicon.png"/>
+            <div class="lolo">
+              <p class="textFS">humidity</p>
+              <h4 id="not_so" class="humus textFS--bold"></h4>
+            </div>
+          </div>
+        </div></div>
+
+    </section>
+
+    <section id="f2" class="card_section">
+      <h4 class="card_title_section titleFS">Watch Cities</h4>
+      <div class="cardContainer">
+        <div class="addCard">
+          <div class="searchbar--card">
+            <img
+              class="addbutton"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAABHNCSVQICAgIfAhkiAAAAqpJREFUaEPtmrtLXEEUh72LsC8wpDAJiliI2KaIWiRdYkD9D3xACi0sxCpgwFQBxVbyFyRsynQrwZBeRbCxCEEsREEMgiD7YFl3811Yg/tyxr0z995kz4LcZefMzPl+c87x3rPrdLTRy2kj1g5fYfP5/GC5XO6tCFyMxWIHjuNc+iW4L7CZTOYZUF+AGmwAlorH4/OM52xDW4flJJPZbPYQmCd3wKwnEonlfx42l8vNAvxJAXLF6T5AkLJNYOsnSwh/AGJFBRGJRAbI4SOVnZdxP2BXgX2nchLYIWB/qey8jAusF/Vq5xLGcrK1okgYmwwx1pKcNSmo5GwDNSVnTYaY5KxhNSVnJWfl3thoUslNhUk5pUCFpUDRQnlIF3ACfwZKpVLE6ynz4P6SNV5orPORvS807O40cRt3/O3R5vlRa1iVs4TcMAZpjLu9bhr0fITbTCaTk7f9qIKlC/iTwaGgHTW4/xJdy42b9f7CFgqFp8Vicd/gRmFYahfY0TpYN0/J0XQYPDTlA6H8m1B+1PawrzjZ76ZUDck6J4RxX93JUol7qMKnIXHSiBuE8TfCeLwO1v2AavyZy4yRnYJf5BoXnnOyOw1h3Q/5bmaFcH7LKXcF72/LHuwxcxHQ7ab/Z28PAO3e9XS2vF1lIqE0x9tp1TqIO4vNicpONU4v6ywajbr3C3UveepRqXefcXnqaaCWtFLvE0IatpKzGiJpm0jOSs5KK1U7XXQMpUDpqKRrIwVKCpQUKN1s0bKTAqUlk6aRFKj/tUDR8VimW7GmCgS+m3lMt+JcZedl3HrO0nwfo6e1pXDymH5RvxcQnbnWYV0n6FqmuEw1c4gH99f8/NZ6z9oXWBeScH5DOC/wdqQCnef6FdD3tn9UfSOyb7A6YWbbRmBtKxzU+n8A+IRTS+GMm94AAAAASUVORK5CYII="
+            />
+            <input
+              value=""
+              class="card_input textFS"
+              placeholder="Add a card to watch"
+            />
+          </div>
+        </div>
+        <ul class="card_collection"></ul>
+      </div>
+    </section>
+  </section>
+  
+  <div id="f5" class="setting">
+    <div class="setting_top">
+      <h4 class="titleFS">Utility bar</h4>
+      <input type="button" class="closeButton textFS" value="Close" />
+    </div>
+    <hr />
+    <div class="setting_body">
+      <div class="setting_item">
+        <h4 class="titleFS">Temp Unit (°F / °C)</h4>
+        <div class="switcher">
+          <label class="switch">
+            <input type="checkbox" class="setting_temp" />
+            <span class="slider round"></span
+          ></label>
+        </div>
+        
+      </div>
+      <hr />
+      <div class="setting_item">
+        <h4 class="titleFS">Theme(Dark/light)</h4>
+        <div class="switcher">
+          <label class="switch"
+            ><input type="checkbox" class="setting_clock" />
+            <span class="slider round"></span
+          ></label>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="setting_top">
+      <input type="button" class="closeButton textFS" onclick="window.location.href='day.html'" value="5 day Forecast" />
+    </div>
+    <hr />
+    <div class="setting_top">
+      <input type="button" class="closeButton textFS" onclick="window.location.href='maps.html'" value="Maps" />
+    </div>
+    <hr />
+
+  </div>
+
+  <script  src="main.js"></script>
+</body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8' />
+    <title>Add custom markers in Mapbox GL JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+          /* background-color: black; */
+        width: 97%;
+        height: 580px;
+        margin: 6% auto;
+        margin-top: 5.3%;
+        margin-bottom: 2%;
+
+        box-shadow: -25px 18px 15px rgb(0 0 0 / 60%);
+      }
+  
+      .MAPCONTAINER {
+        background-color: #f0f2f5;
+      }
+    </style>
+</head>
+<body>
+
+  <div class="MAPCONTAINER">
+    <div id="map"></div>
+  </div>
+
+  <script src='maps.js'></script>
+</body>
+</html>

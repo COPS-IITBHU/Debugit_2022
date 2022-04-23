@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "629207813547",
+    "project_id": "chatlin-2a78f",
+    "storage_bucket": "chatlin-2a78f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629207813547:android:076a7c160dba9c2c6116ee",
+        "android_client_info": {
+          "package_name": "com.example.chatlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629207813547-016bbsofp26r5rp0avfp8v0vqu4v62sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Bx8udgso9z0b3o1Xo_qe6466ihdBw-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629207813547-016bbsofp26r5rp0avfp8v0vqu4v62sl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629207813547:android:31f09655c7a4d2596116ee",
+        "android_client_info": {
+          "package_name": "com.yashacker.chatlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629207813547-016bbsofp26r5rp0avfp8v0vqu4v62sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Bx8udgso9z0b3o1Xo_qe6466ihdBw-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629207813547-016bbsofp26r5rp0avfp8v0vqu4v62sl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

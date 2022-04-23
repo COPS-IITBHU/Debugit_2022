@@ -21,9 +21,8 @@ I'm from IIT BHU. 😁
 
 ## 🎥 Dont forget to watch the Demo Video 🌝
 
-
-[Click on this link to view Demo video 🙏](https://user-images.githubusercontent.com/95977604/164809955-cbec5395-5155-4383-b55e-e608230b7e5f.mp4) 👈
--   
+https://user-images.githubusercontent.com/95977604/164809955-cbec5395-5155-4383-b55e-e608230b7e5f.mp4
+   
 
 
 

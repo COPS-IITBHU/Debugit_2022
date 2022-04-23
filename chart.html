@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChildCare Online Service</title>
+    <link rel="shortcut icon" href="./assets/title.jpg">
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oswald:wght@300;400&family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>          
+      // Reading data
+      function getna() {
+          var key = localStorage.key(0);
+          let x= JSON.parse(window.localStorage.getItem(key)).Name;
+          document.getElementById("nage").innerHTML = x;
+          console.log(x);
+      }
+      
+      </script>
+  </head>
+  <body style="overflow-x: hidden" onload="getna()">
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <i class="fas fa-heartbeat"></i> ChildCare.
+      </a>
+
+      <nav class="navbar">
+        <a href="./chart.html" id="dont">Chart</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#contact">Contact</a>
+        <a href="./register.html">Register</a>
+        <a href="./login.html">Login</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <!-- header section ends -->
+     <div class="orpho">
+       <h1>Welcome <span id="nage">XYZ</span> orphanage thank you for believing in our facility</h1>
+     </div>
+    <!-- table section start-->
+    <div class="add">
+    <div class="imag">
+      <img src="./assets/oro.jpg" alt="" />
+    </div>
+    <div class="container2">
+      <h1 style="margin-top: -10px">Add new children</h1>
+      <label for="fname">FIRST NAME</label>
+      <input type="text" name="fname" id="fname" />
+      <label for="lname">LAST NAME</label>
+      <input type="text" name="lname" id="lname" />
+      <label for="age">AGE</label>
+      <input type="text" name="age" id="age" />
+      <label for="gender">GENDER</label>
+      <input list="genders" name="gender" id="gender">
+      <datalist id="genders">
+        <option value="Male">
+        <option value="Female">
+        <option value="Non-Binary">
+        <option value="None">
+      </datalist>
+      <label for="text">HEALTH ISSUES</label>
+      <input type="text" name="health" id="health" />
+      <input
+        type="button"
+        name="button"
+        id="btn"
+        value="Add Children"
+        onclick="Validation()"
+      />
+    </div>
+  </div>
+    <div class="cha">
+      <table id="show">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Health issues</th>
+          <th>More Details</th>
+        </tr>
+        <tr class="dummy">
+          <th>Shayam</th>
+          <th>Aggarwal</th>
+          <th>14</th>
+          <th>Male</th>
+          <th>Asthma</th>
+          <th id="1"><a href="./det.html">Details</a></th>
+        </tr>
+        <tr class="dummy">
+          <th>Brahma</th>
+          <th>Mishra</th>
+          <th>13</th>
+          <th>Male</th>
+          <th>Migraine</th>
+          <th id="2"><a href="./det.html">Details</a></th>
+        </tr>
+        <tr class="dummy">
+          <th>Tani</th>
+          <th>Behra</th>
+          <th>15</th>
+          <th>Female</th>
+          <th>None</th>
+          <th id="3"><a href="./det.html">Details</a></th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- table section end -->
+
+    <!-- booking section starts   -->
+    <div class="bookappo">
+      <section class="book" id="book">
+        <h1 class="heading"><span>BOOK</span> NOW</h1>
+
+        <div class="row">
+          <div class="image">
+            <img src="./assets/wid.jpg" alt="" />
+          </div>
+          <div class="formbook">
+          <form>
+            <h3>Book appointment for children</h3>
+            <input type="text" placeholder="Child name"id="name" class="box" />
+            <input type="number" placeholder="Orphonage number" id="num" class="box" required/>
+            <input type="text" placeholder="Reason" id="reason" class="box" />
+            <input type="date" id="date" class="box"  required/>
+            <input type="submit" onclick="Valid()" value="book now" class="btn" />
+          </form>
+        </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- table 2 -->
+    <div class="profile2">
+      <table class="content-table" id="appost">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Children Name</th>
+            <th>Doctor Name</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022-04-27</td>
+            <td>Ramanuja</td>
+            <td>Siddarth Singh</td>
+            <td>Trouble Breathing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+      <div class="box-container">
+        <div class="box">
+          <h3>Our Services</h3>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Total care </a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Expert Doctors </a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Appointments</a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Checkups </a>
+          <a href="#">
+            <i class="fas fa-chevron-right"></i> Ambulance service
+          </a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> xyz@gmail.com </a>
+          <a href="#"> <i class="fas fa-envelope"></i> abc@gmail.com </a>
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i> Mumbai, India - 400104
+          </a>
+        </div>
+
+        <div class="box">
+          <h3>Follow us</h3>
+          <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
+          <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+          <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+          <a href="#"> <i class="fab fa-linkedin"></i> Linkedin </a>
+          <a href="#"> <i class="fab fa-pinterest"></i> Pinterest </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        Created by <span>Team Bugs</span> | All rights reserved
+      </div>
+    </section>
+
+    <!-- contact section ends -->
+    <script src="./doctors.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

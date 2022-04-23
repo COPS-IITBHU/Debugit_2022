@@ -22,3 +22,6 @@ You can browse to the deployed link below or just download the code and execute 
 
 ## Deployed at
 It is hosted using the service Vercel and is available at the [ChildCare](https://debugit-2022-three.vercel.app/)
+
+## Demo Video
+[ChildCare Demo](https://drive.google.com/file/d/1w3bOt1K68v9oKM4d-Spi8dbi8V9y2V5X/view?usp=sharing)

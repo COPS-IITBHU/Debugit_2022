@@ -1,0 +1,48 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/final/output.css">
+    <title> <%= title %>  </title>
+
+    <style>
+        header {
+            z-index: 50;
+        }
+        
+        nav {
+            position: fixed;
+            left: 0;
+            height: 100%;
+            z-index: 50;
+            margin-top: 6rem;
+            width: 18rem;
+        }
+    
+        #body, #create-res {
+            margin-top: 6rem;
+            margin-left: 20rem;
+        }
+
+        #search-body {
+            margin-left: 20rem;
+        }
+
+        @media screen and (max-width: 766px) {
+            nav {
+                margin-top: 3.5rem;
+            }
+
+            #body, #create-res {
+                margin-top: 10rem;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            #search-body {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }   
+        }
+    </style>
+</head>

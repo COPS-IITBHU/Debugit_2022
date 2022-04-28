@@ -16,12 +16,19 @@ https://user-images.githubusercontent.com/95405559/164772570-8b3651f1-3978-4b88-
 
 
 
+
+<br>
+Update : New Layout <br>
+
+![capture screen](https://user-images.githubusercontent.com/95405559/165680837-dce5d938-5ebd-4e97-b776-0f87a7b45df4.JPG)
+
+
+
+
 ## Deployed Links :
 Please Note : 
-- This website is viewable only on PC/Laptop.
-- The website components might appear different from the one in the video above.
-  In such a case, try zooming in/zooming out to make them appear in the same way for better functionality.
- 
+- This website is responsive for all screen sizes (as now updated in Links but not the repo)
+- The updated repo Link is :https://github.com/BabyElias/Puzzle-Game
 ```sh
 https://babyelias.github.io/Puzzle-Game/
 ```

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Check</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <div>
+        <h1><u>Health Check</u></h1>
+        
+        <!--Add few elements to the form-->
+
+        <div>
+            <input type="text" id="txtName" placeholder="Enter your name" />
+        </div>
+        <div>
+            <input type="text" id="txtAge" placeholder="Enter your age" />
+        </div>
+        <div>
+            <fieldset>
+                <legend>Gender</legend>
+            Male<input type="radio" id="gender" name="Male" />
+            
+            Female<input type="radio" id="gender" name="Female" />
+            
+            </fieldset>
+        </div>
+        <div>
+            Weight(kg): <input type="weight" name="weight" id="weight"/>
+            Height(cm): <input type="height" name="height" id="height"/>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Medication Allergies</legend>
+            
+                Yes <input type="radio" name="yes" id="yes">
+                
+                No <input type="radio" name="no" id="no">
+                
+    
+            
+        </fieldset>
+        <fieldset>
+            <legend>Food Allergies</legend>
+        
+            Yes <input type="radio" name="yes" id="yes">
+            
+            No <input type="radio" name="no" id="no">
+            
+    
+         
+    </fieldset>
+    <fieldset>
+        <legend>Other Allergies</legend>
+    
+        Yes <input type="radio" name="yes" id="yes">
+        No <input type="radio" name="no" id="no">
+    
+     
+    </fieldset>
+        </div>
+        <div>
+            <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+        </div>
+
+    </div>
+    <script src="HS.js"></script>
+</body>
+</html>

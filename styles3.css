@@ -1,0 +1,27 @@
+html { 
+    background: url(41-419358_health-hd-wallpapers.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h1{
+      color: white;
+  }
+  div {
+    padding: 10px;
+    
+    overflow: hidden;
+    
+}
+* {
+    box-sizing: border-box;
+}
+input[type=button]{ 
+    font: 17px Calibri;
+    width: auto;
+    float: right;
+    cursor: pointer;
+    padding: 7px;
+    border: 1px solid rgb(235, 106, 106);
+}

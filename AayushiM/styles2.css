@@ -1,0 +1,40 @@
+html { 
+    background: url(top-view-stethoscope-pink-flat-lay-copy-space-medical-concept_93675-68935.webp) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h1{
+      color: white;
+  }
+  * {
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+    
+    overflow: hidden;
+}
+input[type=text], textarea, select {
+    font: 17px Calibri;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(235, 106, 106);
+    border-radius: 4px;
+}
+input[type=button]{ 
+    font: 17px Calibri;
+    width: auto;
+    float: right;
+    cursor: pointer;
+    padding: 7px;
+    border: 1px solid rgb(235, 106, 106);
+}
+input[type=radio], select
+{
+    border: 1px solid rgb(235, 106, 106);
+    
+}
+
+  

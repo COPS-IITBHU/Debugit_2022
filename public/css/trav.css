@@ -1,103 +1,26 @@
-body {
-    background-color: #262626;
+body{
+    background-color: lightgray;
 }
-
-hr {
-    background-color: white;
-}
-
-.heading {
-    width: 100%;
-    text-align: center;
-    height: auto;
-    padding-top: 10px;
-    font-size: 35px;
-    font-weight: bold;
-    background-color: violet;
-    border: black solid 2px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.box {
+.cont{
+    width: 60%;
+    margin: 1% 20%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    margin-top: 20px;
+    
 }
-
-#f {
-    width: 27%;
-    height: auto;
+#oh{
+    margin: 3px auto;
+}
+#search{
     border: black solid 2px;
-    font-size: 25px;
-    background-color: #E98074;
-    border-radius: 20px;
+    border-radius: 2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+.res{
     text-align: center;
 }
-
-#g {
-    width: 27%;
-    height: auto;
-    border: black solid 2px;
-    font-size: 25px;
-    background-color: #E98074;
-    border-radius: 20px;
+#box{
     text-align: center;
-}
-
-#h {
-    width: 27%;
-    height: auto;
-    border: black solid 2px;
-    font-size: 25px;
-    background-color: #E98074;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.mi {
-    display: flex;
-    justify-content: space-around;
-    margin: 15px;
-}
-
-.sta {
-    width: 100%;
-    text-align: center;
-    height: auto;
-    padding-top: 10px;
-    font-size: 35px;
-    font-weight: bold;
-    background-color: aquamarine;
-    border: black solid 2px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#ri {
-    width: 100%;
-    text-align: center;
-    height: auto;
-    padding-top: 10px;
-    font-size: 35px;
-    font-weight: bold;
-    background-color: aquamarine;
-    border: black solid 2px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.para {
-    width: 100%;
-    height: auto;
-    color: black;
-    background-color: blanchedalmond;
-    margin: auto;
-    text-align: center;
-    border: black solid 2px;
-    border-radius: 10px;
-    font-size: 25px;
 }

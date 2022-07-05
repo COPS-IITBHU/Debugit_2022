@@ -1,0 +1,48 @@
+body {
+    background-color: #262626;
+}
+
+.box {
+    background-color: #262626;
+}
+
+#header {
+    background-color: #262626;
+}
+
+.head {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    padding-top: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: #262626;
+    border: #262626 solid 2px;
+    border-radius: 10px;
+    color: orangered;
+}
+
+hr {
+    background-color: white;
+}
+
+.box {
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.b {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    justify-content: space-around;
+    background-color: orange;
+    border: solid black 3px;
+    border-radius: 50px;
+    font-size: 50;
+    padding-top: 50px;
+    text-align: center;
+}

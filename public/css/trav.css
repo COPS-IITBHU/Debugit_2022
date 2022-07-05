@@ -1,0 +1,26 @@
+body{
+    background-color: lightgray;
+}
+.cont{
+    width: 60%;
+    margin: 1% 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+#oh{
+    margin: 3px auto;
+}
+#search{
+    border: black solid 2px;
+    border-radius: 2rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+.res{
+    text-align: center;
+}
+#box{
+    text-align: center;
+}

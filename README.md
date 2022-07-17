@@ -1,124 +1,68 @@
-## Debugit 2022
-[![Debugit](./lib/copsWeek_debugit.png)](https://hackalog.copsiitbhu.co.in/hackathon/debug-it-2022)
+# Contest Reminder Bot
 
-## Introduction
-Debugit is a week long hackathon open to ideas in a very literal sense. You can make anything from the projects' list we'll share or ignite the inquisitive Bob the Builder inside you to make something exciting and completely new!
+This is a Discord Bot that sends reminders for upcoming contests from [codeforces](codeforces.com), [codechef](codechef.com), [atcoder](atcoder.jp), [leetcode](leetcode.com) so that you need not keep track of that. You can choose yourself which sites to receive updates from. Data is obtained either from APIs or by scraping the web pages.
 
-## How to make a submission?
-Submissions are to be made through GitHub Pull Requests. To know more about how to make a GitHub Pull Request you can refer the [Fundamentals of Git](https://www.youtube.com/playlist?list=PLLt4yMoVgczVgFcTzT60U5IXtNX1qjHL9) playlist which contains everything that you would need.
+## TechStack Used:
+- [ ] nodejs
+- [ ] express (so the the bot can be pinged and kept alive)
+- [ ] discord.js
+- [ ] MongoDB / mongoose
+- [ ] axios
+- [ ] cheerio
 
-## Make sure to include
-  - A README.md file with your name, contact information, project description and how to run the code (and other necessary information).
-  - A folder containing a demo video of your project.
+*Github Link: https://github.com/Adrito-M/Debugit_2022*
 
-## Here is a detailed step by step walkthrough if you don't know how to make a Debugit submission.
+## Instructions:
 
-- Create a fork of this [repository](https://github.com/COPS-IITBHU/Debugit_2022)
- A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
-   1. Click on the fork icon in the repository that you might find at the top right corner.
+To clone the project:
+```bash
+$ git clone https://github.com/Adrito-M/Debugit_2022.git
+$ cd Debugit_2022
+```
+To test the bot for yourself, invite bot with [invite_link](https://discord.com/api/oauth2/authorize?client_id=965978317209620510&permissions=8&scope=bot%20applications.commands) to your server. Alternatively, create a `.env` file in accordance with `.env_sample` file. Provide your Discord Bot Token in `TOKEN` and a MongoDB URI in `MONGO_URI`.
 
-   Demo:
-   ![](./lib/fork.png)
+For slash commands to register quickly in a test server, provide the server ID in `DEVELOPEMENT_GUILD_ID` and uncomment the following lines:
 
-   2. It will ask you what would you like to name the forked repository. By default they are named the same as the parent directory. Lets keep the name as it is.
+- In `commands/commands.js`, `commands/help.js`, `commands/setup.js`:
 
-   Demo:
-   ![](./lib/fork_name.png)
+```javascript
+testOnly: true,
+```
 
-- Clone the repository that you forked
-  1. Find the link which you would need to clone and copy it.
+- In `bot.js`:
 
-   Demo:
-   ![](./lib/clone_link.png)
+```javascript
+testServers: process.env.DEVELOPEMENT_GUILD_ID,
+```
 
-  2. Go to the directory in which you want to clone your repository and open the terminal.
+Run the bot with 
+```bash
+$ npm run start
+```
 
-   Demo:
-   ![](./lib/open_terminal.png)
+## Available Commands:
 
-  3. Run the `git clone` command in the terminal (in case of windows, git bash terminal) and append the link that you copied.
-     ```
-     git clone <repository_link>
-     ```
+- #### `/help` or `r!help`
 
-     Demo:
-     ![](./lib/clone.png)
+    Shows the help message. The help message is shown by default when the bot joins a new Server.
 
-  4. You will find that the repository is cloned in the directory.
-- Now you can open the directory in vs code and play with the code and complete your project. 
-- After completing the project, its time to push your code:
-  1. Open the vs code (or any other editor of your choice) terminal in the project folder. 
-  2. Create a new branch in which you want to push your code using the following code.
-     ```
-     git checkout -b <branch_name>
-     ```
-     You can name your branch whatever you like.
+    ![Debugit](./lib/help.png)
 
-     Demo:
-     ![](./lib/create_branch.png)
+- #### `/commands` or `r!commands`
 
-  3. Check which branch are you on using the `git branch` command.
-     ```
-     git branch
-     ```
-  4. The branch name with a `*` on it is the current branch. If it is different from the branch that you created, then switch to your branch using the `git checkout`
-     ```
-     git checkout <branch_name>
-     ```
-  5. You can check the status of the files using 
-     ```
-     git status
-     ```
-  6. Add (Stage) all the files you want to upload using the `git add` command.
-    To add individual files run the following command:
-     ```
-     git add <filename>
-     ```
-     If you want to add all the files from your project directory you can run
-     ```
-     git add .
-     ```
-     It is recommended not to add the some directories like node_modules directory in your commit. You can prevent it by adding it in a `.gitignore` file (For more reference [here](https://www.w3schools.com/git/git_ignore.asp?remote=github)).
+    Shows available commands.
 
-     Demo:
-     ![](./lib/add_files.png)
+    ![Screenshot of /commands](./lib/commands.png)
 
-  6. Commmit your code.
-     You can commit all your staged code (to the local git repository) using the `git commit` command
-    Run the following command:
-     ```
-     git commit -m "first commit"
-     ```
-     You can replace `first commit` with anything. It is actually a message to let you keep a brief track of what changes has been done in that commit.
+- #### `/setup` or `r!setup`
+    Asks which websites to set reminders for. Creates a channel `contest-reminder` to send reminders in that channel. After creation, the channel can be renamed or moved around. If the channel is deleted, or the preferences need to be changed, run `/setup` again.
 
-     Demo:
-     ![](./lib/commit.png)
+    ![Screenshot of /setup](./lib/setup.png)
 
-  7. Push your code.
-     Push all of your commited code using the `git push` command.
-    Run the following command:
-     ```
-     git push --set-upstream origin <branch_name>
-     ```
+- ## Demo Video:
+    
 
-     Demo:
-     ![](./lib/push.png)
-
-- Make the Pull Request and submit your code.
-  1. After you push your code, it gets uploaded to your forked directory and creates a new branch that you created.
-  2. If it notices any difference in the code of your forked repo and the parent repo. It automatically shows you an option to create a pull request.
-
-    Demo:
-    ![](./lib/pull_request.png)
-
-  3. Write down a brief description of your project in the Pull Request description and give the PR a proper title and click on create pull request. Now GitHub might run some checks. If you pass all the checks, you are good to go.
-
-    Demo:
-    ![](./lib/submission.png) 
-
-
-- Pat yourself on the back
-
-  ![](./lib/pat.gif)
-
-> All The Best 🎉🎉.
+    https://user-images.githubusercontent.com/98008131/164793404-17c6f954-14bd-496e-8547-66d0781ceba8.mp4
+    
+    This video is also present in the `lib` folder
+    

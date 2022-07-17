@@ -1,0 +1,1 @@
+module.exports = (dateObj) => `https://www.timeanddate.com/worldclock/fixedtime.html?iso=${dateObj.toISOString()}`

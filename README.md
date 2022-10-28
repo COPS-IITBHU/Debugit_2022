@@ -8,4 +8,5 @@
 ##This game has 2 levels, to clear level 1 score 20 points
 ##yellow coins are worth 1 point, blue ones are 5 points
 ##Hope you have fun playing
+##To see a recording of the game, go to the video folder.
 ##Thankyou
